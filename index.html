@@ -14,7 +14,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 -apple-system,
 h1{font-size:1.3rem;margin:4px 0 2px}
 .sub{color:var(--mut);font-size:.9rem}
 .tabs{display:flex;gap:8px;margin:14px 0}
-.tab{flex:1;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:600 .95rem inherit;cursor:pointer}
+.tab{flex:1;padding:10px 6px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:600 .95rem inherit;cursor:pointer}
 .tab[aria-selected=true]{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
 select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:12px}
@@ -48,13 +48,15 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <div class="sub" id="sub">Carregando…</div>
 <div class="tabs" role="tablist">
 <button class="tab" id="t1" role="tab" aria-selected="true">Minha clínica</button>
-<button class="tab" id="t2" role="tab" aria-selected="false">Ranking</button>
+<button class="tab" id="t3" role="tab" aria-selected="false">Minha gerência</button>
+<button class="tab" id="t2" role="tab" aria-selected="false">Ranking geral</button>
 </div>
 <div id="v1">
 <label for="sel" class="sub">Escolha a clínica</label>
 <select id="sel"></select>
 <div id="conteudo"></div>
 </div>
+<div id="v3" hidden><div class="card"><div class="sub" id="gsub">Escolha a sua clínica na aba "Minha clínica" para ver a sua gerência.</div><table id="gtab"></table></div></div>
 <div id="v2" hidden><div class="card"><table id="tab"></table></div></div>
 <div class="ft" id="ft"></div>
 </div>
@@ -79,7 +81,7 @@ function clinica(id){
     <div class="pill ${i.ok?"ok":"no"}">${fmt(i.pts)} / ${i.max}</div></div>`;}
   if(!D.reclamacoes_disponivel)h+=`<div class="ind-row"><div class="ind-s">Reclamações: em breve.</div></div>`;
   h+=`</div>`;
-  document.getElementById("conteudo").innerHTML=h; desenharRanking(id);
+  document.getElementById("conteudo").innerHTML=h; desenharRanking(id); desenharGerencia(id);
 }
 function desenharRanking(meu){
   const L=[...D.clinicas].sort((a,b)=>a.posicao-b.posicao); let h="",linha=false;
@@ -88,9 +90,21 @@ function desenharRanking(meu){
     h+=`<tr class="${c.atencao?"at ":""}${c.id===meu?"eu":""}"><td>${c.posicao}º</td><td>${c.atencao?"⚠️ ":""}${esc(c.nome)}</td><td class="n">${fmt(c.nota)}</td></tr>`;}
   document.getElementById("tab").innerHTML=h;
 }
-function aba(n){["t1","t2"].forEach((t,i)=>document.getElementById(t).setAttribute("aria-selected",i===n));
-  document.getElementById("v1").hidden=n!==0;document.getElementById("v2").hidden=n!==1;}
-document.getElementById("t1").onclick=()=>aba(0);document.getElementById("t2").onclick=()=>aba(1);
+function desenharGerencia(meu){
+  const c=D.clinicas.find(x=>x.id===meu);
+  if(!c){document.getElementById("gsub").textContent='Escolha a sua clínica na aba "Minha clínica" para ver a sua gerência.';document.getElementById("gtab").innerHTML="";return;}
+  const L=D.clinicas.filter(x=>x.gerencia===c.gerencia).sort((a,b)=>a.posicao-b.posicao);
+  const at=L.filter(x=>x.atencao).length, pos=L.findIndex(x=>x.id===meu)+1;
+  document.getElementById("gsub").textContent=`${L.length} clínicas na sua gerência · a sua está em ${pos}º · ${at} na zona de atenção`;
+  let h="",linha=false;
+  L.forEach((x,i)=>{
+    if(x.atencao&&!linha){h+=`<tr class="linha60"><td colspan="4"></td></tr>`;linha=true;}
+    h+=`<tr class="${x.atencao?"at ":""}${x.id===meu?"eu":""}"><td>${i+1}º</td><td>${x.atencao?"⚠️ ":""}${esc(x.nome)}<div class="ind-s">${x.posicao}º no geral</div></td><td class="n">${fmt(x.nota)}</td></tr>`;});
+  document.getElementById("gtab").innerHTML=h;
+}
+const ABAS=[["t1","v1"],["t3","v3"],["t2","v2"]];
+function aba(id){ABAS.forEach(([t,v])=>{const on=t===id;document.getElementById(t).setAttribute("aria-selected",on);document.getElementById(v).hidden=!on;});}
+ABAS.forEach(([t])=>document.getElementById(t).onclick=()=>aba(t));
 Promise.all([fetch("dados.json?v="+Date.now()).then(r=>r.json()),fetch("acoes.json?v="+Date.now()).then(r=>r.json())]).then(([d,a])=>{
   D=d;A=a;
   document.getElementById("sub").textContent=`Dados até ${d.data_br} · ${d.dia_trabalhado}º de ${d.dias_mes} dias trabalhados de ${d.mes}`;

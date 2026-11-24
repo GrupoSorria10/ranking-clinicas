@@ -10,6 +10,7 @@
   {
    "id": "SGA01",
    "nome": "Anápolis 01",
+   "gerencia": "Jéssica",
    "nota": 29.1,
    "atencao": true,
    "indicadores": {
@@ -64,6 +65,7 @@
   {
    "id": "SGA02",
    "nome": "Anápolis 02",
+   "gerencia": "Jéssica",
    "nota": 45.6,
    "atencao": true,
    "indicadores": {
@@ -118,6 +120,7 @@
   {
    "id": "GO030",
    "nome": "Barreiras",
+   "gerencia": "Nathan",
    "nota": 82.9,
    "atencao": false,
    "indicadores": {
@@ -172,6 +175,7 @@
   {
    "id": "PB002",
    "nome": "Campina Grande",
+   "gerencia": "Luiz",
    "nota": 95.4,
    "atencao": false,
    "indicadores": {
@@ -226,6 +230,7 @@
   {
    "id": "GO022",
    "nome": "Canaã",
+   "gerencia": "Felipe",
    "nota": 78.1,
    "atencao": false,
    "indicadores": {
@@ -280,6 +285,7 @@
   {
    "id": "GO025",
    "nome": "Castelo Branco",
+   "gerencia": "Alef",
    "nota": 46.8,
    "atencao": true,
    "indicadores": {
@@ -334,6 +340,7 @@
   {
    "id": "GO028",
    "nome": "Catalão",
+   "gerencia": "Alex",
    "nota": 50.0,
    "atencao": true,
    "indicadores": {
@@ -388,6 +395,7 @@
   {
    "id": "GO024",
    "nome": "Ceilândia",
+   "gerencia": "Mattheus",
    "nota": 45.8,
    "atencao": true,
    "indicadores": {
@@ -442,6 +450,7 @@
   {
    "id": "GO010",
    "nome": "Formosa",
+   "gerencia": "Mattheus",
    "nota": 17.8,
    "atencao": true,
    "indicadores": {
@@ -496,6 +505,7 @@
   {
    "id": "GO009",
    "nome": "Garavelo",
+   "gerencia": "Jéssica",
    "nota": 71.4,
    "atencao": false,
    "indicadores": {
@@ -550,6 +560,7 @@
   {
    "id": "PE002",
    "nome": "Goiana",
+   "gerencia": "Luiz",
    "nota": 57.0,
    "atencao": true,
    "indicadores": {
@@ -604,6 +615,7 @@
   {
    "id": "GO018",
    "nome": "Goianira",
+   "gerencia": "Alef",
    "nota": 71.6,
    "atencao": false,
    "indicadores": {
@@ -658,6 +670,7 @@
   {
    "id": "GO006",
    "nome": "Goiânia 01",
+   "gerencia": "Murilo",
    "nota": 50.0,
    "atencao": true,
    "indicadores": {
@@ -712,6 +725,7 @@
   {
    "id": "GO007",
    "nome": "Goiânia 02",
+   "gerencia": "Murilo",
    "nota": 87.5,
    "atencao": false,
    "indicadores": {
@@ -766,6 +780,7 @@
   {
    "id": "SGG03",
    "nome": "Goiânia 03",
+   "gerencia": "Paulo",
    "nota": 96.8,
    "atencao": false,
    "indicadores": {
@@ -820,6 +835,7 @@
   {
    "id": "GO016",
    "nome": "Independência",
+   "gerencia": "Paulo",
    "nota": 70.4,
    "atencao": false,
    "indicadores": {
@@ -874,6 +890,7 @@
   {
    "id": "SGI01",
    "nome": "Inhumas",
+   "gerencia": "Alef",
    "nota": 86.0,
    "atencao": false,
    "indicadores": {
@@ -928,6 +945,7 @@
   {
    "id": "GO014",
    "nome": "Itumbiara",
+   "gerencia": "Alex",
    "nota": 85.1,
    "atencao": false,
    "indicadores": {
@@ -982,6 +1000,7 @@
   {
    "id": "MT002",
    "nome": "Jaciara",
+   "gerencia": "Felipe",
    "nota": 38.5,
    "atencao": true,
    "indicadores": {
@@ -1036,6 +1055,7 @@
   {
    "id": "GO020",
    "nome": "Jardim Ingá",
+   "gerencia": "Mattheus",
    "nota": 71.0,
    "atencao": false,
    "indicadores": {
@@ -1090,6 +1110,7 @@
   {
    "id": "GO011",
    "nome": "Jataí",
+   "gerencia": "Alex",
    "nota": 86.0,
    "atencao": false,
    "indicadores": {
@@ -1144,6 +1165,7 @@
   {
    "id": "PB001",
    "nome": "João Pessoa",
+   "gerencia": "Luiz",
    "nota": 97.8,
    "atencao": false,
    "indicadores": {
@@ -1198,6 +1220,7 @@
   {
    "id": "SGL01",
    "nome": "Luziânia",
+   "gerencia": "Mattheus",
    "nota": 76.6,
    "atencao": false,
    "indicadores": {
@@ -1252,6 +1275,7 @@
   {
    "id": "GO003",
    "nome": "Madre Germana",
+   "gerencia": "Jéssica",
    "nota": 71.2,
    "atencao": false,
    "indicadores": {
@@ -1306,6 +1330,7 @@
   {
    "id": "GO015",
    "nome": "Mangalô",
+   "gerencia": "Alef",
    "nota": 83.4,
    "atencao": false,
    "indicadores": {
@@ -1360,6 +1385,7 @@
   {
    "id": "SGM01",
    "nome": "Maysa",
+   "gerencia": "Paulo",
    "nota": 84.9,
    "atencao": false,
    "indicadores": {
@@ -1414,6 +1440,7 @@
   {
    "id": "GO021",
    "nome": "Morrinhos",
+   "gerencia": "Alex",
    "nota": 83.1,
    "atencao": false,
    "indicadores": {
@@ -1468,6 +1495,7 @@
   {
    "id": "GO012",
    "nome": "Novo Gama",
+   "gerencia": "Mattheus",
    "nota": 84.4,
    "atencao": false,
    "indicadores": {
@@ -1522,6 +1550,7 @@
   {
    "id": "DF003",
    "nome": "Núcleo Band.",
+   "gerencia": "Mattheus",
    "nota": 87.5,
    "atencao": false,
    "indicadores": {
@@ -1576,6 +1605,7 @@
   {
    "id": "GO029",
    "nome": "Paracatu",
+   "gerencia": "Nathan",
    "nota": 83.2,
    "atencao": false,
    "indicadores": {
@@ -1630,6 +1660,7 @@
   {
    "id": "DF001",
    "nome": "Paranoá",
+   "gerencia": "Mattheus",
    "nota": 83.8,
    "atencao": false,
    "indicadores": {
@@ -1684,6 +1715,7 @@
   {
    "id": "GO023",
    "nome": "Parque Anhanguera",
+   "gerencia": "Felipe",
    "nota": 75.0,
    "atencao": false,
    "indicadores": {
@@ -1738,6 +1770,7 @@
   {
    "id": "GO005",
    "nome": "Planaltina",
+   "gerencia": "Mattheus",
    "nota": 36.5,
    "atencao": true,
    "indicadores": {
@@ -1792,6 +1825,7 @@
   {
    "id": "GO026",
    "nome": "Plano Piloto",
+   "gerencia": "Mattheus",
    "nota": 25.5,
    "atencao": true,
    "indicadores": {
@@ -1846,6 +1880,7 @@
   {
    "id": "RO001",
    "nome": "Porto Velho",
+   "gerencia": "Murilo",
    "nota": 72.8,
    "atencao": false,
    "indicadores": {
@@ -1900,6 +1935,7 @@
   {
    "id": "GO032",
    "nome": "Praça A",
+   "gerencia": "Alef",
    "nota": 50.0,
    "atencao": true,
    "indicadores": {
@@ -1954,6 +1990,7 @@
   {
    "id": "GO017",
    "nome": "Quirinópolis",
+   "gerencia": "Alex",
    "nota": 99.4,
    "atencao": false,
    "indicadores": {
@@ -2008,6 +2045,7 @@
   {
    "id": "SGRV1",
    "nome": "Rio Verde 03",
+   "gerencia": "Alex",
    "nota": 56.1,
    "atencao": true,
    "indicadores": {
@@ -2062,6 +2100,7 @@
   {
    "id": "MT001",
    "nome": "Rondonópolis",
+   "gerencia": "Alef",
    "nota": 96.4,
    "atencao": false,
    "indicadores": {
@@ -2116,6 +2155,7 @@
   {
    "id": "GO004",
    "nome": "Santa Rita",
+   "gerencia": "Paulo",
    "nota": 84.9,
    "atencao": false,
    "indicadores": {
@@ -2170,6 +2210,7 @@
   {
    "id": "PE004",
    "nome": "Santo Antão",
+   "gerencia": "Luiz",
    "nota": 81.4,
    "atencao": false,
    "indicadores": {
@@ -2224,6 +2265,7 @@
   {
    "id": "GO001",
    "nome": "Santo Antônio",
+   "gerencia": "Nathan",
    "nota": 34.9,
    "atencao": true,
    "indicadores": {
@@ -2278,6 +2320,7 @@
   {
    "id": "GO031",
    "nome": "Santo Hilário",
+   "gerencia": "Felipe",
    "nota": 98.5,
    "atencao": false,
    "indicadores": {
@@ -2332,6 +2375,7 @@
   {
    "id": "GSC01",
    "nome": "Sen. Canedo",
+   "gerencia": "Felipe",
    "nota": 61.4,
    "atencao": false,
    "indicadores": {
@@ -2386,6 +2430,7 @@
   {
    "id": "GO013",
    "nome": "Studio OralGold",
+   "gerencia": "Jéssica",
    "nota": 98.2,
    "atencao": false,
    "indicadores": {
@@ -2440,6 +2485,7 @@
   {
    "id": "DF002",
    "nome": "Taguatinga",
+   "gerencia": "Nathan",
    "nota": 83.1,
    "atencao": false,
    "indicadores": {
@@ -2494,6 +2540,7 @@
   {
    "id": "SGT01",
    "nome": "Trindade",
+   "gerencia": "Paulo",
    "nota": 46.8,
    "atencao": true,
    "indicadores": {
@@ -2548,6 +2595,7 @@
   {
    "id": "GO008",
    "nome": "Vila Brasília",
+   "gerencia": "Murilo",
    "nota": 85.7,
    "atencao": false,
    "indicadores": {
@@ -2602,6 +2650,7 @@
   {
    "id": "GO019",
    "nome": "Vila Concórdia",
+   "gerencia": "Felipe",
    "nota": 31.8,
    "atencao": true,
    "indicadores": {
@@ -2656,6 +2705,7 @@
   {
    "id": "GO027",
    "nome": "Vila Nova",
+   "gerencia": "Murilo",
    "nota": 87.5,
    "atencao": false,
    "indicadores": {
@@ -2710,6 +2760,7 @@
   {
    "id": "GO002",
    "nome": "Águas Lindas",
+   "gerencia": "Nathan",
    "nota": 32.9,
    "atencao": true,
    "indicadores": {
