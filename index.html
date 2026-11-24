@@ -27,7 +27,13 @@ select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px soli
 .missao{background:var(--accbg);border:1px solid var(--acc)}
 .missao .lab{color:var(--acc);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
 .missao .ind{font-size:1.15rem;font-weight:800;margin:4px 0}
-.missao ul{margin:10px 0 0;padding-left:20px}.missao li{margin:6px 0}
+.missao ul{margin:6px 0 0;padding-left:20px}.missao li{margin:6px 0}
+.m-item{padding:10px 0;border-top:1px solid var(--acc)}.m-item:first-of-type{border-top:0}
+.m-n{font-weight:800}.m-sub{font-size:.9rem;margin:4px 0 0 4px}
+details{margin-top:6px}summary{cursor:pointer;color:var(--acc);font-weight:600;font-size:.9rem}
+.m-ok{margin-top:10px;padding-top:10px;border-top:1px solid var(--acc);font-size:.92rem}
+.parte{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:8px 0 0 14px;padding-left:10px;border-left:3px solid var(--line)}
+.parte .pill{font-size:.82rem;padding:4px 8px}
 .ind-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-top:1px solid var(--line)}
 .ind-row:first-of-type{border-top:0}
 .ind-n{font-weight:700}.ind-s{color:var(--mut);font-size:.88rem}.ind-h{font-size:.9rem;margin-top:3px}
@@ -72,7 +78,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <div class="ind-row"><div><div class="ind-n">📈 Crescimento de avaliação</div><div class="ind-h">Primeiras avaliações do mês contra o mês anterior no mesmo número de dias trabalhados. Crescer 10% ou mais vale tudo; entre 0 e 10% vale proporcional; caiu, zero.</div></div><div class="pill ok">15</div></div>
 <div class="ind-row"><div><div class="ind-n">🧾 Pagamento por atendimento</div><div class="ind-h">Faturamento do mês dividido pelos pacientes que compareceram. Chegando ao objetivo do grupo vale tudo; abaixo, zero.</div></div><div class="pill ok">15</div></div></div>
 <div class="card"><div class="sec" style="margin-top:0">Missão do dia</div>
-<p>Entre os indicadores fora do ritmo, a missão do dia é o que a clínica consegue recuperar com menos esforço e que mais soma pontos. Embaixo dela está o passo a passo do que fazer.</p>
+<p>A missão do dia mostra <b>todos os indicadores fora do padrão</b> em 🔴 vermelho, começando pelo que mais tira pontos da nota, cada um com o que fazer hoje. Os que estão no padrão aparecem em 🟢 verde, para manter. Na Performance de avaliação, contratação, ticket e pedida aparecem separados, cada um com a sua cor.</p>
 <div class="sec">Quando atualiza</div>
 <p>Todo dia de madrugada, com os dados do último dia trabalhado (segunda a sábado). O placar recomeça todo dia 1.</p></div>
 </div>
@@ -87,16 +93,30 @@ function guardar(k,v){try{localStorage.setItem(k,v)}catch(e){}}
 function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function clinica(id){
   const c=D.clinicas.find(x=>x.id===id); if(!c)return;
-  const a=A[c.missao.indicador]||A.manter;
   let h=`<div class="card"><div class="nota"><div><div class="sub">Nota da clínica</div><div class="big">${fmt(c.nota)}</div></div>
   <div class="pos">Posição<br><b>${c.posicao}º</b> de ${D.total_clinicas}</div></div>
   <div class="faixa ${c.atencao?"at":"ok"}">${c.atencao?"⚠️ Zona de atenção: abaixo de 60 pontos":"✅ Fora da zona de atenção"}</div></div>`;
-  h+=`<div class="card missao"><div class="lab">🎯 Missão do dia</div><div class="ind">${esc(c.missao.nome)}</div><div>${esc(c.missao.texto)}</div>
-  <div class="sec">${esc(a.titulo)}</div><ul>${a.acoes.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>`;
+  const inds=ORDEM.map(k=>[k,c.indicadores[k]]).filter(([k,i])=>i);
+  const fora=inds.filter(([k,i])=>!i.ok).sort((x,y)=>(y[1].max-y[1].pts)-(x[1].max-x[1].pts));
+  const dentro=inds.filter(([k,i])=>i.ok);
+  h+=`<div class="card missao"><div class="lab">🎯 Missão do dia</div>`;
+  if(!fora.length){h+=`<div class="ind">🟢 Tudo no padrão</div><div>Todos os indicadores no padrão. A missão de hoje é manter.</div><ul>${A.manter.acoes.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`;}
+  else{
+    h+=`<div class="ind">🔴 ${fora.length} indicador${fora.length>1?"es":""} fora do padrão</div>`;
+    fora.forEach(([k,i],n)=>{const a=A[k];
+      h+=`<div class="m-item"><div class="m-n">🔴 ${esc(i.nome)} <span class="ind-s">(${fmt(i.pts)} de ${i.max})</span></div>`;
+      if(i.partes){for(const p of i.partes)h+=`<div class="m-sub">${p.ok?"🟢":"🔴"} <b>${esc(p.nome)}</b>: ${esc(p.status)}${p.ok?"":`<br><span>${esc(p.hoje)}</span>`}</div>`;}
+      else h+=`<div class="m-sub">${esc(i.hoje)}</div>`;
+      if(a)h+=`<details${n===0?" open":""}><summary>${esc(a.titulo)}</summary><ul>${a.acoes.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></details>`;
+      h+=`</div>`;});
+  }
+  if(dentro.length&&fora.length)h+=`<div class="m-ok">🟢 <b>No padrão, manter:</b> ${dentro.map(([k,i])=>esc(i.nome)).join(" · ")}</div>`;
+  h+=`</div>`;
   h+=`<div class="card"><div class="sec" style="margin-top:0">Indicadores</div>`;
   for(const k of ORDEM){const i=c.indicadores[k]; if(!i)continue;
-    h+=`<div class="ind-row"><div><div class="ind-n">${i.ok?"🟢":"🔴"} ${esc(i.nome)}</div><div class="ind-s">${esc(i.status)}</div><div class="ind-h">${esc(i.hoje)}</div></div>
-    <div class="pill ${i.ok?"ok":"no"}">${fmt(i.pts)} / ${i.max}</div></div>`;}
+    h+=`<div class="ind-row"><div><div class="ind-n">${i.ok?"🟢":"🔴"} ${esc(i.nome)}</div>${i.partes?"":`<div class="ind-s">${esc(i.status)}</div><div class="ind-h">${esc(i.hoje)}</div>`}</div>
+    <div class="pill ${i.ok?"ok":"no"}">${fmt(i.pts)} / ${i.max}</div></div>`;
+    if(i.partes)for(const p of i.partes)h+=`<div class="parte"><div><div class="ind-n">${p.ok?"🟢":"🔴"} ${esc(p.nome)}</div><div class="ind-s">${esc(p.status)}</div></div><div class="pill ${p.ok?"ok":"no"}">${fmt(p.pts)} / ${p.max}</div></div>`;}
   if(!D.reclamacoes_disponivel)h+=`<div class="ind-row"><div class="ind-s">Reclamações: em breve.</div></div>`;
   h+=`</div>`;
   document.getElementById("conteudo").innerHTML=h; desenharRanking(id); desenharGerencia(id);
