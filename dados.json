@@ -1,0 +1,2765 @@
+{
+ "data": "2026-11-20",
+ "data_br": "20/11/2026",
+ "mes": "novembro",
+ "dia_trabalhado": 15,
+ "dias_mes": 23,
+ "total_clinicas": 51,
+ "reclamacoes_disponivel": false,
+ "clinicas": [
+  {
+   "id": "SGA01",
+   "nome": "Anápolis 01",
+   "nota": 29.1,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "58% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 13.3,
+     "ok": false,
+     "status": "Abaixo: contratação 40,4% (padrão ouro 65%); ticket 61% do padrão ouro; pedida 94% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 2 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 2 avaliação(ões) 5★ no Google."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+89% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "77% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 85% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "google",
+    "nome": "Google",
+    "texto": "Hoje: 2 avaliação(ões) 5★ no Google."
+   },
+   "posicao": 49
+  },
+  {
+   "id": "SGA02",
+   "nome": "Anápolis 02",
+   "nota": 45.6,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "83% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.5,
+     "ok": false,
+     "status": "Abaixo: contratação 62,9% (padrão ouro 65%); ticket 71% do padrão ouro; pedida 64% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+19% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "80% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 71% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 43
+  },
+  {
+   "id": "GO030",
+   "nome": "Barreiras",
+   "nota": 82.9,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "121% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.3,
+     "ok": false,
+     "status": "Abaixo: contratação 62,7% (padrão ouro 65%); ticket 57% do padrão ouro; pedida 89% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+10% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "90% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 33% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render 33% a mais que a média atual (sem atendimento sem pagamento)."
+   },
+   "posicao": 23
+  },
+  {
+   "id": "PB002",
+   "nome": "Campina Grande",
+   "nota": 95.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "124% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.3,
+     "ok": false,
+     "status": "Abaixo: contratação 54,7% (padrão ouro 65%); ticket 69% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+120% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 7
+  },
+  {
+   "id": "GO022",
+   "nome": "Canaã",
+   "nota": 78.1,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "102% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.3,
+     "ok": false,
+     "status": "Abaixo: contratação 54,2% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 4.2,
+     "ok": false,
+     "status": "+4% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 5 primeira(s) avaliação(ões) a mais que a média do dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "99% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 4% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render 4% a mais que a média atual (sem atendimento sem pagamento)."
+   },
+   "posicao": 25
+  },
+  {
+   "id": "GO025",
+   "nome": "Castelo Branco",
+   "nota": 46.8,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "69% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.4,
+     "ok": false,
+     "status": "Abaixo: contratação 48,0% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 13 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 13 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+37% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 41
+  },
+  {
+   "id": "GO028",
+   "nome": "Catalão",
+   "nota": 50.0,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "82% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 20 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 20 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+41% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 39
+  },
+  {
+   "id": "GO024",
+   "nome": "Ceilândia",
+   "nota": 45.8,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "87% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.6,
+     "ok": false,
+     "status": "Abaixo: contratação 53,2% (padrão ouro 65%); ticket 85% do padrão ouro; pedida 84% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+52% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "99% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 1% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render 1% a mais que a média atual (sem atendimento sem pagamento)."
+   },
+   "posicao": 42
+  },
+  {
+   "id": "GO010",
+   "nome": "Formosa",
+   "nota": 17.8,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "84% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 14.2,
+     "ok": false,
+     "status": "Abaixo: contratação 50,9% (padrão ouro 65%); ticket 54% do padrão ouro; pedida 85% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 7 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 7 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "-8% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 12 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "75% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 97% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 51
+  },
+  {
+   "id": "GO009",
+   "nome": "Garavelo",
+   "nota": 71.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "131% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.1,
+     "ok": false,
+     "status": "Abaixo: contratação 50,7% (padrão ouro 65%); pedida 77% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 48 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 48 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+32% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "98% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 5% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render 5% a mais que a média atual (sem atendimento sem pagamento)."
+   },
+   "posicao": 30
+  },
+  {
+   "id": "PE002",
+   "nome": "Goiana",
+   "nota": 57.0,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "67% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 15.6,
+     "ok": false,
+     "status": "Abaixo: ticket 47% do padrão ouro; pedida 79% do padrão ouro",
+     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+246% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 35
+  },
+  {
+   "id": "GO018",
+   "nome": "Goianira",
+   "nota": 71.6,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "124% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.3,
+     "ok": false,
+     "status": "Abaixo: contratação 60,3% (padrão ouro 65%); ticket 72% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 1 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 1 avaliação(ões) 5★ no Google."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+26% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "78% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 83% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "google",
+    "nome": "Google",
+    "texto": "Hoje: 1 avaliação(ões) 5★ no Google."
+   },
+   "posicao": 29
+  },
+  {
+   "id": "GO006",
+   "nome": "Goiânia 01",
+   "nota": 50.0,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "98% do ritmo do objetivo",
+     "hoje": "Faturar hoje 1,4 vez(es) a média diária da clínica para voltar ao ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 52 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 52 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+16% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Faturar hoje 1,4 vez(es) a média diária da clínica para voltar ao ritmo."
+   },
+   "posicao": 37
+  },
+  {
+   "id": "GO007",
+   "nome": "Goiânia 02",
+   "nota": 87.5,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "122% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 8 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 8 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+39% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "google",
+    "nome": "Google",
+    "texto": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 8 para o ritmo)."
+   },
+   "posicao": 9
+  },
+  {
+   "id": "SGG03",
+   "nome": "Goiânia 03",
+   "nota": 96.8,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "105% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.4,
+     "ok": false,
+     "status": "Abaixo: contratação 48,1% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+32% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 5
+  },
+  {
+   "id": "GO016",
+   "nome": "Independência",
+   "nota": 70.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "107% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.3,
+     "ok": false,
+     "status": "Abaixo: contratação 61,4% (padrão ouro 65%); ticket 56% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 8 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 8 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+28% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "80% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 73% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 33
+  },
+  {
+   "id": "SGI01",
+   "nome": "Inhumas",
+   "nota": 86.0,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "111% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.8,
+     "ok": false,
+     "status": "Abaixo: contratação 56,9% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 36 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 36 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+93% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 11
+  },
+  {
+   "id": "GO014",
+   "nome": "Itumbiara",
+   "nota": 85.1,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "108% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.1,
+     "ok": false,
+     "status": "Abaixo: contratação 63,9% (padrão ouro 65%); ticket 75% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 43 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 43 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+32% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 14
+  },
+  {
+   "id": "MT002",
+   "nome": "Jaciara",
+   "nota": 38.5,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "72% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 10.8,
+     "ok": false,
+     "status": "Abaixo: contratação 31,8% (padrão ouro 65%); ticket 42% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+32% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "98% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 7% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render 7% a mais que a média atual (sem atendimento sem pagamento)."
+   },
+   "posicao": 44
+  },
+  {
+   "id": "GO020",
+   "nome": "Jardim Ingá",
+   "nota": 71.0,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "129% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.8,
+     "ok": false,
+     "status": "Abaixo: contratação 56,7% (padrão ouro 65%); ticket 73% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 13 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 13 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+35% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "80% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 71% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 32
+  },
+  {
+   "id": "GO011",
+   "nome": "Jataí",
+   "nota": 86.0,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "110% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.8,
+     "ok": false,
+     "status": "Abaixo: ticket 83% do padrão ouro",
+     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+19% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "80% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 72% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
+   },
+   "posicao": 12
+  },
+  {
+   "id": "PB001",
+   "nome": "João Pessoa",
+   "nota": 97.8,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "146% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.2,
+     "ok": false,
+     "status": "Abaixo: ticket 75% do padrão ouro",
+     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+12% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
+   },
+   "posicao": 4
+  },
+  {
+   "id": "SGL01",
+   "nome": "Luziânia",
+   "nota": 76.6,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "126% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.7,
+     "ok": false,
+     "status": "Abaixo: contratação 62,5% (padrão ouro 65%); ticket 73% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 3.6,
+     "ok": false,
+     "status": "+4% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 4 primeira(s) avaliação(ões) a mais que a média do dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "85% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 50% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliações",
+    "texto": "Hoje: 4 primeira(s) avaliação(ões) a mais que a média do dia."
+   },
+   "posicao": 26
+  },
+  {
+   "id": "GO003",
+   "nome": "Madre Germana",
+   "nota": 71.2,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "119% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.4,
+     "ok": false,
+     "status": "Abaixo: contratação 54,8% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 4 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 4 avaliação(ões) 5★ no Google."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 8.6,
+     "ok": false,
+     "status": "+9% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "91% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 29% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliações",
+    "texto": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
+   },
+   "posicao": 31
+  },
+  {
+   "id": "GO015",
+   "nome": "Mangalô",
+   "nota": 83.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "112% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.7,
+     "ok": false,
+     "status": "Abaixo: contratação 43,8% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 22 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 22 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+30% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 19
+  },
+  {
+   "id": "SGM01",
+   "nome": "Maysa",
+   "nota": 84.9,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "123% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.9,
+     "ok": false,
+     "status": "Abaixo: contratação 55,4% (padrão ouro 65%); pedida 78% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+67% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "84% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 53% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 16
+  },
+  {
+   "id": "GO021",
+   "nome": "Morrinhos",
+   "nota": 83.1,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "131% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 19.8,
+     "ok": false,
+     "status": "Abaixo: contratação 63,4% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 19 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 19 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 6.7,
+     "ok": false,
+     "status": "+7% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 2 primeira(s) avaliação(ões) a mais que a média do dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliações",
+    "texto": "Hoje: 2 primeira(s) avaliação(ões) a mais que a média do dia."
+   },
+   "posicao": 21
+  },
+  {
+   "id": "GO012",
+   "nome": "Novo Gama",
+   "nota": 84.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "118% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.0,
+     "ok": false,
+     "status": "Abaixo: ticket 72% do padrão ouro; pedida 98% do padrão ouro",
+     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 9.5,
+     "ok": false,
+     "status": "+10% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "94% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 18% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliações",
+    "texto": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
+   },
+   "posicao": 17
+  },
+  {
+   "id": "DF003",
+   "nome": "Núcleo Band.",
+   "nota": 87.5,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "201% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 12 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 12 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+19% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "google",
+    "nome": "Google",
+    "texto": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 12 para o ritmo)."
+   },
+   "posicao": 8
+  },
+  {
+   "id": "GO029",
+   "nome": "Paracatu",
+   "nota": 83.2,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "127% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.6,
+     "ok": false,
+     "status": "Abaixo: contratação 54,5% (padrão ouro 65%); ticket 75% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+74% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "94% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 17% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render 17% a mais que a média atual (sem atendimento sem pagamento)."
+   },
+   "posicao": 20
+  },
+  {
+   "id": "DF001",
+   "nome": "Paranoá",
+   "nota": 83.8,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "104% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.0,
+     "ok": false,
+     "status": "Abaixo: contratação 45,5% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "-20% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 29 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 18
+  },
+  {
+   "id": "GO023",
+   "nome": "Parque Anhanguera",
+   "nota": 75.0,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "100% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "-24% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 17 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "93% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 21% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render 21% a mais que a média atual (sem atendimento sem pagamento)."
+   },
+   "posicao": 27
+  },
+  {
+   "id": "GO005",
+   "nome": "Planaltina",
+   "nota": 36.5,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "82% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 19.2,
+     "ok": false,
+     "status": "Abaixo: contratação 60,0% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "-24% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 12 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "86% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 47% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 45
+  },
+  {
+   "id": "GO026",
+   "nome": "Plano Piloto",
+   "nota": 25.5,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "47% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 10.4,
+     "ok": false,
+     "status": "Abaixo: contratação 29,4% (padrão ouro 65%); ticket 56% do padrão ouro; pedida 65% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 41 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 41 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+19% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "97% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 8% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render 8% a mais que a média atual (sem atendimento sem pagamento)."
+   },
+   "posicao": 50
+  },
+  {
+   "id": "RO001",
+   "nome": "Porto Velho",
+   "nota": 72.8,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "134% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.8,
+     "ok": false,
+     "status": "Abaixo: ticket 59% do padrão ouro; pedida 87% do padrão ouro",
+     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 1.4,
+     "ok": false,
+     "status": "+1% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "81% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 66% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliações",
+    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
+   },
+   "posicao": 28
+  },
+  {
+   "id": "GO032",
+   "nome": "Praça A",
+   "nota": 50.0,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "98% do ritmo do objetivo",
+     "hoje": "Faturar hoje 1,4 vez(es) a média diária da clínica para voltar ao ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "-13% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 16 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Faturar hoje 1,4 vez(es) a média diária da clínica para voltar ao ritmo."
+   },
+   "posicao": 38
+  },
+  {
+   "id": "GO017",
+   "nome": "Quirinópolis",
+   "nota": 99.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "110% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 19.5,
+     "ok": false,
+     "status": "Abaixo: contratação 61,8% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+29% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 1
+  },
+  {
+   "id": "SGRV1",
+   "nome": "Rio Verde 03",
+   "nota": 56.1,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "150% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 14.9,
+     "ok": false,
+     "status": "Abaixo: contratação 42,9% (padrão ouro 65%); ticket 75% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 64 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 64 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "-16% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 18 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "74% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 100% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 36
+  },
+  {
+   "id": "MT001",
+   "nome": "Rondonópolis",
+   "nota": 96.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "124% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.1,
+     "ok": false,
+     "status": "Abaixo: contratação 47,9% (padrão ouro 65%); ticket 97% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+119% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 6
+  },
+  {
+   "id": "GO004",
+   "nome": "Santa Rita",
+   "nota": 84.9,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "101% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.9,
+     "ok": false,
+     "status": "Abaixo: contratação 60,0% (padrão ouro 65%); ticket 81% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+24% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "77% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 88% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 15
+  },
+  {
+   "id": "PE004",
+   "nome": "Santo Antão",
+   "nota": 81.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "126% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 15.1,
+     "ok": false,
+     "status": "Abaixo: contratação 58,3% (padrão ouro 65%); ticket 61% do padrão ouro; pedida 61% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+72% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "96% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 11% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render 11% a mais que a média atual (sem atendimento sem pagamento)."
+   },
+   "posicao": 24
+  },
+  {
+   "id": "GO001",
+   "nome": "Santo Antônio",
+   "nota": 34.9,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "95% do ritmo do objetivo",
+     "hoje": "Faturar hoje 1,8 vez(es) a média diária da clínica para voltar ao ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.9,
+     "ok": false,
+     "status": "Abaixo: ticket 69% do padrão ouro",
+     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "-14% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 14 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "62% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 175% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Faturar hoje 1,8 vez(es) a média diária da clínica para voltar ao ritmo."
+   },
+   "posicao": 46
+  },
+  {
+   "id": "GO031",
+   "nome": "Santo Hilário",
+   "nota": 98.5,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "117% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.8,
+     "ok": false,
+     "status": "Abaixo: contratação 57,4% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+15% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 2
+  },
+  {
+   "id": "GSC01",
+   "nome": "Sen. Canedo",
+   "nota": 61.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "115% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 19.1,
+     "ok": false,
+     "status": "Abaixo: contratação 59,4% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 4 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 4 avaliação(ões) 5★ no Google."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "-18% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 27 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "84% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 54% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "google",
+    "nome": "Google",
+    "texto": "Hoje: 4 avaliação(ões) 5★ no Google."
+   },
+   "posicao": 34
+  },
+  {
+   "id": "GO013",
+   "nome": "Studio OralGold",
+   "nota": 98.2,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "113% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.6,
+     "ok": false,
+     "status": "Abaixo: contratação 56,0% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+35% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 3
+  },
+  {
+   "id": "DF002",
+   "nome": "Taguatinga",
+   "nota": 83.1,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "112% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.5,
+     "ok": false,
+     "status": "Abaixo: contratação 57,5% (padrão ouro 65%); ticket 79% do padrão ouro; pedida 70% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 56 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 56 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+38% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 22
+  },
+  {
+   "id": "SGT01",
+   "nome": "Trindade",
+   "nota": 46.8,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "87% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 17.4,
+     "ok": false,
+     "status": "Abaixo: contratação 48,1% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+51% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "86% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 48% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 40
+  },
+  {
+   "id": "GO008",
+   "nome": "Vila Brasília",
+   "nota": 85.7,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "109% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 18.6,
+     "ok": false,
+     "status": "Abaixo: contratação 56,0% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 35 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 35 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+62% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 13
+  },
+  {
+   "id": "GO019",
+   "nome": "Vila Concórdia",
+   "nota": 31.8,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "79% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 15.4,
+     "ok": false,
+     "status": "Abaixo: contratação 57,7% (padrão ouro 65%); ticket 67% do padrão ouro; pedida 62% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 20 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 20 para o ritmo)."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+21% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "83% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 60% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 48
+  },
+  {
+   "id": "GO027",
+   "nome": "Vila Nova",
+   "nota": 87.5,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "126% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "-7% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 8 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No objetivo",
+     "hoje": "Manter: todo atendimento com pagamento registrado."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliações",
+    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 8 para +10%)."
+   },
+   "posicao": 10
+  },
+  {
+   "id": "GO002",
+   "nome": "Águas Lindas",
+   "nota": 32.9,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "80% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Avaliação",
+     "max": 20,
+     "pts": 16.3,
+     "ok": false,
+     "status": "Abaixo: contratação 63,2% (padrão ouro 65%); ticket 60% do padrão ouro; pedida 78% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    },
+    "google": {
+     "nome": "Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 2 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 2 avaliação(ões) 5★ no Google."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "+19% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "83% do objetivo",
+     "hoje": "Hoje: cada atendimento precisa render 58% a mais que a média atual (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "google",
+    "nome": "Google",
+    "texto": "Hoje: 2 avaliação(ões) 5★ no Google."
+   },
+   "posicao": 47
+  }
+ ]
+}

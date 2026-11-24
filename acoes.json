@@ -1,0 +1,63 @@
+{
+ "_leia": "Textos de 'o que fazer' de cada indicador. O Willian pode editar à vontade: cada item da lista vira um tópico no site. Não use as palavras meta nem uniforme.",
+ "faturamento": {
+  "titulo": "Como voltar ao ritmo do faturamento",
+  "acoes": [
+   "Revisar a agenda de hoje logo cedo: quem tem plano aprovado e ainda não começou o tratamento?",
+   "Ligar para os pacientes avaliados nos últimos 7 dias que não fecharam e oferecer uma condição para começar esta semana.",
+   "Em toda avaliação, apresentar o plano completo e já sugerir a data de início.",
+   "Oferecer as formas de pagamento das financeiras antes do paciente dizer que não cabe no bolso."
+  ]
+ },
+ "avaliacao": {
+  "titulo": "Como chegar ao padrão ouro da avaliação",
+  "acoes": [
+   "Contratação: terminar toda avaliação com a pergunta de fechamento: 'Podemos agendar o início?'.",
+   "Ticket: apresentar o tratamento ideal completo, sem cortar etapas para parecer mais barato.",
+   "Pedida: mostrar fotos e o antes/depois para o paciente entender o valor do plano.",
+   "Paciente que não fechou: sair com retorno marcado em até 3 dias."
+  ]
+ },
+ "google": {
+  "titulo": "Como ganhar avaliações 5★ no Google",
+  "acoes": [
+   "Pedir a avaliação no momento de maior satisfação: fim do procedimento, entrega de prótese, primeira sessão sem dor.",
+   "Mandar o link do Google no WhatsApp do paciente na hora, ainda na clínica.",
+   "Ajudar o paciente a avaliar ali mesmo, se ele quiser.",
+   "Paciente insatisfeito: resolver antes de ele sair, nunca pedir avaliação nesse caso."
+  ]
+ },
+ "reclamacoes": {
+  "titulo": "Como evitar reclamações",
+  "acoes": [
+   "Explicar valores, prazos e etapas por escrito antes de começar o tratamento.",
+   "Atraso na agenda: avisar o paciente e pedir desculpas antes de ele perguntar.",
+   "Qualquer insatisfação: chamar o gerente na hora e resolver antes de o paciente sair."
+  ]
+ },
+ "crescimento": {
+  "titulo": "Como trazer mais primeiras avaliações",
+  "acoes": [
+   "Captação: fazer os contatos do dia (leads, retornos e pacientes antigos) e agendar avaliação.",
+   "Acompanhante: oferecer a avaliação a todo acompanhante que entrar na clínica hoje.",
+   "Vídeo no grupo da família: pedir ao paciente satisfeito para encaminhar o vídeo da clínica no grupo da família.",
+   "Indicação: pedir indicação a pelo menos 3 pacientes hoje, no momento de maior satisfação."
+  ]
+ },
+ "pagantes": {
+  "titulo": "Como aumentar o pagamento por atendimento",
+  "acoes": [
+   "Todo atendimento com pagamento registrado: nada de procedimento sem lançamento.",
+   "Confirmar antes do atendimento que o paciente está com as parcelas em dia.",
+   "Paciente que só faz manutenção: apresentar o próximo passo do tratamento.",
+   "Oferecer as financeiras para quem quer adiantar o tratamento."
+  ]
+ },
+ "manter": {
+  "titulo": "Tudo no ritmo",
+  "acoes": [
+   "Manter o padrão de hoje e ajudar a equipe a seguir assim.",
+   "Pedir indicação e avaliação no Google a todo paciente satisfeito."
+  ]
+ }
+}

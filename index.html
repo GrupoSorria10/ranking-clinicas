@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Ranking das clínicas · Grupo Sorria</title>
+<style>
+:root{--bg:#f4f5f7;--card:#fff;--fg:#14181f;--mut:#5f6673;--line:#e3e6eb;--ok:#0f8a5f;--okbg:#e8f6ef;--no:#c2410c;--nobg:#fff1e8;--warn:#b91c1c;--warnbg:#fdecec;--acc:#1d4ed8;--accbg:#eef3ff}
+@media (prefers-color-scheme:dark){:root{--bg:#101318;--card:#181c23;--fg:#e9ecf1;--mut:#9aa3b2;--line:#2a303a;--okbg:#10291f;--nobg:#2e1a10;--warnbg:#2e1414;--accbg:#16213b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 -apple-system,"Segoe UI",Roboto,"Noto Sans",sans-serif;-webkit-text-size-adjust:100%}
+.wrap{max-width:640px;margin:0 auto;padding:14px max(14px,env(safe-area-inset-left)) 40px max(14px,env(safe-area-inset-right))}
+h1{font-size:1.3rem;margin:4px 0 2px}
+.sub{color:var(--mut);font-size:.9rem}
+.tabs{display:flex;gap:8px;margin:14px 0}
+.tab{flex:1;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:600 .95rem inherit;cursor:pointer}
+.tab[aria-selected=true]{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:12px}
+.nota{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.big{font-size:2.6rem;font-weight:800;line-height:1}
+.pos{font-size:1rem;color:var(--mut);text-align:right}
+.pos b{color:var(--fg);font-size:1.4rem}
+.faixa{margin-top:10px;padding:8px 12px;border-radius:10px;font-weight:600;font-size:.95rem}
+.faixa.ok{background:var(--okbg);color:var(--ok)}.faixa.at{background:var(--warnbg);color:var(--warn)}
+.missao{background:var(--accbg);border:1px solid var(--acc)}
+.missao .lab{color:var(--acc);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+.missao .ind{font-size:1.15rem;font-weight:800;margin:4px 0}
+.missao ul{margin:10px 0 0;padding-left:20px}.missao li{margin:6px 0}
+.ind-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-top:1px solid var(--line)}
+.ind-row:first-of-type{border-top:0}
+.ind-n{font-weight:700}.ind-s{color:var(--mut);font-size:.88rem}.ind-h{font-size:.9rem;margin-top:3px}
+.pill{flex:none;font-weight:800;padding:6px 10px;border-radius:999px;font-size:.95rem;white-space:nowrap}
+.pill.ok{background:var(--okbg);color:var(--ok)}.pill.no{background:var(--nobg);color:var(--no)}
+.sec{font-weight:700;margin:18px 0 0}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+td{padding:9px 6px;border-top:1px solid var(--line)}td.n{text-align:right;font-weight:700}
+tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
+.linha60 td{border-top:2px dashed var(--warn);padding:0}
+.ft{color:var(--mut);font-size:.8rem;margin-top:18px}
+.erro{color:var(--warn)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🏆 Ranking das clínicas</h1>
+<div class="sub" id="sub">Carregando…</div>
+<div class="tabs" role="tablist">
+<button class="tab" id="t1" role="tab" aria-selected="true">Minha clínica</button>
+<button class="tab" id="t2" role="tab" aria-selected="false">Ranking</button>
+</div>
+<div id="v1">
+<label for="sel" class="sub">Escolha a clínica</label>
+<select id="sel"></select>
+<div id="conteudo"></div>
+</div>
+<div id="v2" hidden><div class="card"><table id="tab"></table></div></div>
+<div class="ft" id="ft"></div>
+</div>
+<script>
+const ORDEM=["faturamento","avaliacao","google","reclamacoes","crescimento","pagantes"];
+const fmt=v=>(Math.round(v*10)/10).toLocaleString("pt-BR",{minimumFractionDigits:1,maximumFractionDigits:1});
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let D,A;
+function guardar(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function clinica(id){
+  const c=D.clinicas.find(x=>x.id===id); if(!c)return;
+  const a=A[c.missao.indicador]||A.manter;
+  let h=`<div class="card"><div class="nota"><div><div class="sub">Nota da clínica</div><div class="big">${fmt(c.nota)}</div></div>
+  <div class="pos">Posição<br><b>${c.posicao}º</b> de ${D.total_clinicas}</div></div>
+  <div class="faixa ${c.atencao?"at":"ok"}">${c.atencao?"⚠️ Zona de atenção: abaixo de 60 pontos":"✅ Fora da zona de atenção"}</div></div>`;
+  h+=`<div class="card missao"><div class="lab">🎯 Missão do dia</div><div class="ind">${esc(c.missao.nome)}</div><div>${esc(c.missao.texto)}</div>
+  <div class="sec">${esc(a.titulo)}</div><ul>${a.acoes.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>`;
+  h+=`<div class="card"><div class="sec" style="margin-top:0">Indicadores</div>`;
+  for(const k of ORDEM){const i=c.indicadores[k]; if(!i)continue;
+    h+=`<div class="ind-row"><div><div class="ind-n">${i.ok?"🟢":"🔴"} ${esc(i.nome)}</div><div class="ind-s">${esc(i.status)}</div><div class="ind-h">${esc(i.hoje)}</div></div>
+    <div class="pill ${i.ok?"ok":"no"}">${fmt(i.pts)} / ${i.max}</div></div>`;}
+  if(!D.reclamacoes_disponivel)h+=`<div class="ind-row"><div class="ind-s">Reclamações: em breve.</div></div>`;
+  h+=`</div>`;
+  document.getElementById("conteudo").innerHTML=h; desenharRanking(id);
+}
+function desenharRanking(meu){
+  const L=[...D.clinicas].sort((a,b)=>a.posicao-b.posicao); let h="",linha=false;
+  for(const c of L){
+    if(c.atencao&&!linha){h+=`<tr class="linha60"><td colspan="3"></td></tr>`;linha=true;}
+    h+=`<tr class="${c.atencao?"at ":""}${c.id===meu?"eu":""}"><td>${c.posicao}º</td><td>${c.atencao?"⚠️ ":""}${esc(c.nome)}</td><td class="n">${fmt(c.nota)}</td></tr>`;}
+  document.getElementById("tab").innerHTML=h;
+}
+function aba(n){["t1","t2"].forEach((t,i)=>document.getElementById(t).setAttribute("aria-selected",i===n));
+  document.getElementById("v1").hidden=n!==0;document.getElementById("v2").hidden=n!==1;}
+document.getElementById("t1").onclick=()=>aba(0);document.getElementById("t2").onclick=()=>aba(1);
+Promise.all([fetch("dados.json?v="+Date.now()).then(r=>r.json()),fetch("acoes.json?v="+Date.now()).then(r=>r.json())]).then(([d,a])=>{
+  D=d;A=a;
+  document.getElementById("sub").textContent=`Dados até ${d.data_br} · ${d.dia_trabalhado}º de ${d.dias_mes} dias trabalhados de ${d.mes}`;
+  const sel=document.getElementById("sel");
+  sel.innerHTML=`<option value="">Selecione…</option>`+d.clinicas.map(c=>`<option value="${c.id}">${esc(c.nome)}</option>`).join("");
+  const s=ler("clinica"); if(s&&d.clinicas.some(c=>c.id===s)){sel.value=s;clinica(s);} else desenharRanking(null);
+  sel.onchange=()=>{guardar("clinica",sel.value);clinica(sel.value);};
+  document.getElementById("ft").textContent="Nota = Faturamento (30), Avaliação (20), Google (10), Reclamações (10), Crescimento (10) e Pagamento por atendimento (10), convertida para 100. Abaixo de 60 pontos = zona de atenção. Atualizado todo dia de madrugada.";
+}).catch(()=>{document.getElementById("sub").innerHTML='<span class="erro">Não foi possível carregar os dados. Tente de novo em alguns minutos.</span>';});
+</script>
+</body>
+</html>
