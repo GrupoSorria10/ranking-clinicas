@@ -13,8 +13,8 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 -apple-system,
 .wrap{max-width:640px;margin:0 auto;padding:14px max(14px,env(safe-area-inset-left)) 40px max(14px,env(safe-area-inset-right))}
 h1{font-size:1.3rem;margin:4px 0 2px}
 .sub{color:var(--mut);font-size:.9rem}
-.tabs{display:flex;gap:8px;margin:14px 0}
-.tab{flex:1;padding:10px 6px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:600 .95rem inherit;cursor:pointer}
+.tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0}#t4{grid-column:1/-1}
+.tab{padding:10px 6px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:600 .95rem inherit;cursor:pointer}
 .tab[aria-selected=true]{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
 select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-top:12px}
@@ -40,6 +40,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 .linha60 td{border-top:2px dashed var(--warn);padding:0}
 .ft{color:var(--mut);font-size:.8rem;margin-top:18px}
 .erro{color:var(--warn)}
+#v4 p{margin:8px 0}
 </style>
 </head>
 <body>
@@ -50,6 +51,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <button class="tab" id="t1" role="tab" aria-selected="true">Minha clínica</button>
 <button class="tab" id="t3" role="tab" aria-selected="false">Minha gerência</button>
 <button class="tab" id="t2" role="tab" aria-selected="false">Ranking geral</button>
+<button class="tab" id="t4" role="tab" aria-selected="false">Como é calculada a nota?</button>
 </div>
 <div id="v1">
 <label for="sel" class="sub">Escolha a clínica</label>
@@ -58,6 +60,22 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 </div>
 <div id="v3" hidden><div class="card"><div class="sub" id="gsub">Escolha a sua clínica na aba "Minha clínica" para ver a sua gerência.</div><table id="gtab"></table></div></div>
 <div id="v2" hidden><div class="card"><table id="tab"></table></div></div>
+<div id="v4" hidden>
+<div class="card"><div class="sec" style="margin-top:0">A nota da clínica</div>
+<p>A nota vai de <b>0 a 100</b>. Ela soma 6 indicadores do mês, os mesmos do ranking dos gerentes (sem o Economizômetro). Juntos eles valem 90 pontos, que são convertidos para uma nota de 0 a 100.</p>
+<div class="faixa at">⚠️ Abaixo de 60 pontos a clínica fica na <b>zona de atenção</b>.</div></div>
+<div class="card"><div class="sec" style="margin-top:0">Os 6 indicadores</div>
+<div class="ind-row"><div><div class="ind-n">🎯 Faturamento</div><div class="ind-h">A clínica está no ritmo quando o faturamento do mês até hoje, mantido o mesmo ritmo até o fim do mês, chega ao objetivo da clínica. No ritmo vale tudo; fora do ritmo vale zero.</div></div><div class="pill ok">30</div></div>
+<div class="ind-row"><div><div class="ind-n">📋 Avaliação</div><div class="ind-h">Compara a clínica com o padrão ouro do grupo: contratação (até 10 pontos, padrão de 65% das avaliações fechadas), ticket médio (até 7) e pedida (até 3). Cada parte vale proporcional ao quanto chega do padrão.</div></div><div class="pill ok">20</div></div>
+<div class="ind-row"><div><div class="ind-n">⭐ Google</div><div class="ind-h">Avaliações 5★ do mês contra o objetivo do plano de notas até hoje. Avaliações de 1 a 4★ aumentam o número de 5★ necessárias. Clínica com objetivo de manter 5,0 fica no ritmo enquanto exibir 5,0. No ritmo vale tudo; fora, zero.</div></div><div class="pill ok">10</div></div>
+<div class="ind-row"><div><div class="ind-n">🙂 Reclamações</div><div class="ind-h">Começa com 10. Cada reclamação de paciente no mês tira 1 ponto.</div></div><div class="pill ok">10</div></div>
+<div class="ind-row"><div><div class="ind-n">📈 Crescimento de avaliações</div><div class="ind-h">Primeiras avaliações do mês contra o mês anterior no mesmo número de dias trabalhados. Crescer 10% ou mais vale tudo; entre 0 e 10% vale proporcional; caiu, zero.</div></div><div class="pill ok">10</div></div>
+<div class="ind-row"><div><div class="ind-n">🧾 Pagamento por atendimento</div><div class="ind-h">Faturamento do mês dividido pelos pacientes que compareceram. Chegando ao objetivo do grupo vale tudo; abaixo, zero.</div></div><div class="pill ok">10</div></div></div>
+<div class="card"><div class="sec" style="margin-top:0">Missão do dia</div>
+<p>Entre os indicadores fora do ritmo, a missão do dia é o que a clínica consegue recuperar com menos esforço e que mais soma pontos. Embaixo dela está o passo a passo do que fazer.</p>
+<div class="sec">Quando atualiza</div>
+<p>Todo dia de madrugada, com os dados do último dia trabalhado (segunda a sábado, sem feriados). O placar recomeça todo dia 1.</p></div>
+</div>
 <div class="ft" id="ft"></div>
 </div>
 <script>
@@ -102,7 +120,7 @@ function desenharGerencia(meu){
     h+=`<tr class="${x.atencao?"at ":""}${x.id===meu?"eu":""}"><td>${i+1}º</td><td>${x.atencao?"⚠️ ":""}${esc(x.nome)}<div class="ind-s">${x.posicao}º no geral</div></td><td class="n">${fmt(x.nota)}</td></tr>`;});
   document.getElementById("gtab").innerHTML=h;
 }
-const ABAS=[["t1","v1"],["t3","v3"],["t2","v2"]];
+const ABAS=[["t1","v1"],["t3","v3"],["t2","v2"],["t4","v4"]];
 function aba(id){ABAS.forEach(([t,v])=>{const on=t===id;document.getElementById(t).setAttribute("aria-selected",on);document.getElementById(v).hidden=!on;});}
 ABAS.forEach(([t])=>document.getElementById(t).onclick=()=>aba(t));
 Promise.all([fetch("dados.json?v="+Date.now()).then(r=>r.json()),fetch("acoes.json?v="+Date.now()).then(r=>r.json())]).then(([d,a])=>{
