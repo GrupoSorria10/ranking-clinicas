@@ -43,7 +43,7 @@
        "max": 7,
        "pts": 4.3,
        "ok": false,
-       "status": "61% do padrão ouro",
+       "status": "R$ 996 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -51,7 +51,7 @@
        "max": 3,
        "pts": 2.8,
        "ok": false,
-       "status": "94% do padrão ouro",
+       "status": "R$ 4.230 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -77,8 +77,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "77% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 85% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 216 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 399 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -124,7 +124,7 @@
        "max": 7,
        "pts": 5.0,
        "ok": false,
-       "status": "71% do padrão ouro",
+       "status": "R$ 1.149 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -132,7 +132,7 @@
        "max": 3,
        "pts": 1.9,
        "ok": false,
-       "status": "64% do padrão ouro",
+       "status": "R$ 2.865 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -158,8 +158,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "80% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 71% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 383 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -205,7 +205,7 @@
        "max": 7,
        "pts": 4.0,
        "ok": false,
-       "status": "57% do padrão ouro",
+       "status": "R$ 925 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -213,7 +213,7 @@
        "max": 3,
        "pts": 2.7,
        "ok": false,
-       "status": "89% do padrão ouro",
+       "status": "R$ 4.019 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -239,8 +239,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "90% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 33% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 252 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 335 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -286,7 +286,7 @@
        "max": 7,
        "pts": 4.8,
        "ok": false,
-       "status": "69% do padrão ouro",
+       "status": "R$ 1.121 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -294,7 +294,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.412 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -320,8 +320,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -367,7 +367,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.934 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -375,7 +375,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.495 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -401,8 +401,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "99% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 4% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 277 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 288 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -448,7 +448,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.855 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -456,7 +456,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.030 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -482,8 +482,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -521,7 +521,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "68,2% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -529,7 +529,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 3.280 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -537,7 +537,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 16.604 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -563,8 +563,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -608,9 +608,9 @@
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 6.0,
+       "pts": 5.9,
        "ok": false,
-       "status": "85% do padrão ouro",
+       "status": "R$ 1.372 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -618,7 +618,7 @@
        "max": 3,
        "pts": 2.5,
        "ok": false,
-       "status": "84% do padrão ouro",
+       "status": "R$ 3.771 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -644,8 +644,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "99% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 1% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 277 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 280 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -691,7 +691,7 @@
        "max": 7,
        "pts": 3.8,
        "ok": false,
-       "status": "54% do padrão ouro",
+       "status": "R$ 879 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -699,7 +699,7 @@
        "max": 3,
        "pts": 2.5,
        "ok": false,
-       "status": "85% do padrão ouro",
+       "status": "R$ 3.803 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -725,8 +725,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "75% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 97% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 210 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 414 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -772,7 +772,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.702 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -780,7 +780,7 @@
        "max": 3,
        "pts": 2.3,
        "ok": false,
-       "status": "77% do padrão ouro",
+       "status": "R$ 3.449 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -806,8 +806,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "98% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 5% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 274 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 288 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -845,7 +845,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "69,4% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -853,7 +853,7 @@
        "max": 7,
        "pts": 3.3,
        "ok": false,
-       "status": "47% do padrão ouro",
+       "status": "R$ 758 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -861,7 +861,7 @@
        "max": 3,
        "pts": 2.4,
        "ok": false,
-       "status": "79% do padrão ouro",
+       "status": "R$ 3.560 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -887,8 +887,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -934,7 +934,7 @@
        "max": 7,
        "pts": 5.0,
        "ok": false,
-       "status": "72% do padrão ouro",
+       "status": "R$ 1.167 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -942,7 +942,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 4.910 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -968,8 +968,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "78% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 83% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 218 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 400 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -1007,7 +1007,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "70,1% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1015,7 +1015,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.041 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1023,7 +1023,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.404 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1049,8 +1049,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -1088,7 +1088,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "67,6% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1096,7 +1096,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.878 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1104,7 +1104,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.378 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1130,8 +1130,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -1177,7 +1177,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.745 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1185,7 +1185,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.096 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1211,8 +1211,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -1258,7 +1258,7 @@
        "max": 7,
        "pts": 3.9,
        "ok": false,
-       "status": "56% do padrão ouro",
+       "status": "R$ 900 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -1266,7 +1266,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.850 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1292,8 +1292,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "80% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 73% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 388 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -1339,7 +1339,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 3.301 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1347,7 +1347,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.587 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1373,8 +1373,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -1418,9 +1418,9 @@
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 5.2,
+       "pts": 5.3,
        "ok": false,
-       "status": "75% do padrão ouro",
+       "status": "R$ 1.219 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -1428,7 +1428,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 7.462 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1454,8 +1454,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -1501,7 +1501,7 @@
        "max": 7,
        "pts": 2.9,
        "ok": false,
-       "status": "42% do padrão ouro",
+       "status": "R$ 677 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -1509,7 +1509,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.670 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1535,8 +1535,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "98% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 7% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 274 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 294 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -1582,7 +1582,7 @@
        "max": 7,
        "pts": 5.1,
        "ok": false,
-       "status": "73% do padrão ouro",
+       "status": "R$ 1.185 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -1590,7 +1590,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.161 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1616,8 +1616,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "80% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 71% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 383 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -1655,7 +1655,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "67,8% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1663,7 +1663,7 @@
        "max": 7,
        "pts": 5.8,
        "ok": false,
-       "status": "83% do padrão ouro",
+       "status": "R$ 1.342 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -1671,7 +1671,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 4.680 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1697,8 +1697,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "80% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 72% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 385 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -1736,7 +1736,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "79,5% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1744,7 +1744,7 @@
        "max": 7,
        "pts": 5.2,
        "ok": false,
-       "status": "75% do padrão ouro",
+       "status": "R$ 1.215 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -1752,7 +1752,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.808 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1778,8 +1778,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -1825,7 +1825,7 @@
        "max": 7,
        "pts": 5.1,
        "ok": false,
-       "status": "73% do padrão ouro",
+       "status": "R$ 1.177 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -1833,7 +1833,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.713 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1859,8 +1859,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "85% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 50% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 238 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 357 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -1906,7 +1906,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.195 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1914,7 +1914,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.830 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1940,8 +1940,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "91% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 29% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 255 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 329 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -1987,7 +1987,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.059 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1995,7 +1995,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.098 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2021,8 +2021,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -2068,7 +2068,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.722 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2076,7 +2076,7 @@
        "max": 3,
        "pts": 2.3,
        "ok": false,
-       "status": "78% do padrão ouro",
+       "status": "R$ 3.519 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -2102,8 +2102,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "84% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 53% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 235 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 360 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -2149,7 +2149,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.904 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2157,7 +2157,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 7.472 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2183,8 +2183,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -2222,15 +2222,15 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "69,0% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 5.0,
+       "pts": 5.1,
        "ok": false,
-       "status": "72% do padrão ouro",
+       "status": "R$ 1.175 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -2238,7 +2238,7 @@
        "max": 3,
        "pts": 2.9,
        "ok": false,
-       "status": "98% do padrão ouro",
+       "status": "R$ 4.403 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -2264,8 +2264,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "94% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 18% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 263 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 311 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -2303,7 +2303,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "67,2% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2311,7 +2311,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.448 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2319,7 +2319,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 4.936 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2345,8 +2345,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -2390,9 +2390,9 @@
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 5.2,
+       "pts": 5.3,
        "ok": false,
-       "status": "75% do padrão ouro",
+       "status": "R$ 1.216 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -2400,7 +2400,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.608 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2426,8 +2426,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "94% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 17% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 263 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 308 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -2473,7 +2473,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.978 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2481,7 +2481,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.463 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2507,8 +2507,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -2546,7 +2546,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "65,5% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2554,7 +2554,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.006 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2562,7 +2562,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.675 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2588,8 +2588,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "93% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 21% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 260 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 315 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -2635,7 +2635,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.041 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2643,7 +2643,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.608 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2669,8 +2669,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "86% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 47% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 241 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 354 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -2714,17 +2714,17 @@
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 3.9,
+       "pts": 4.0,
        "ok": false,
-       "status": "56% do padrão ouro",
+       "status": "R$ 915 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 2.0,
+       "pts": 1.9,
        "ok": false,
-       "status": "65% do padrão ouro",
+       "status": "R$ 2.920 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -2750,8 +2750,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "97% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 8% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 272 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 293 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -2789,15 +2789,15 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "65,5% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 4.1,
+       "pts": 4.2,
        "ok": false,
-       "status": "59% do padrão ouro",
+       "status": "R$ 964 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -2805,7 +2805,7 @@
        "max": 3,
        "pts": 2.6,
        "ok": false,
-       "status": "87% do padrão ouro",
+       "status": "R$ 3.936 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -2831,8 +2831,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "81% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 66% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 227 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 376 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -2870,7 +2870,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "65,3% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2878,7 +2878,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.746 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2886,7 +2886,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.662 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2912,8 +2912,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -2959,7 +2959,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.698 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2967,7 +2967,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 7.166 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2993,8 +2993,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -3038,9 +3038,9 @@
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 5.2,
+       "pts": 5.3,
        "ok": false,
-       "status": "75% do padrão ouro",
+       "status": "R$ 1.224 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -3048,7 +3048,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.766 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3074,8 +3074,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "74% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 100% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 207 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 414 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -3121,7 +3121,7 @@
        "max": 7,
        "pts": 6.8,
        "ok": false,
-       "status": "97% do padrão ouro",
+       "status": "R$ 1.569 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -3129,7 +3129,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.869 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3155,8 +3155,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -3202,7 +3202,7 @@
        "max": 7,
        "pts": 5.7,
        "ok": false,
-       "status": "81% do padrão ouro",
+       "status": "R$ 1.314 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -3210,7 +3210,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 4.574 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3236,8 +3236,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "77% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 88% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 216 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 405 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -3283,7 +3283,7 @@
        "max": 7,
        "pts": 4.3,
        "ok": false,
-       "status": "61% do padrão ouro",
+       "status": "R$ 996 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -3291,7 +3291,7 @@
        "max": 3,
        "pts": 1.8,
        "ok": false,
-       "status": "61% do padrão ouro",
+       "status": "R$ 2.727 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -3317,8 +3317,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "96% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 11% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 269 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 298 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -3356,15 +3356,15 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "70,7% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 4.8,
+       "pts": 4.9,
        "ok": false,
-       "status": "69% do padrão ouro",
+       "status": "R$ 1.124 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -3372,7 +3372,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 4.796 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3398,8 +3398,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "62% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 175% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 174 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 477 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -3445,7 +3445,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.872 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -3453,7 +3453,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.498 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3479,8 +3479,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -3526,7 +3526,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 1.822 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -3534,7 +3534,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.267 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3560,8 +3560,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "84% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 54% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 235 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 362 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -3607,7 +3607,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.633 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -3615,7 +3615,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 7.254 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3641,8 +3641,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -3688,7 +3688,7 @@
        "max": 7,
        "pts": 5.5,
        "ok": false,
-       "status": "79% do padrão ouro",
+       "status": "R$ 1.279 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -3696,7 +3696,7 @@
        "max": 3,
        "pts": 2.1,
        "ok": false,
-       "status": "70% do padrão ouro",
+       "status": "R$ 3.132 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -3722,8 +3722,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -3769,7 +3769,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.747 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -3777,7 +3777,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.224 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3803,8 +3803,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "86% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 48% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 241 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 356 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -3850,7 +3850,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.182 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -3858,7 +3858,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 5.113 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3884,8 +3884,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -3931,7 +3931,7 @@
        "max": 7,
        "pts": 4.7,
        "ok": false,
-       "status": "67% do padrão ouro",
+       "status": "R$ 1.086 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -3939,7 +3939,7 @@
        "max": 3,
        "pts": 1.9,
        "ok": false,
-       "status": "62% do padrão ouro",
+       "status": "R$ 2.805 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -3965,8 +3965,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "83% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 60% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 232 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 372 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -4004,7 +4004,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "73,7% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -4012,7 +4012,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 2.220 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -4020,7 +4020,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "No padrão ouro",
+       "status": "R$ 6.503 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -4046,8 +4046,8 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo",
-     "hoje": "Manter: todo atendimento com pagamento registrado."
+     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
@@ -4093,15 +4093,15 @@
        "max": 7,
        "pts": 4.2,
        "ok": false,
-       "status": "60% do padrão ouro",
+       "status": "R$ 980 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 2.3,
+       "pts": 2.4,
        "ok": false,
-       "status": "78% do padrão ouro",
+       "status": "R$ 3.531 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -4127,8 +4127,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "83% do objetivo",
-     "hoje": "Hoje: cada atendimento precisa render 58% a mais que a média atual (sem atendimento sem pagamento)."
+     "status": "R$ 232 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 367 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
