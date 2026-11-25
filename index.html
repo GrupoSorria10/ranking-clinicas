@@ -40,6 +40,10 @@ select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px soli
 .m-meta{margin-top:6px;font-size:1rem;font-weight:700;background:rgba(255,255,255,.18);border-radius:10px;padding:8px 10px}
 .gcards{display:grid;grid-template-columns:1fr;gap:12px}@media (min-width:900px){.gcards{grid-template-columns:1fr 1fr}}
 .gcards .missao{margin-top:0}.gcards .m-topo .lab{text-transform:none;letter-spacing:0;font-size:1.1rem;opacity:1}.gcards .gnota{font-size:.9rem;font-weight:600;opacity:.9}.gnota{font-size:.95rem;font-weight:700;margin-top:4px;opacity:.95}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin-top:8px}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--accbg);color:var(--fg);cursor:pointer;text-align:left;font:700 .95rem inherit}
+.tile small{font-weight:500;color:var(--mut);font-size:.8rem}.tile:hover{border-color:var(--acc)}
+.tile.gerando{opacity:.6}.tile.feito span::after{content:" ✓";color:#0f7a3d}
 .gwrap{display:flex;flex-direction:column}.gacoes{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
 .cap .capft{display:none}.capturando .capft{display:block;padding:8px 14px 12px;font-size:.8rem;color:var(--mut)}
 .capturando details,.capturando .btn2{display:none!important}
@@ -264,22 +268,15 @@ async function carregarGer(){
   const at=L.filter(c=>c.atencao).length;
   let h=`<div class="card"><div class="sec" style="margin-top:0">Área do gerente${minhas.length>1?"":` · ${esc(gerEscolhida)}`}</div>
    ${minhas.length>1?`<select id="gersel" style="margin-top:8px">${minhas.map(x=>`<option${x===gerEscolhida?" selected":""}>${esc(x)}</option>`).join("")}</select>`:""}
-   <div class="sub" style="margin-top:8px">${L.length} clínicas · ${at} na zona de atenção · da que mais precisa para a que menos precisa. Dados até ${D.data_br}.</div><button class="btn" id="baixartodos">📥 Baixar todos os cards (PNG, um por clínica)</button><div class="sub" id="baixarmsg" style="margin-top:6px"></div></div>
+   <div class="sub" style="margin-top:8px">${L.length} clínicas · ${at} na zona de atenção · da que mais precisa para a que menos precisa. Dados até ${D.data_br}.</div><div class="sec">📥 Baixar a imagem de cada clínica</div><div class="tiles">${L.map(c=>`<button class="tile png1" data-id="${c.id}"><span>${esc(c.nome)}</span><small>${c.posicao}º · nota ${fmt(c.nota)}</small></button>`).join("")}</div><div class="sub" id="baixarmsg" style="margin-top:6px"></div></div>
    <div class="gcards" style="margin-top:12px">`;
   for(const c of L)h+=`<div class="gwrap"><div class="cap" data-id="${c.id}">`+missaoHTML(c,{abrir:false,titulo:`${esc(c.nome)} · ${c.posicao}º lugar<div class="gnota">Nota ${fmt(c.nota)}${c.atencao?" · ⚠️ zona de atenção":""}</div>`}).replace(/<\/div>$/,`<div class="capft">Ranking das clínicas · Grupo Sorria · dados até ${D.data_br}</div></div>`)+`</div>
     <div class="gacoes"><button class="btn2 png1" data-id="${c.id}">📥 Baixar PNG</button>${podeCompartilhar()?`<button class="btn2 share1" data-id="${c.id}">📤 Enviar</button>`:""}</div></div>`;
   h+=`</div><div class="ft">Entrou como ${esc(meu)} · <span class="sairger" style="color:var(--acc);text-decoration:underline;cursor:pointer">sair</span></div>`;
   box.innerHTML=h;
   const sel=document.getElementById("gersel"); if(sel)sel.onchange=()=>{gerEscolhida=sel.value;carregarGer();};
-  document.querySelectorAll(".png1").forEach(b=>b.onclick=async()=>{b.disabled=true;try{const f=await pngDoCard(b.dataset.id);baixar(f);}catch(e){alertaPng();}b.disabled=false;});
+  document.querySelectorAll(".png1").forEach(b=>b.onclick=async()=>{b.disabled=true;b.classList.add("gerando");try{const f=await pngDoCard(b.dataset.id);baixar(f);b.classList.add("feito");}catch(e){alertaPng();}b.classList.remove("gerando");b.disabled=false;});
   document.querySelectorAll(".share1").forEach(b=>b.onclick=async()=>{b.disabled=true;try{const f=await pngDoCard(b.dataset.id);await navigator.share({files:[f],title:f.name});}catch(e){if(e&&e.name!=="AbortError")alertaPng();}b.disabled=false;});
-  document.getElementById("baixartodos").onclick=async()=>{const m=document.getElementById("baixarmsg"),bt=document.getElementById("baixartodos");bt.disabled=true;
-    try{await carregarScript("lib/jszip.min.js"); const z=new JSZip();
-      for(let i=0;i<L.length;i++){m.textContent=`Gerando ${i+1} de ${L.length}…`; const f=await pngDoCard(L[i].id); z.file(f.name,f);}
-      const blob=await z.generateAsync({type:"blob"}); baixar(new File([blob],`missao-do-dia-${slug(gerEscolhida)}-${D.data.replace(/-/g,"")}.zip`,{type:"application/zip"}));
-      m.textContent=`Pronto: ${L.length} imagens em um arquivo .zip (uma por clínica).`;}
-    catch(e){m.textContent="Não foi possível gerar as imagens agora. Tente de novo.";}
-    bt.disabled=false;};
   document.querySelectorAll(".sairger").forEach(e=>e.onclick=()=>{try{localStorage.removeItem("geremail")}catch(x){} carregarGer();});
 }
 const slug=t=>String(t).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
@@ -292,7 +289,7 @@ async function pngDoCard(id){await carregarScript("lib/html-to-image.js");
   el.classList.add("capturando");
   try{const fundo=getComputedStyle(document.body).backgroundColor;
     const blob=await htmlToImage.toBlob(el,{pixelRatio:2,backgroundColor:fundo,cacheBust:true});
-    return new File([blob],`missao-${slug(c.nome)}-${D.data.replace(/-/g,"")}.png`,{type:"image/png"});}
+    return new File([blob],`${c.nome}.png`,{type:"image/png"});}
   finally{el.classList.remove("capturando");}}
 function mostrarGer(){document.getElementById("links").hidden=true;document.getElementById("entrada").hidden=true;document.getElementById("app").hidden=true;document.getElementById("v5").hidden=true;document.getElementById("v6").hidden=false;carregarGer();}
 function sairGer(){document.getElementById("links").hidden=false;document.getElementById("v6").hidden=true; if(ler("email"))mostrarApp(); else pedirEmail();}
