@@ -38,6 +38,7 @@ select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px soli
 .m-sub.ok{color:var(--mut)}
 .sobe{display:inline-block;margin-top:8px;font-weight:800;font-size:.9rem;padding:4px 10px;border-radius:999px;background:#e7f7ec;color:#0f7a3d}
 .m-meta{margin-top:6px;font-size:1rem;font-weight:700;background:rgba(255,255,255,.18);border-radius:10px;padding:8px 10px}
+.prio{display:inline-block;font-weight:800;font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--acc);padding:3px 8px;border-radius:6px;margin-bottom:6px}
 .chip{display:inline-block;font-weight:800;font-size:.8rem;padding:2px 8px;border-radius:999px;background:var(--card);color:var(--no);margin-left:4px}
 .m-ok{margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--okbg);font-size:.95rem}
 .duas{display:block}
@@ -110,7 +111,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <div class="ind-row"><div><div class="ind-n">📈 Crescimento de avaliação</div><div class="ind-h">Primeiras avaliações do mês contra o mês anterior no mesmo número de dias trabalhados. Crescer 10% ou mais vale tudo; entre 0 e 10% vale proporcional; caiu, zero.</div></div><div class="pill ok">15</div></div>
 <div class="ind-row"><div><div class="ind-n">🧾 Pagamento por atendimento</div><div class="ind-h">Faturamento do mês dividido pelos pacientes que compareceram. Chegando ao objetivo do grupo, de R$ 280 por atendimento, vale tudo; abaixo, zero.</div></div><div class="pill ok">15</div></div></div>
 <div class="card"><div class="sec" style="margin-top:0">Missão do dia</div>
-<p>A missão do dia mostra <b>todos os indicadores fora do padrão</b> em 🔴 vermelho, começando pelo que mais tira pontos da nota, cada um com o que fazer hoje. Os que estão no padrão aparecem em 🟢 verde, para manter. Na Performance de avaliação, contratação, ticket e pedida aparecem separados, cada um com a sua cor. Em cada indicador aparece quantas posições a clínica sobe no ranking se recuperar aquele indicador, contando que as outras clínicas fiquem como estão.</p>
+<p>A missão do dia mostra <b>todos os indicadores fora do padrão</b> em 🔴 vermelho, começando pelo que mais tira pontos da nota, cada um com o que fazer hoje. Os que estão no padrão aparecem em 🟢 verde, para manter. Na Performance de avaliação, contratação, ticket e pedida aparecem separados, cada um com a sua cor. No topo, o objetivo de hoje mostra o menor grupo de indicadores que faz a clínica subir cerca de 10 posições no ranking; esses indicadores vêm primeiro, marcados como prioridade. Em cada indicador aparece quantas posições a clínica sobe se recuperar só aquele indicador, contando que as outras clínicas fiquem como estão.</p>
 <div class="sec">Quando atualiza</div>
 <p>Todo dia de madrugada, com os dados do último dia trabalhado (segunda a sábado). O placar recomeça todo dia 1.</p></div>
 </div>
@@ -223,7 +224,7 @@ function guardar(k,v){try{localStorage.setItem(k,v)}catch(e){}}
 function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function posCom(c,nota){return 1+D.clinicas.filter(x=>x.id!==c.id&&x.nota>nota+1e-9).length;}
 function simula(c,ganho){const I=Object.values(c.indicadores),soma=I.reduce((t,i)=>t+i.pts,0),mx=I.reduce((t,i)=>t+i.max,0);
-  const nova=Math.round((soma+ganho)*1000/mx)/10, de=posCom(c,c.nota), para=posCom(c,nova);
+  const nova=Math.round((soma+ganho)*1000/mx)/10, de=c.posicao, para=Math.min(de,posCom(c,nova));
   return {nova,dn:nova-c.nota,de,para,sobe:de-para,saiAtencao:c.nota<60&&nova>=60};}
 function txtSobe(r){if(r.sobe>0)return `🚀 Sobe ${r.sobe} posiç${r.sobe>1?"ões":"ão"} (vai para ${r.para}º)${r.saiAtencao?" e sai da zona de atenção":""}`;
   return r.saiAtencao?"🚀 Sai da zona de atenção":`⬆️ +${fmt(r.dn)} pontos na nota (já está entre as primeiras)`;}
@@ -238,10 +239,20 @@ function clinica(id){
   h+=`<div class="duas"><div class="card missao"><div class="m-topo"><div class="lab">🎯 Missão do dia</div>`;
   if(!fora.length){h+=`<div class="ind">🟢 Tudo no padrão: hoje é manter!</div></div><div class="m-corpo"><ul>${A.manter.acoes.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`;}
   else{
-    const recup=fora.filter(([k])=>k!=="reclamacoes"), tot=simula(c,recup.reduce((t,[k,i])=>t+i.max-i.pts,0));
-    h+=`<div class="ind">${fora.length} indicador${fora.length>1?"es":""} para recuperar hoje</div>${tot.sobe>0?`<div class="m-meta">🚀 Recuperando ${recup.length>1?"todos":"este indicador"}, a clínica sai de ${tot.de}º para ${tot.para}º lugar${tot.saiAtencao?" e deixa a zona de atenção":""}!</div>`:""}</div><div class="m-corpo">`;
+    const recup=fora.filter(([k])=>k!=="reclamacoes");
+    // Objetivo conservador: o menor conjunto de indicadores que faz a clínica subir pelo menos 10 posições (o mais perto de 10).
+    let alvo=null;
+    for(let m=1;m<(1<<recup.length);m++){const sel=recup.filter((_,j)=>m&(1<<j)); const r=simula(c,sel.reduce((t,[k,i])=>t+i.max-i.pts,0));
+      const cand={sel,r}; if(r.sobe<1)continue;
+      const bom=x=>x.r.sobe>=10, melhor=!alvo||(bom(cand)&&!bom(alvo))||(bom(cand)===bom(alvo)&&(bom(cand)?(cand.r.sobe<alvo.r.sobe||(cand.r.sobe===alvo.r.sobe&&cand.sel.length<alvo.sel.length)):cand.r.sobe>alvo.r.sobe));
+      if(melhor)alvo=cand;}
+    const prior=new Set(alvo?alvo.sel.map(([k])=>k):[]);
+    fora.sort((x,y)=>(prior.has(y[0])-prior.has(x[0])));
+    const nomesP=alvo?alvo.sel.map(([k,i])=>i.nome):[];
+    const lista=nomesP.length>1?nomesP.slice(0,-1).join(", ")+" e "+nomesP.slice(-1):nomesP[0];
+    h+=`<div class="ind">${fora.length} indicador${fora.length>1?"es":""} fora do padrão</div>${alvo?`<div class="m-meta">🚀 Objetivo de hoje: recuperar ${esc(lista)}. Assim a clínica sobe ${alvo.r.sobe} posiç${alvo.r.sobe>1?"ões":"ão"}, de ${alvo.r.de}º para ${alvo.r.para}º${alvo.r.saiAtencao?", e sai da zona de atenção":""}.</div>`:""}</div><div class="m-corpo">`;
     fora.forEach(([k,i],n)=>{const a=A[k];
-      h+=`<div class="m-item"><div class="m-n">🔴 ${esc(i.nome)} <span class="chip">${fmt(i.pts)} de ${i.max}</span></div>`;
+      h+=`<div class="m-item">${prior.has(k)?'<div class="prio">⭐ Prioridade de hoje</div>':""}<div class="m-n">🔴 ${esc(i.nome)} <span class="chip">${fmt(i.pts)} de ${i.max}</span></div>`;
       if(i.partes){for(const p of i.partes)h+=p.ok?`<div class="m-sub ok"><span class="dot ok"></span>${esc(p.nome)}: ${esc(p.status)}</div>`:`<div class="m-sub"><span class="dot no"></span><b>${esc(p.nome)}</b>: ${esc(p.status)}</div><div class="m-hoje">👉 ${esc(p.hoje)}</div>`;}
       else h+=`<div class="m-hoje">👉 ${esc(i.hoje)}</div>`;
       if(k!=="reclamacoes"){const r=simula(c,i.max-i.pts); h+=`<div class="sobe">${txtSobe(r)}</div>`;}
