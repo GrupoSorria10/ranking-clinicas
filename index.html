@@ -68,6 +68,11 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 .linha60 td{border-top:2px dashed var(--warn);padding:0}
 .ft{color:var(--mut);font-size:.8rem;margin-top:18px}
 .erro{color:var(--warn)}
+.lks{margin-top:12px;font-size:.9rem;text-align:center;line-height:1.9}.lks span{color:var(--acc);text-decoration:underline;cursor:pointer}
+#eMsg{margin-top:10px}#eMsg.ok{color:var(--fg)}
+.cad{border-top:1px solid var(--line);padding:10px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+.cadac{display:flex;gap:6px;flex-wrap:wrap;align-items:center}.cadac select{max-width:230px;padding:8px;border-radius:8px}
+.cadok{background:var(--acc);color:#fff;border-color:var(--acc)}.badge{display:inline-block;background:var(--warn);color:#fff;border-radius:999px;padding:0 7px;font-size:.75rem;margin-left:4px;text-decoration:none}
 #v4 p{margin:8px 0}
 #entrada input{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg);margin-top:8px}
 .btn{width:100%;margin-top:10px;padding:12px;border:0;border-radius:10px;background:var(--acc);color:#fff;font:700 1rem inherit;cursor:pointer}
@@ -87,11 +92,42 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <h1>🏆 Ranking das clínicas</h1>
 <div class="sub" id="sub">Carregando…</div>
 <div id="entrada" class="card" hidden>
+<div id="fEntrar" hidden>
 <div class="sec" style="margin-top:0">Entrar</div>
-<p class="sub">Digite o seu e-mail. Só precisa fazer isso uma vez neste celular.</p>
-<input id="email" type="email" inputmode="email" autocomplete="email" placeholder="seu@email.com">
-<div class="erro" id="emailerro" hidden>Digite um e-mail válido.</div>
-<button class="btn" id="entrar">Entrar</button>
+<p class="sub">Use o seu e-mail e a sua senha.</p>
+<input id="lEmail" type="email" inputmode="email" autocomplete="email" placeholder="seu@email.com">
+<input id="lSenha" type="password" autocomplete="current-password" placeholder="Senha">
+<button class="btn" id="bEntrar">Entrar</button>
+<div class="lks"><span id="irCriar">Primeiro acesso? Criar acesso</span><br><span id="irEsqueci">Esqueci minha senha</span></div>
+</div>
+<div id="fCriar" hidden>
+<div class="sec" style="margin-top:0">Criar acesso</div>
+<p class="sub">Preencha os dados abaixo. O seu gerente vai aprovar o acesso e ligar você à sua clínica.</p>
+<input id="cNome" type="text" autocomplete="name" placeholder="Seu nome completo">
+<input id="cEmail" type="email" inputmode="email" autocomplete="email" placeholder="seu@email.com">
+<input id="cSenha" type="password" autocomplete="new-password" placeholder="Crie uma senha (mínimo 6 caracteres)">
+<input id="cSenha2" type="password" autocomplete="new-password" placeholder="Repita a senha">
+<button class="btn" id="bCriar">Criar acesso</button>
+<div class="lks"><span class="irEntrar">Já tenho acesso · Entrar</span></div>
+</div>
+<div id="fEsqueci" hidden>
+<div class="sec" style="margin-top:0">Esqueci minha senha</div>
+<p class="sub">Digite o seu e-mail. Vamos enviar um link para você criar uma nova senha.</p>
+<input id="rEmail" type="email" inputmode="email" autocomplete="email" placeholder="seu@email.com">
+<button class="btn" id="bEsqueci">Enviar link</button>
+<div class="lks"><span class="irEntrar">Voltar para entrar</span></div>
+</div>
+<div id="fNova" hidden>
+<div class="sec" style="margin-top:0">Criar nova senha</div>
+<input id="nSenha" type="password" autocomplete="new-password" placeholder="Nova senha (mínimo 6 caracteres)">
+<input id="nSenha2" type="password" autocomplete="new-password" placeholder="Repita a nova senha">
+<button class="btn" id="bNova">Salvar nova senha</button>
+</div>
+<div id="fAviso" hidden>
+<div id="avisoTxt"></div>
+<div class="lks"><span class="sairConta">Sair e entrar com outro e-mail</span></div>
+</div>
+<div class="sub" id="eMsg"></div>
 <div class="lgpd">O acesso a esta página é registrado (e-mail, clínica, data e hora) para acompanhar o uso do ranking.</div>
 </div>
 <div id="app" hidden>
@@ -127,29 +163,15 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 </div>
 <div id="v5" hidden>
 <button class="btn2" id="admvoltar">← Voltar ao ranking</button>
-<div class="card" id="admlogin" hidden>
-<div class="sec" style="margin-top:0">Área do administrador</div>
-<p class="sub">Digite o e-mail de administrador. Você vai receber um link de acesso (sem senha).</p>
-<input id="admemail" type="email" inputmode="email" placeholder="seu@email.com" style="width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)">
-<button class="btn" id="admenviar">Enviar link de acesso</button>
-<div class="sub" id="admmsg" style="margin-top:8px"></div>
-</div>
-<div id="admconteudo"></div>
+<div id="admcad"></div><div id="admconteudo"></div>
 </div>
 <div id="v6" hidden>
 <button class="btn2" id="gervoltar">← Voltar ao ranking</button>
-<div class="card" id="gerlogin" hidden>
-<div class="sec" style="margin-top:0">Área do gerente</div>
-<p class="sub">Digite o seu e-mail de gerente cadastrado.</p>
-<input id="geremail" type="email" inputmode="email" placeholder="seu@email.com" style="width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)">
-<button class="btn" id="gerenviar">Entrar</button>
-<div class="sub" id="germsg" style="margin-top:8px"></div>
-</div>
 <div id="gerconteudo"></div>
 </div>
 <div class="ft" id="ft"></div>
 <div class="ft" id="quem"></div>
-<div class="ft" id="links"><span id="gerlink">Área do gerente</span> · <span id="admlink">Área do administrador</span></div>
+<div class="ft" id="links" hidden><span id="gerlink">Área do gerente</span><span id="gerbadge"></span><span id="admsep"> · </span><span id="admlink">Área do administrador</span></div>
 </div>
 <script>
 const ORDEM=["faturamento","avaliacao","google","reclamacoes","crescimento","pagantes"];
@@ -157,56 +179,170 @@ const fmt=v=>{const r=Math.round(v*10)/10;return r.toLocaleString("pt-BR",{minim
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let D,A;
 const SB="https://snhuzcovovpueswmudcq.supabase.co/rest/v1/acessos", SBK="sb_publishable_Ljm8QlLxg8LQuxUQNILiAg_Y0yCUXeW";
-let registrado=false;
+const SBU="https://snhuzcovovpueswmudcq.supabase.co";
+let registrado=false, S=null, P=null;
 function registrar(){
-  const e=ler("email"), c=ler("clinica")||"";
-  if(!e||registrado||e.toLowerCase()==="whjacometo@gmail.com")return; registrado=true; // o administrador não conta como acesso
+  const e=P&&P.email, c=ler("clinica")||"";
+  if(!e||registrado||e.toLowerCase()===ADMIN_EMAIL)return; registrado=true; // o administrador não conta como acesso
   try{fetch(SB,{method:"POST",keepalive:true,headers:{apikey:SBK,"Content-Type":"application/json",Prefer:"return=minimal"},
     body:JSON.stringify({email:e,clinica:c.slice(0,20)||null,aparelho:navigator.userAgent.slice(0,200)})}).catch(()=>{});}catch(x){}
 }
+// ---------- Entrada com e-mail e senha (Supabase Auth) ----------
+const jwt=t=>{try{return JSON.parse(decodeURIComponent(escape(atob(t.split(".")[1].replace(/-/g,"+").replace(/_/g,"/")))))}catch(e){return {}}};
+function salvarSessao(j){S={a:j.access_token,r:j.refresh_token,e:Date.now()+(+j.expires_in||3600)*1000};guardar("sess",JSON.stringify(S));}
+function limparSessao(){S=null;P=null;["sess","adm","geremail","email","abrirAdm","abrirQual"].forEach(k=>{try{localStorage.removeItem(k)}catch(x){}});}
+async function token(){
+  if(!S){try{S=JSON.parse(ler("sess")||ler("adm"))}catch(e){} if(!S||!S.a){S=null;return null;}}
+  if(Date.now()>S.e-60000){
+    try{const r=await fetch(SBU+"/auth/v1/token?grant_type=refresh_token",{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({refresh_token:S.r})});
+      if(!r.ok)throw 0; salvarSessao(await r.json());}
+    catch(e){limparSessao();return null;}}
+  return S.a;}
+async function api(path,opt={}){const t=await token();
+  return fetch(SBU+path,{...opt,headers:{apikey:SBK,"Content-Type":"application/json",...(t?{Authorization:"Bearer "+t}:{}),...(opt.headers||{})}});}
+async function meuPerfil(){const t=await token(); if(!t)return null;
+  const r=await api(`/rest/v1/perfis?select=*&user_id=eq.${jwt(t).sub}`);
+  if(r.status===401){limparSessao();return null;} if(!r.ok)throw new Error(r.status);
+  const L=await r.json(); return L[0]||{status:"pendente",papel:"parceiro",email:String(jwt(t).email||"").toLowerCase()};}
+let modoNova=false, msgHash="";
+(function(){const h=location.hash.slice(1); if(!h)return; const q=new URLSearchParams(h);
+  if(q.get("access_token")){salvarSessao({access_token:q.get("access_token"),refresh_token:q.get("refresh_token"),expires_in:q.get("expires_in")}); if(q.get("type")==="recovery")modoNova=true;}
+  else if(q.get("error")||q.get("error_description"))msgHash="Este link expirou ou já foi usado. Entre com a sua senha ou peça um link novo em “Esqueci minha senha”.";
+  else return;
+  history.replaceState(null,"",location.pathname+location.search);})();
+const $=id=>document.getElementById(id);
+const okEmail=v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)&&v.length<=120;
+const voltarPara=()=>location.origin+location.pathname;
+function msgE(t,ok){const m=$("eMsg"); m.className="sub"+(ok?" ok":" erro"); m.innerHTML=t||"";}
+function telaEntrada(qual,msg,ok){
+  ["app","v5","v6"].forEach(i=>$(i).hidden=true); $("links").hidden=true; $("quem").innerHTML="";
+  $("entrada").hidden=false; ["fEntrar","fCriar","fEsqueci","fNova","fAviso"].forEach(i=>$(i).hidden=i!==qual);
+  msgE(msg,ok);
+}
+function aviso(html){$("avisoTxt").innerHTML=html; telaEntrada("fAviso");}
+async function sair(){try{await api("/auth/v1/logout",{method:"POST"});}catch(e){} limparSessao(); location.reload();}
+async function erroAuth(r){let j={};try{j=await r.json()}catch(e){} const c=j.error_code||j.code||"", m=String(j.msg||j.error_description||j.message||"").toLowerCase();
+  if(c==="invalid_credentials"||m.includes("invalid login"))return "E-mail ou senha incorretos.";
+  if(c==="email_not_confirmed"||m.includes("not confirmed"))return "Você ainda não confirmou o e-mail. Abra o link que enviamos para a sua caixa de entrada (veja também o spam).";
+  if(c==="user_already_exists"||m.includes("already registered"))return "Este e-mail já tem acesso. Entre com a sua senha ou use “Esqueci minha senha”.";
+  if(c==="weak_password"||m.includes("password should"))return "A senha precisa ter pelo menos 6 caracteres.";
+  if(c==="email_address_not_authorized"||m.includes("not authorized"))return "Não conseguimos enviar o e-mail para este endereço agora. Avise o seu gerente.";
+  if(c==="same_password")return "A nova senha precisa ser diferente da anterior.";
+  if(String(c).includes("rate_limit")||r.status===429)return "Muitas tentativas seguidas. Espere alguns minutos e tente de novo.";
+  return "Não foi possível agora. Tente de novo em instantes.";}
+async function iniciar(){
+  const t=await token();
+  if(!t){telaEntrada("fEntrar",msgHash);msgHash="";return;}
+  if(modoNova){telaEntrada("fNova","");return;}
+  try{P=await meuPerfil();}catch(e){aviso('<p class="erro">Não foi possível conferir o seu acesso agora. Tente de novo em instantes.</p>');return;}
+  if(!P){telaEntrada("fEntrar","Sua sessão terminou. Entre de novo.");return;}
+  if(P.status==="pendente"){aviso(`<div class="sec" style="margin-top:0">Cadastro recebido ✅</div><p>Olá${P.nome?", "+esc(P.nome.split(" ")[0]):""}! O seu acesso (${esc(P.email)}) está <b>aguardando a aprovação do seu gerente</b>. Assim que ele aprovar, é só abrir esta página de novo.</p><button class="btn" id="bDeNovo">Já foi aprovado? Conferir de novo</button>`);$("bDeNovo").onclick=iniciar;return;}
+  if(P.status==="recusado"){aviso(`<div class="sec" style="margin-top:0">Acesso não liberado</div><p>O cadastro de ${esc(P.email)} não foi aprovado. Se for um engano, fale com o seu gerente.</p>`);return;}
+  mostrarApp();
+}
+$("bEntrar").onclick=async()=>{const e=$("lEmail").value.trim().toLowerCase(), s=$("lSenha").value;
+  if(!okEmail(e))return msgE("Digite um e-mail válido."); if(!s)return msgE("Digite a sua senha.");
+  msgE("Entrando…",1); $("bEntrar").disabled=true;
+  try{const r=await fetch(SBU+"/auth/v1/token?grant_type=password",{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({email:e,password:s})});
+    if(!r.ok){msgE(await erroAuth(r));}else{salvarSessao(await r.json()); $("lSenha").value=""; await iniciar();}}
+  catch(x){msgE("Sem conexão agora. Tente de novo.");}
+  $("bEntrar").disabled=false;};
+$("lSenha").onkeydown=e=>{if(e.key==="Enter")$("bEntrar").click();};
+$("bCriar").onclick=async()=>{const n=$("cNome").value.trim(), e=$("cEmail").value.trim().toLowerCase(), s=$("cSenha").value, s2=$("cSenha2").value;
+  if(n.length<3)return msgE("Digite o seu nome completo."); if(!okEmail(e))return msgE("Digite um e-mail válido.");
+  if(s.length<6)return msgE("A senha precisa ter pelo menos 6 caracteres."); if(s!==s2)return msgE("As duas senhas não são iguais.");
+  msgE("Criando…",1); $("bCriar").disabled=true;
+  try{const r=await fetch(`${SBU}/auth/v1/signup?redirect_to=${encodeURIComponent(voltarPara())}`,{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({email:e,password:s,data:{nome:n.slice(0,80)}})});
+    if(!r.ok){msgE(await erroAuth(r));}
+    else{const j=await r.json();
+      if(j.access_token){salvarSessao(j); await iniciar();}
+      else{$("lEmail").value=e; telaEntrada("fEntrar",`Quase lá! Enviamos um e-mail para <b>${esc(e)}</b>. Abra o link de confirmação (veja também o spam). Depois disso, o seu gerente aprova o acesso.`,1);}}}
+  catch(x){msgE("Sem conexão agora. Tente de novo.");}
+  $("bCriar").disabled=false;};
+$("bEsqueci").onclick=async()=>{const e=$("rEmail").value.trim().toLowerCase(); if(!okEmail(e))return msgE("Digite um e-mail válido.");
+  msgE("Enviando…",1); $("bEsqueci").disabled=true;
+  try{const r=await fetch(`${SBU}/auth/v1/recover?redirect_to=${encodeURIComponent(voltarPara())}`,{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({email:e})});
+    if(r.ok)msgE(`Se <b>${esc(e)}</b> tiver acesso, enviamos um link para criar uma nova senha. Abra o link neste mesmo aparelho (veja também o spam).`,1); else msgE(await erroAuth(r));}
+  catch(x){msgE("Sem conexão agora. Tente de novo.");}
+  $("bEsqueci").disabled=false;};
+$("bNova").onclick=async()=>{const s=$("nSenha").value, s2=$("nSenha2").value;
+  if(s.length<6)return msgE("A senha precisa ter pelo menos 6 caracteres."); if(s!==s2)return msgE("As duas senhas não são iguais.");
+  msgE("Salvando…",1); $("bNova").disabled=true;
+  try{const r=await api("/auth/v1/user",{method:"PUT",body:JSON.stringify({password:s})});
+    if(!r.ok){msgE(await erroAuth(r));}else{modoNova=false; $("nSenha").value=$("nSenha2").value=""; await iniciar();}}
+  catch(x){msgE("Sem conexão agora. Tente de novo.");}
+  $("bNova").disabled=false;};
+$("irCriar").onclick=()=>{$("cEmail").value=$("cEmail").value||$("lEmail").value;telaEntrada("fCriar");};
+$("irEsqueci").onclick=()=>{$("rEmail").value=$("rEmail").value||$("lEmail").value;telaEntrada("fEsqueci");};
+document.querySelectorAll(".irEntrar").forEach(x=>x.onclick=()=>telaEntrada("fEntrar"));
+document.querySelectorAll(".sairConta").forEach(x=>x.onclick=sair);
 function mostrarApp(){
-  document.getElementById("entrada").hidden=true; document.getElementById("app").hidden=false;
-  document.getElementById("quem").innerHTML=`Entrou como ${esc(ler("email"))} · <span id="sair">trocar e-mail</span>`;
-  document.getElementById("sair").onclick=()=>{try{localStorage.removeItem("email")}catch(x){} location.reload();};
+  $("entrada").hidden=true; $("v5").hidden=true; $("v6").hidden=true; $("app").hidden=false;
+  $("quem").innerHTML=`Entrou como ${esc(P.email)} · <span id="sair">sair</span>`;
+  $("sair").onclick=sair;
+  const ger=P.papel==="gerente"||P.papel==="admin";
+  $("links").hidden=!ger; $("admlink").hidden=$("admsep").hidden=P.papel!=="admin";
+  if(ger)contarPendentes();
+  if(P.clinica&&!ler("clinica")){guardar("clinica",P.clinica);
+    const sel=$("sel"); if(D&&sel&&!sel.value&&D.clinicas.some(c=>c.id===P.clinica)){sel.value=P.clinica;clinica(P.clinica);}}
   if(ler("clinica"))registrar();
 }
-function pedirEmail(){
-  document.getElementById("entrada").hidden=false; document.getElementById("app").hidden=true;
-  const i=document.getElementById("email"), b=document.getElementById("entrar");
-  const ir=()=>{const v=i.value.trim().toLowerCase();
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)||v.length>120){document.getElementById("emailerro").hidden=false;return;}
-    guardar("email",v); mostrarApp();};
-  b.onclick=ir; i.onkeydown=e=>{if(e.key==="Enter")ir();};
+async function contarPendentes(){try{const r=await api("/rest/v1/perfis?select=user_id&status=eq.pendente&papel=eq.parceiro");
+  if(!r.ok)return; const n=(await r.json()).length; $("gerbadge").innerHTML=n?`<span class="badge" title="Cadastros aguardando aprovação">${n}</span>`:"";}catch(e){}}
+
+// ---------- Cadastros (gerente e administrador aprovam e escolhem a clínica) ----------
+async function carregarCadastros(el,perm,titulo){
+  el.innerHTML='<div class="card sub">Carregando cadastros…</div>';
+  let L; try{const r=await api("/rest/v1/perfis?select=*&papel=eq.parceiro&order=criado_em.desc"); if(!r.ok)throw 0; L=await r.json();}
+  catch(e){el.innerHTML='<div class="card erro">Não foi possível carregar os cadastros agora. Tente de novo em instantes.</div>';return;}
+  const nomeC=id=>(D.clinicas.find(c=>c.id===id)||{}).nome||id||"—", pid=new Set(perm.map(c=>c.id));
+  const opts=v=>`<option value="">Escolha a clínica…</option>`+perm.map(c=>`<option value="${c.id}"${c.id===v?" selected":""}>${esc(c.nome)}</option>`).join("");
+  const quando=x=>`Pediu em ${x.criado_em?horaSP(x.criado_em):"—"}${x.decidido_por?` · ${x.status==="aprovado"?"aprovado":"recusado"} por ${esc(x.decidido_por)}${x.decidido_em?" em "+horaSP(x.decidido_em):""}`:""}`;
+  const linha=x=>{const minha=x.status!=="aprovado"||pid.has(x.clinica);
+    return `<div class="cad" data-u="${x.user_id}"><div><b>${esc(x.nome||"(sem nome)")}</b> · ${esc(x.email)}${x.status==="aprovado"?`<div class="em">🏥 ${esc(nomeC(x.clinica))}</div>`:""}<div class="em">${quando(x)}</div></div>
+    <div class="cadac">${minha?`<select class="cadsel" aria-label="Clínica">${opts(x.status==="aprovado"?x.clinica:"")}</select>`:""}
+    ${x.status==="aprovado"?(minha?`<button class="btn2 cadok">Trocar clínica</button><button class="btn2 cadno">Tirar acesso</button>`:""):`<button class="btn2 cadok">Aprovar</button>`}${x.status==="pendente"?`<button class="btn2 cadno">Recusar</button>`:""}</div></div>`;};
+  const pend=L.filter(x=>x.status==="pendente"), apr=L.filter(x=>x.status==="aprovado").sort((a,b)=>nomeC(a.clinica).localeCompare(nomeC(b.clinica))), rec=L.filter(x=>x.status==="recusado");
+  el.innerHTML=`<div class="card"><div class="sec" style="margin-top:0">👥 Cadastros${titulo?" · "+esc(titulo):""}</div>
+   <div class="sub">Quem pede acesso cria e-mail e senha no site e fica aguardando. Escolha a clínica da pessoa e aprove; quem não for da equipe, recuse.</div>
+   <div class="erro cadmsg"></div>
+   <div class="sec">Aguardando aprovação (${pend.length})</div>${pend.length?pend.map(linha).join(""):'<div class="em">Ninguém aguardando agora.</div>'}
+   <details style="margin-top:10px"><summary>Com acesso (${apr.length})</summary>${apr.map(linha).join("")||'<div class="em">Nenhum ainda.</div>'}</details>
+   ${rec.length?`<details style="margin-top:6px"><summary>Recusados (${rec.length})</summary>${rec.map(linha).join("")}</details>`:""}</div>`;
+  const m=el.querySelector(".cadmsg");
+  el.querySelectorAll(".cad").forEach(d=>{const u=d.dataset.u, s=d.querySelector(".cadsel");
+    const dec=async(st,b)=>{
+      if(st==="aprovado"&&(!s||!s.value)){m.textContent="Escolha a clínica antes de aprovar.";if(s)s.focus();return;}
+      if(st==="recusado"&&!confirm(b.textContent==="Tirar acesso"?"Tirar o acesso desta pessoa?":"Recusar este cadastro?"))return;
+      b.disabled=true; m.textContent="";
+      try{const r=await api("/rest/v1/rpc/decidir_cadastro",{method:"POST",body:JSON.stringify({p_user:u,p_clinica:(s&&s.value)||null,p_status:st})});
+        if(!r.ok){let j={};try{j=await r.json()}catch(e){} m.textContent="Não foi possível: "+(j.message||("erro "+r.status));b.disabled=false;return;}
+        carregarCadastros(el,perm,titulo); contarPendentes();}
+      catch(e){m.textContent="Sem conexão agora. Tente de novo.";b.disabled=false;}};
+    const ok=d.querySelector(".cadok"), no=d.querySelector(".cadno");
+    if(ok)ok.onclick=()=>dec("aprovado",ok); if(no)no.onclick=()=>dec("recusado",no);});
 }
 
 // ---------- Área do administrador (só o e-mail liberado no Supabase lê os acessos) ----------
-const SBU="https://snhuzcovovpueswmudcq.supabase.co";
 const FERIADOS_ADM=["2026-10-12","2026-11-02","2026-11-15","2026-11-20","2026-12-25","2027-01-01"];
-(function(){ if(location.hash.includes("access_token")){const q=new URLSearchParams(location.hash.slice(1));
-  guardar("adm",JSON.stringify({a:q.get("access_token"),r:q.get("refresh_token"),e:Date.now()+(+q.get("expires_in")||3600)*1000}));
-  guardar("abrirAdm","1"); history.replaceState(null,"",location.pathname+location.search);} })();
-async function tokenAdm(){let t;try{t=JSON.parse(ler("adm"))}catch(e){} if(!t)return null;
-  if(Date.now()>t.e-60000){try{const r=await fetch(SBU+"/auth/v1/token?grant_type=refresh_token",{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({refresh_token:t.r})});
-    if(!r.ok)throw 0; const j=await r.json(); t={a:j.access_token,r:j.refresh_token,e:Date.now()+j.expires_in*1000}; guardar("adm",JSON.stringify(t));}
-    catch(e){try{localStorage.removeItem("adm")}catch(x){} return null;}}
-  return t.a;}
 const diaSP=d=>new Intl.DateTimeFormat("en-CA",{timeZone:"America/Sao_Paulo"}).format(d);
 const horaSP=d=>new Date(d).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
 function diasTrab(ini,fim){let n=0;for(let d=new Date(ini+"T12:00:00");diaSP(d)<=fim;d.setDate(d.getDate()+1)){const k=diaSP(d);if(d.getDay()!==0&&!FERIADOS_ADM.includes(k))n++;}return n;}
-function mostrarAdm(){document.getElementById("admlink").parentElement.hidden=true;document.getElementById("entrada").hidden=true;document.getElementById("app").hidden=true;document.getElementById("v5").hidden=false;carregarAdm();}
-function sairAdm(){document.getElementById("admlink").parentElement.hidden=false;document.getElementById("v5").hidden=true; if(ler("email"))mostrarApp(); else pedirEmail();}
+function mostrarAdm(){if(!P||P.papel!=="admin")return;document.getElementById("admlink").parentElement.hidden=true;document.getElementById("entrada").hidden=true;document.getElementById("app").hidden=true;document.getElementById("v5").hidden=false;carregarAdm();}
+function sairAdm(){mostrarApp();}
 async function carregarAdm(){
-  const box=document.getElementById("admconteudo"), lg=document.getElementById("admlogin");
-  const tk=await tokenAdm();
-  if(!tk){lg.hidden=false;box.innerHTML="";return;}
-  lg.hidden=true; box.innerHTML='<div class="card sub">Carregando acessos…</div>';
+  const box=document.getElementById("admconteudo");
+  const tk=await token();
+  if(!tk){telaEntrada("fEntrar","Sua sessão terminou. Entre de novo.");return;}
+  box.innerHTML='<div class="card sub">Carregando acessos…</div>';
   for(let i=0;i<50&&!D;i++)await new Promise(r=>setTimeout(r,200));
   const hoje=diaSP(new Date()), ini=hoje.slice(0,8)+"01";
   let rows=[],de=0;
   try{ while(true){const r=await fetch(`${SBU}/rest/v1/acessos?select=email,clinica,criado_em&criado_em=gte.${ini}T03:00:00Z&order=criado_em.desc`,{headers:{apikey:SBK,Authorization:"Bearer "+tk,Range:`${de}-${de+999}`}});
-      if(r.status===401){try{localStorage.removeItem("adm")}catch(x){} return carregarAdm();}
+      if(r.status===401){limparSessao();telaEntrada("fEntrar","Sua sessão terminou. Entre de novo.");return;}
       if(!r.ok)throw new Error(r.status); const L=await r.json(); rows=rows.concat(L.filter(x=>(x.email||"").toLowerCase()!=="whjacometo@gmail.com")); if(L.length<1000)break; de+=1000;} }
   catch(e){box.innerHTML='<div class="card erro">Não foi possível carregar os acessos agora. Tente de novo em alguns minutos.</div>';return;}
+  carregarCadastros(document.getElementById("admcad"),D.clinicas.slice().sort((a,b)=>a.nome.localeCompare(b.nome)),"todas as clínicas");
   const N=diasTrab(ini,hoje), nomes={}, ger={}; (D?D.clinicas:[]).forEach(c=>{nomes[c.id]=c.nome;ger[c.id]=c.gerencia;});
   const porC={}; for(const r of rows){const c=r.clinica||"—"; const k=diaSP(new Date(r.criado_em));
     const x=porC[c]||(porC[c]={n:0,dias:new Set(),em:{}}); x.n++; x.dias.add(k);
@@ -224,43 +360,27 @@ async function carregarAdm(){
   for(const c of L){const em=Object.entries(c.x.em).sort((a,b)=>b[1].dias.size-a[1].dias.size);
     h+=`<tr class="${c.x.n?"":"zero"}" data-g="${esc(c.ger)}"><td><details><summary>${esc(c.nome)}</summary>${em.length?em.map(([e,v])=>`<div class="em">${esc(e)} · ${v.dias.size} de ${N} dias · ${v.n} acesso${v.n>1?"s":""} · último ${horaSP(v.ult)}</div>`).join(""):'<div class="em">Nenhum acesso no mês.</div>'}</details><div class="em">${esc(c.ger)}</div></td>
     <td class="n">${c.x.dias.size} de ${N}</td><td class="n">${c.x.n}</td></tr>`;}
-  h+=`</table><div class="ft">Toque no nome da clínica para ver os e-mails. <span id="admsair" style="color:var(--acc);text-decoration:underline;cursor:pointer">Sair da área do administrador</span></div></div>`;
+  h+=`</table><div class="ft">Toque no nome da clínica para ver os e-mails.</div></div>`;
   box.innerHTML=h;
   document.getElementById("admger").onchange=e=>{const g=e.target.value;document.querySelectorAll("#admtab tr[data-g]").forEach(tr=>tr.hidden=!!g&&tr.dataset.g!==g);};
-  document.getElementById("admsair").onclick=()=>{try{localStorage.removeItem("adm")}catch(x){} carregarAdm();};
 }
 document.getElementById("admlink").onclick=mostrarAdm;
 document.getElementById("admvoltar").onclick=sairAdm;
-document.getElementById("admenviar").onclick=()=>enviarLink(document.getElementById("admemail").value.trim().toLowerCase(),"adm",document.getElementById("admmsg"));
 
 // ---------- Área do gerente ----------
 const ADMIN_EMAIL="whjacometo@gmail.com";
-function emailDoToken(t){try{return JSON.parse(atob(t.split(".")[1].replace(/-/g,"+").replace(/_/g,"/"))).email.toLowerCase()}catch(e){return ""}}
-async function enviarLink(email,qual,msg){
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){msg.textContent="Digite um e-mail válido.";return;}
-  msg.textContent="Enviando…"; guardar("abrirQual",qual);
-  try{const r=await fetch(`${SBU}/auth/v1/otp?redirect_to=${encodeURIComponent(location.origin+location.pathname)}`,{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({email,create_user:true})});
-    msg.textContent=r.ok?"Pronto! Abra o link que chegou no seu e-mail (neste mesmo aparelho).":"Não foi possível enviar agora. Espere 1 minuto e tente de novo.";}
-  catch(x){msg.textContent="Não foi possível enviar agora. Tente de novo.";}}
-async function gerenteDoEmail(e){
-  if(e===ADMIN_EMAIL)return "*";
-  const r=await fetch(`${SBU}/rest/v1/rpc/gerente_do_email`,{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({e})});
+async function gerenteDoEmail(){
+  if(P&&P.papel==="admin")return "*";
+  const r=await api("/rest/v1/rpc/meu_gerente",{method:"POST",body:"{}"});
   if(!r.ok)throw new Error(r.status); return await r.json();}
-document.getElementById("gerenviar").onclick=async()=>{const e=document.getElementById("geremail").value.trim().toLowerCase(), m=document.getElementById("germsg");
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){m.textContent="Digite um e-mail válido.";return;}
-  m.textContent="Conferindo…";
-  try{const g=await gerenteDoEmail(e); if(!g){m.textContent="Este e-mail não está cadastrado como gerente. Fale com o Willian.";return;}
-    guardar("geremail",e); m.textContent=""; carregarGer();}
-  catch(x){m.textContent="Não foi possível conferir agora. Tente de novo em instantes.";}};
 let gerEscolhida=null;
 async function carregarGer(){
-  const box=document.getElementById("gerconteudo"), lg=document.getElementById("gerlogin");
-  const meu=ler("geremail");
-  if(!meu){lg.hidden=false;box.innerHTML="";return;}
-  lg.hidden=true; box.innerHTML='<div class="card sub">Carregando…</div>';
+  const box=document.getElementById("gerconteudo"), meu=P&&P.email;
+  if(!P||!(P.papel==="gerente"||P.papel==="admin")){mostrarApp();return;}
+  box.innerHTML='<div class="card sub">Carregando…</div>';
   for(let i=0;i<50&&!D;i++)await new Promise(r=>setTimeout(r,200));
-  let g=null; try{g=await gerenteDoEmail(meu);}catch(e){box.innerHTML='<div class="card erro">Não foi possível carregar agora. Tente de novo em instantes.</div>';return;}
-  if(!g){try{localStorage.removeItem("geremail")}catch(x){} lg.hidden=false;box.innerHTML="";document.getElementById("germsg").textContent="Este e-mail não está mais cadastrado como gerente.";return;}
+  let g=null; try{g=await gerenteDoEmail();}catch(e){box.innerHTML='<div class="card erro">Não foi possível carregar agora. Tente de novo em instantes.</div>';return;}
+  if(!g){box.innerHTML='<div class="card erro">Este e-mail não está cadastrado como gerente. Fale com o Willian.</div>';return;}
   const todas=[...new Set(D.clinicas.map(c=>c.gerencia))].sort();
   const minhas=g==="*"?todas:[g];
   if(!gerEscolhida||!minhas.includes(gerEscolhida))gerEscolhida=minhas[0];
@@ -272,12 +392,12 @@ async function carregarGer(){
    <div class="gcards" style="margin-top:12px">`;
   for(const c of L)h+=`<div class="gwrap"><div class="cap" data-id="${c.id}">`+missaoHTML(c,{abrir:false,titulo:`${esc(c.nome)} · ${c.posicao}º lugar<div class="gnota">Nota ${fmt(c.nota)}${c.atencao?" · ⚠️ zona de atenção":""}</div>`}).replace(/<\/div>$/,`<div class="capft">Ranking das clínicas · Grupo Sorria · dados até ${D.data_br}</div></div>`)+`</div>
     <div class="gacoes"><button class="btn2 png1" data-id="${c.id}">📥 Baixar PNG</button>${podeCompartilhar()?`<button class="btn2 share1" data-id="${c.id}">📤 Enviar</button>`:""}</div></div>`;
-  h+=`</div><div class="ft">Entrou como ${esc(meu)} · <span class="sairger" style="color:var(--acc);text-decoration:underline;cursor:pointer">sair</span></div>`;
-  box.innerHTML=h;
+  h+=`</div><div class="ft">Entrou como ${esc(meu)}</div>`;
+  box.innerHTML=h.replace('<div class="gcards"','<div id="gercad"></div><div class="gcards"');
+  carregarCadastros(document.getElementById("gercad"),L.slice().sort((a,b)=>a.nome.localeCompare(b.nome)),gerEscolhida);
   const sel=document.getElementById("gersel"); if(sel)sel.onchange=()=>{gerEscolhida=sel.value;carregarGer();};
   document.querySelectorAll(".png1").forEach(b=>b.onclick=async()=>{b.disabled=true;b.classList.add("gerando");try{const f=await pngDoCard(b.dataset.id);baixar(f);b.classList.add("feito");}catch(e){alertaPng();}b.classList.remove("gerando");b.disabled=false;});
   document.querySelectorAll(".share1").forEach(b=>b.onclick=async()=>{b.disabled=true;try{const f=await pngDoCard(b.dataset.id);await navigator.share({files:[f],title:f.name});}catch(e){if(e&&e.name!=="AbortError")alertaPng();}b.disabled=false;});
-  document.querySelectorAll(".sairger").forEach(e=>e.onclick=()=>{try{localStorage.removeItem("geremail")}catch(x){} carregarGer();});
 }
 const slug=t=>String(t).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 function carregarScript(src){return new Promise((ok,erro)=>{if(document.querySelector(`script[src="${src}"]`)){ok();return;}const e=document.createElement("script");e.src=src;e.onload=ok;e.onerror=erro;document.head.appendChild(e);});}
@@ -291,13 +411,12 @@ async function pngDoCard(id){await carregarScript("lib/html-to-image.js");
     const blob=await htmlToImage.toBlob(el,{pixelRatio:2,backgroundColor:fundo,cacheBust:true});
     return new File([blob],`${c.nome}.png`,{type:"image/png"});}
   finally{el.classList.remove("capturando");}}
-function mostrarGer(){document.getElementById("links").hidden=true;document.getElementById("entrada").hidden=true;document.getElementById("app").hidden=true;document.getElementById("v5").hidden=true;document.getElementById("v6").hidden=false;carregarGer();}
-function sairGer(){document.getElementById("links").hidden=false;document.getElementById("v6").hidden=true; if(ler("email"))mostrarApp(); else pedirEmail();}
+function mostrarGer(){if(!P||!(P.papel==="gerente"||P.papel==="admin"))return;document.getElementById("links").hidden=true;document.getElementById("entrada").hidden=true;document.getElementById("app").hidden=true;document.getElementById("v5").hidden=true;document.getElementById("v6").hidden=false;carregarGer();}
+function sairGer(){mostrarApp();}
 document.getElementById("gerlink").onclick=mostrarGer;
 document.getElementById("gervoltar").onclick=sairGer;
 
-if(ler("abrirAdm")){try{localStorage.removeItem("abrirAdm")}catch(x){} mostrarAdm();}
-else if(ler("email"))mostrarApp(); else pedirEmail();
+iniciar();
 function guardar(k,v){try{localStorage.setItem(k,v)}catch(e){}}
 function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function posCom(c,nota){return 1+D.clinicas.filter(x=>x.id!==c.id&&x.nota>nota+1e-9).length;}
