@@ -24,14 +24,22 @@ select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px soli
 .pos b{color:var(--fg);font-size:1.4rem}
 .faixa{margin-top:10px;padding:8px 12px;border-radius:10px;font-weight:600;font-size:.95rem}
 .faixa.ok{background:var(--okbg);color:var(--ok)}.faixa.at{background:var(--warnbg);color:var(--warn)}
-.missao{background:var(--accbg);border:1px solid var(--acc)}
-.missao .lab{color:var(--acc);font-weight:700;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
-.missao .ind{font-size:1.15rem;font-weight:800;margin:4px 0}
+.missao{background:var(--card);border:2px solid var(--acc);padding:0;overflow:hidden;box-shadow:0 6px 20px rgba(29,78,216,.15)}
+.m-topo{background:var(--acc);color:#fff;padding:14px 16px}
+.m-topo .lab{font-weight:800;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.m-topo .ind{font-size:1.45rem;font-weight:800;margin:4px 0 0;line-height:1.2}
+.m-corpo{padding:12px 14px 14px}
 .missao ul{margin:6px 0 0;padding-left:20px}.missao li{margin:6px 0}
-.m-item{padding:10px 0;border-top:1px solid var(--acc)}.m-item:first-of-type{border-top:0}
-.m-n{font-weight:800}.m-sub{font-size:.9rem;margin:4px 0 0 4px}
-details{margin-top:6px}summary{cursor:pointer;color:var(--acc);font-weight:600;font-size:.9rem}
-.m-ok{margin-top:10px;padding-top:10px;border-top:1px solid var(--acc);font-size:.92rem}
+.m-item{background:var(--nobg);border-left:6px solid var(--no);border-radius:10px;padding:12px;margin-top:10px}
+.m-item:first-child{margin-top:0}
+.m-n{font-weight:800;font-size:1.08rem}
+.m-hoje{margin-top:6px;font-weight:700;font-size:1rem}
+.m-sub{font-size:.92rem;margin:6px 0 0}
+.m-sub.ok{color:var(--mut)}
+.chip{display:inline-block;font-weight:800;font-size:.8rem;padding:2px 8px;border-radius:999px;background:var(--card);color:var(--no);margin-left:4px}
+.m-ok{margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--okbg);font-size:.95rem}
+.duas{display:block}
+@media (min-width:900px){.wrap{max-width:1120px}.duas{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;align-items:start}.duas>.card{margin-top:12px}.duas .lado{position:sticky;top:12px}#v1 select{max-width:420px}#v2 .card,#v3 .card,#v4 .card,#entrada{max-width:720px}}
 .parte{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:8px 0 0 14px;padding-left:10px;border-left:3px solid var(--line)}
 .parte .pill{font-size:.82rem;padding:4px 8px}
 .ind-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-top:1px solid var(--line)}
@@ -137,26 +145,26 @@ function clinica(id){
   const inds=ORDEM.map(k=>[k,c.indicadores[k]]).filter(([k,i])=>i);
   const fora=inds.filter(([k,i])=>!i.ok).sort((x,y)=>(y[1].max-y[1].pts)-(x[1].max-x[1].pts));
   const dentro=inds.filter(([k,i])=>i.ok);
-  h+=`<div class="card missao"><div class="lab">🎯 Missão do dia</div>`;
-  if(!fora.length){h+=`<div class="ind">🟢 Tudo no padrão</div><div>Todos os indicadores no padrão. A missão de hoje é manter.</div><ul>${A.manter.acoes.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`;}
+  h+=`<div class="duas"><div class="card missao"><div class="m-topo"><div class="lab">🎯 Missão do dia</div>`;
+  if(!fora.length){h+=`<div class="ind">🟢 Tudo no padrão: hoje é manter!</div></div><div class="m-corpo"><ul>${A.manter.acoes.map(t=>`<li>${esc(t)}</li>`).join("")}</ul>`;}
   else{
-    h+=`<div class="ind">🔴 ${fora.length} indicador${fora.length>1?"es":""} fora do padrão</div>`;
+    h+=`<div class="ind">${fora.length} indicador${fora.length>1?"es":""} para recuperar hoje</div></div><div class="m-corpo">`;
     fora.forEach(([k,i],n)=>{const a=A[k];
-      h+=`<div class="m-item"><div class="m-n">🔴 ${esc(i.nome)} <span class="ind-s">(${fmt(i.pts)} de ${i.max})</span></div>`;
-      if(i.partes){for(const p of i.partes)h+=`<div class="m-sub">${p.ok?"🟢":"🔴"} <b>${esc(p.nome)}</b>: ${esc(p.status)}${p.ok?"":`<br><span>${esc(p.hoje)}</span>`}</div>`;}
-      else h+=`<div class="m-sub">${esc(i.hoje)}</div>`;
+      h+=`<div class="m-item"><div class="m-n">🔴 ${esc(i.nome)} <span class="chip">${fmt(i.pts)} de ${i.max}</span></div>`;
+      if(i.partes){for(const p of i.partes)h+=p.ok?`<div class="m-sub ok">🟢 ${esc(p.nome)}: ${esc(p.status)}</div>`:`<div class="m-sub">🔴 <b>${esc(p.nome)}</b>: ${esc(p.status)}</div><div class="m-hoje">👉 ${esc(p.hoje)}</div>`;}
+      else h+=`<div class="m-hoje">👉 ${esc(i.hoje)}</div>`;
       if(a)h+=`<details${n===0?" open":""}><summary>${esc(a.titulo)}</summary><ul>${a.acoes.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></details>`;
       h+=`</div>`;});
   }
   if(dentro.length&&fora.length)h+=`<div class="m-ok">🟢 <b>No padrão, manter:</b> ${dentro.map(([k,i])=>esc(i.nome)).join(" · ")}</div>`;
-  h+=`</div>`;
-  h+=`<div class="card"><div class="sec" style="margin-top:0">Indicadores</div>`;
+  h+=`</div></div>`;
+  h+=`<div class="card lado"><div class="sec" style="margin-top:0">Indicadores</div>`;
   for(const k of ORDEM){const i=c.indicadores[k]; if(!i)continue;
     h+=`<div class="ind-row"><div><div class="ind-n">${i.ok?"🟢":"🔴"} ${esc(i.nome)}</div>${i.partes?"":`<div class="ind-s">${esc(i.status)}</div><div class="ind-h">${esc(i.hoje)}</div>`}</div>
     <div class="pill ${i.ok?"ok":"no"}">${fmt(i.pts)} / ${i.max}</div></div>`;
     if(i.partes)for(const p of i.partes)h+=`<div class="parte"><div><div class="ind-n">${p.ok?"🟢":"🔴"} ${esc(p.nome)}</div><div class="ind-s">${esc(p.status)}</div></div><div class="pill ${p.ok?"ok":"no"}">${fmt(p.pts)} / ${p.max}</div></div>`;}
   if(!D.reclamacoes_disponivel)h+=`<div class="ind-row"><div class="ind-s">Reclamações: em breve.</div></div>`;
-  h+=`</div>`;
+  h+=`</div></div>`;
   document.getElementById("conteudo").innerHTML=h; desenharRanking(id); desenharGerencia(id);
 }
 function desenharRanking(meu){
