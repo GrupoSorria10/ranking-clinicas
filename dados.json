@@ -3799,8 +3799,8 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam -8 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: -8 avaliação(ões) 5★ no Google."
+     "status": "Nota abaixo de 5,0 (objetivo: manter 5,0)",
+     "hoje": "Hoje: pedir avaliação 5★ a todo paciente satisfeito para a nota voltar a 5,0."
     },
     "reclamacoes": {
      "nome": "Reclamações",

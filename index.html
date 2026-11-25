@@ -13,7 +13,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 -apple-system,
 .wrap{max-width:640px;margin:0 auto;padding:14px max(14px,env(safe-area-inset-left)) 40px max(14px,env(safe-area-inset-right))}
 h1{font-size:1.3rem;margin:4px 0 2px}
 .sub{color:var(--mut);font-size:.9rem}
-.tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0}#t4{grid-column:span 2}
+.tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0}#t4{grid-column:1/-1}
 .tab{padding:10px 6px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:600 .95rem inherit;cursor:pointer}
 .tab[aria-selected=true]{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
 select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
@@ -65,7 +65,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 #entrada input{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg);margin-top:8px}
 .btn{width:100%;margin-top:10px;padding:12px;border:0;border-radius:10px;background:var(--acc);color:#fff;font:700 1rem inherit;cursor:pointer}
 .lgpd{color:var(--mut);font-size:.8rem;margin-top:10px}
-#sair,#admlink{color:var(--acc);text-decoration:underline;cursor:pointer}
+#sair,#admlink,#gerlink{color:var(--acc);text-decoration:underline;cursor:pointer}
 #v5 .card{max-width:980px}
 .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
 .kpi{background:var(--accbg);border-radius:10px;padding:10px;text-align:center}.kpi b{display:block;font-size:1.4rem}
@@ -92,7 +92,6 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <button class="tab" id="t1" role="tab" aria-selected="true">Minha clínica</button>
 <button class="tab" id="t3" role="tab" aria-selected="false">Minha gerência</button>
 <button class="tab" id="t2" role="tab" aria-selected="false">Ranking geral</button>
-<button class="tab" id="t6" role="tab" aria-selected="false">Área do gerente</button>
 <button class="tab" id="t4" role="tab" aria-selected="false">Como é calculada a nota?</button>
 </div>
 <div id="v1">
@@ -102,16 +101,6 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 </div>
 <div id="v3" hidden><div class="card"><div class="sub" id="gsub">Escolha a sua clínica na aba "Minha clínica" para ver a sua gerência.</div><table id="gtab"></table></div></div>
 <div id="v2" hidden><div class="card"><table id="tab"></table></div></div>
-<div id="v6" hidden>
-<div class="card" id="gerlogin" hidden>
-<div class="sec" style="margin-top:0">Área do gerente</div>
-<p class="sub">Digite o seu e-mail de gerente. Você vai receber um link de acesso (sem senha).</p>
-<input id="geremail" type="email" inputmode="email" placeholder="seu@email.com" style="width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)">
-<button class="btn" id="gerenviar">Enviar link de acesso</button>
-<div class="sub" id="germsg" style="margin-top:8px"></div>
-</div>
-<div id="gerconteudo"></div>
-</div>
 <div id="v4" hidden>
 <div class="card"><div class="sec" style="margin-top:0">A nota da clínica</div>
 <p>A nota vai de <b>0 a 100</b>. Ela é a soma de 6 indicadores do mês, que juntos valem 100 pontos.</p>
@@ -140,9 +129,20 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 </div>
 <div id="admconteudo"></div>
 </div>
+<div id="v6" hidden>
+<button class="btn2" id="gervoltar">← Voltar ao ranking</button>
+<div class="card" id="gerlogin" hidden>
+<div class="sec" style="margin-top:0">Área do gerente</div>
+<p class="sub">Digite o seu e-mail de gerente cadastrado.</p>
+<input id="geremail" type="email" inputmode="email" placeholder="seu@email.com" style="width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)">
+<button class="btn" id="gerenviar">Entrar</button>
+<div class="sub" id="germsg" style="margin-top:8px"></div>
+</div>
+<div id="gerconteudo"></div>
+</div>
 <div class="ft" id="ft"></div>
 <div class="ft" id="quem"></div>
-<div class="ft"><span id="admlink">Área do administrador</span></div>
+<div class="ft" id="links"><span id="gerlink">Área do gerente</span> · <span id="admlink">Área do administrador</span></div>
 </div>
 <script>
 const ORDEM=["faturamento","avaliacao","google","reclamacoes","crescimento","pagantes"];
@@ -235,41 +235,46 @@ async function enviarLink(email,qual,msg){
   try{const r=await fetch(`${SBU}/auth/v1/otp?redirect_to=${encodeURIComponent(location.origin+location.pathname)}`,{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({email,create_user:true})});
     msg.textContent=r.ok?"Pronto! Abra o link que chegou no seu e-mail (neste mesmo aparelho).":"Não foi possível enviar agora. Espere 1 minuto e tente de novo.";}
   catch(x){msg.textContent="Não foi possível enviar agora. Tente de novo.";}}
-document.getElementById("gerenviar").onclick=()=>enviarLink(document.getElementById("geremail").value.trim().toLowerCase(),"ger",document.getElementById("germsg"));
+async function gerenteDoEmail(e){
+  if(e===ADMIN_EMAIL)return "*";
+  const r=await fetch(`${SBU}/rest/v1/rpc/gerente_do_email`,{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({e})});
+  if(!r.ok)throw new Error(r.status); return await r.json();}
+document.getElementById("gerenviar").onclick=async()=>{const e=document.getElementById("geremail").value.trim().toLowerCase(), m=document.getElementById("germsg");
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){m.textContent="Digite um e-mail válido.";return;}
+  m.textContent="Conferindo…";
+  try{const g=await gerenteDoEmail(e); if(!g){m.textContent="Este e-mail não está cadastrado como gerente. Fale com o Willian.";return;}
+    guardar("geremail",e); m.textContent=""; carregarGer();}
+  catch(x){m.textContent="Não foi possível conferir agora. Tente de novo em instantes.";}};
 let gerEscolhida=null;
 async function carregarGer(){
   const box=document.getElementById("gerconteudo"), lg=document.getElementById("gerlogin");
-  const tk=await tokenAdm();
-  if(!tk){lg.hidden=false;box.innerHTML="";return;}
+  const meu=ler("geremail");
+  if(!meu){lg.hidden=false;box.innerHTML="";return;}
   lg.hidden=true; box.innerHTML='<div class="card sub">Carregando…</div>';
   for(let i=0;i<50&&!D;i++)await new Promise(r=>setTimeout(r,200));
-  const meu=emailDoToken(tk), admin=meu===ADMIN_EMAIL; let lista=[];
-  try{const r=await fetch(`${SBU}/rest/v1/gerentes?select=gerente,email`,{headers:{apikey:SBK,Authorization:"Bearer "+tk}});
-    if(r.status===401){try{localStorage.removeItem("adm")}catch(x){} return carregarGer();}
-    if(r.ok)lista=await r.json();}catch(e){}
+  let g=null; try{g=await gerenteDoEmail(meu);}catch(e){box.innerHTML='<div class="card erro">Não foi possível carregar agora. Tente de novo em instantes.</div>';return;}
+  if(!g){try{localStorage.removeItem("geremail")}catch(x){} lg.hidden=false;box.innerHTML="";document.getElementById("germsg").textContent="Este e-mail não está mais cadastrado como gerente.";return;}
   const todas=[...new Set(D.clinicas.map(c=>c.gerencia))].sort();
-  const minhas=admin?todas:[...new Set(lista.filter(x=>x.email.toLowerCase()===meu).map(x=>x.gerente))];
-  if(!minhas.length){box.innerHTML=`<div class="card"><div class="sec" style="margin-top:0">Área do gerente</div><p>O e-mail <b>${esc(meu)}</b> ainda não está cadastrado como gerente. Fale com o Willian.</p><span class="sairger" style="color:var(--acc);text-decoration:underline;cursor:pointer">Entrar com outro e-mail</span></div>`;ligarSairGer();return;}
+  const minhas=g==="*"?todas:[g];
   if(!gerEscolhida||!minhas.includes(gerEscolhida))gerEscolhida=minhas[0];
   const L=D.clinicas.filter(c=>c.gerencia===gerEscolhida).sort((a,b)=>a.nota-b.nota);
   const at=L.filter(c=>c.atencao).length;
   let h=`<div class="card"><div class="sec" style="margin-top:0">Área do gerente${minhas.length>1?"":` · ${esc(gerEscolhida)}`}</div>
-   ${minhas.length>1?`<select id="gersel" style="margin-top:8px">${minhas.map(g=>`<option${g===gerEscolhida?" selected":""}>${esc(g)}</option>`).join("")}</select>`:""}
+   ${minhas.length>1?`<select id="gersel" style="margin-top:8px">${minhas.map(x=>`<option${x===gerEscolhida?" selected":""}>${esc(x)}</option>`).join("")}</select>`:""}
    <div class="sub" style="margin-top:8px">${L.length} clínicas · ${at} na zona de atenção · da que mais precisa para a que menos precisa. Dados até ${D.data_br}.</div></div>
    <div class="gcards" style="margin-top:12px">`;
   for(const c of L)h+=missaoHTML(c,{abrir:false,titulo:`${esc(c.nome)} · ${c.posicao}º lugar<div class="gnota">Nota ${fmt(c.nota)}${c.atencao?" · ⚠️ zona de atenção":""}</div>`});
   h+=`</div><div class="ft">Entrou como ${esc(meu)} · <span class="sairger" style="color:var(--acc);text-decoration:underline;cursor:pointer">sair</span></div>`;
   box.innerHTML=h;
   const sel=document.getElementById("gersel"); if(sel)sel.onchange=()=>{gerEscolhida=sel.value;carregarGer();};
-  ligarSairGer();
+  document.querySelectorAll(".sairger").forEach(e=>e.onclick=()=>{try{localStorage.removeItem("geremail")}catch(x){} carregarGer();});
 }
-function ligarSairGer(){document.querySelectorAll(".sairger").forEach(e=>e.onclick=()=>{try{localStorage.removeItem("adm")}catch(x){} carregarGer();});}
-document.getElementById("t6").addEventListener("click",carregarGer);
+function mostrarGer(){document.getElementById("links").hidden=true;document.getElementById("entrada").hidden=true;document.getElementById("app").hidden=true;document.getElementById("v5").hidden=true;document.getElementById("v6").hidden=false;carregarGer();}
+function sairGer(){document.getElementById("links").hidden=false;document.getElementById("v6").hidden=true; if(ler("email"))mostrarApp(); else pedirEmail();}
+document.getElementById("gerlink").onclick=mostrarGer;
+document.getElementById("gervoltar").onclick=sairGer;
 
-if(ler("abrirAdm")){try{localStorage.removeItem("abrirAdm")}catch(x){}
-  if(ler("abrirQual")==="ger"){try{localStorage.removeItem("abrirQual")}catch(x){}
-    (async()=>{const t=await tokenAdm(); if(!ler("email")&&t)guardar("email",emailDoToken(t)); mostrarApp(); aba("t6"); carregarGer();})();}
-  else mostrarAdm();}
+if(ler("abrirAdm")){try{localStorage.removeItem("abrirAdm")}catch(x){} mostrarAdm();}
 else if(ler("email"))mostrarApp(); else pedirEmail();
 function guardar(k,v){try{localStorage.setItem(k,v)}catch(e){}}
 function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
@@ -344,7 +349,7 @@ function desenharGerencia(meu){
     h+=`<tr class="${x.atencao?"at ":""}${x.id===meu?"eu":""}"><td>${i+1}º</td><td>${x.atencao?"⚠️ ":""}${esc(x.nome)}<div class="ind-s">${x.posicao}º no geral</div></td><td class="n">${fmt(x.nota)}</td></tr>`;});
   document.getElementById("gtab").innerHTML=h;
 }
-const ABAS=[["t1","v1"],["t3","v3"],["t2","v2"],["t6","v6"],["t4","v4"]];
+const ABAS=[["t1","v1"],["t3","v3"],["t2","v2"],["t4","v4"]];
 function aba(id){ABAS.forEach(([t,v])=>{const on=t===id;document.getElementById(t).setAttribute("aria-selected",on);document.getElementById(v).hidden=!on;});}
 ABAS.forEach(([t])=>document.getElementById(t).onclick=()=>aba(t));
 Promise.all([fetch("dados.json?v="+Date.now()).then(r=>r.json()),fetch("acoes.json?v="+Date.now()).then(r=>r.json())]).then(([d,a])=>{
