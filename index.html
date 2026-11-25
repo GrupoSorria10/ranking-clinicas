@@ -146,7 +146,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 </div>
 <script>
 const ORDEM=["faturamento","avaliacao","google","reclamacoes","crescimento","pagantes"];
-const fmt=v=>(Math.round(v*10)/10).toLocaleString("pt-BR",{minimumFractionDigits:1,maximumFractionDigits:1});
+const fmt=v=>{const r=Math.round(v*10)/10;return r.toLocaleString("pt-BR",{minimumFractionDigits:Number.isInteger(r)?0:1,maximumFractionDigits:1});};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let D,A;
 const SB="https://snhuzcovovpueswmudcq.supabase.co/rest/v1/acessos", SBK="sb_publishable_Ljm8QlLxg8LQuxUQNILiAg_Y0yCUXeW";
