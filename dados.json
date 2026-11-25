@@ -1,17 +1,17 @@
 {
- "data": "2026-11-20",
- "data_br": "20/11/2026",
+ "data": "2026-11-24",
+ "data_br": "24/11/2026",
  "mes": "novembro",
- "dia_trabalhado": 15,
+ "dia_trabalhado": 18,
  "dias_mes": 23,
  "total_clinicas": 51,
- "reclamacoes_disponivel": false,
+ "reclamacoes_disponivel": true,
  "clinicas": [
   {
    "id": "SGA01",
    "nome": "Anápolis 01",
    "gerencia": "Jéssica",
-   "nota": 31.4,
+   "nota": 37.8,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -19,39 +19,39 @@
      "max": 30,
      "pts": 0,
      "ok": false,
-     "status": "58% do ritmo do objetivo",
+     "status": "59% do ritmo do objetivo",
      "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 13.3,
+     "pts": 12.8,
      "ok": false,
-     "status": "Abaixo: contratação 40,4% (padrão ouro 65%); ticket 61% do padrão ouro; pedida 94% do padrão ouro",
+     "status": "Abaixo: contratação 39,8% (padrão ouro 65%); ticket 54% do padrão ouro; pedida 95% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 6.2,
+       "pts": 6.1,
        "ok": false,
-       "status": "40,4% (padrão ouro 65%)",
+       "status": "39,8% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 4.3,
+       "pts": 3.8,
        "ok": false,
-       "status": "R$ 996 (padrão ouro R$ 1.621)",
+       "status": "R$ 878 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 2.8,
+       "pts": 2.9,
        "ok": false,
-       "status": "R$ 4.230 (padrão ouro R$ 4.500)",
+       "status": "R$ 4.291 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -61,8 +61,16 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 2 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: 2 avaliação(ões) 5★ no Google."
+     "status": "Faltam 1 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 1 avaliação(ões) 5★ no Google."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
@@ -77,22 +85,22 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 216 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 399 (sem atendimento sem pagamento)."
+     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 480 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
     "indicador": "google",
     "nome": "Avaliação do Google",
-    "texto": "Hoje: 2 avaliação(ões) 5★ no Google."
+    "texto": "Hoje: 1 avaliação(ões) 5★ no Google."
    },
-   "posicao": 48
+   "posicao": 45
   },
   {
    "id": "SGA02",
    "nome": "Anápolis 02",
    "gerencia": "Jéssica",
-   "nota": 46.1,
+   "nota": 51.7,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -100,39 +108,39 @@
      "max": 30,
      "pts": 0,
      "ok": false,
-     "status": "83% do ritmo do objetivo",
+     "status": "73% do ritmo do objetivo",
      "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 16.5,
+     "pts": 16.7,
      "ok": false,
-     "status": "Abaixo: contratação 62,9% (padrão ouro 65%); ticket 71% do padrão ouro; pedida 64% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "status": "Abaixo: ticket 70% do padrão ouro; pedida 58% do padrão ouro",
+     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 9.7,
-       "ok": false,
-       "status": "62,9% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+       "pts": 10,
+       "ok": true,
+       "status": "65,2% (padrão ouro 65%)",
+       "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 5.0,
+       "pts": 4.9,
        "ok": false,
-       "status": "R$ 1.149 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.141 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 1.9,
+       "pts": 1.7,
        "ok": false,
-       "status": "R$ 2.865 (padrão ouro R$ 4.500)",
+       "status": "R$ 2.590 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -145,12 +153,20 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+19% de primeiras avaliações sobre o mês anterior",
+     "status": "+24% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -158,8 +174,8 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 383 (sem atendimento sem pagamento)."
+     "status": "R$ 209 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 537 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -167,13 +183,13 @@
     "nome": "Faturamento",
     "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
    },
-   "posicao": 43
+   "posicao": 42
   },
   {
    "id": "GO030",
    "nome": "Barreiras",
    "gerencia": "Nathan",
-   "nota": 79.2,
+   "nota": 71.5,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -181,39 +197,39 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "121% do ritmo do objetivo",
+     "status": "122% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 16.3,
+     "pts": 16.5,
      "ok": false,
-     "status": "Abaixo: contratação 62,7% (padrão ouro 65%); ticket 57% do padrão ouro; pedida 89% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "status": "Abaixo: ticket 56% do padrão ouro; pedida 86% do padrão ouro",
+     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 9.6,
-       "ok": false,
-       "status": "62,7% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+       "pts": 10,
+       "ok": true,
+       "status": "65,6% (padrão ouro 65%)",
+       "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 4.0,
+       "pts": 3.9,
        "ok": false,
-       "status": "R$ 925 (padrão ouro R$ 1.621)",
+       "status": "R$ 907 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 2.7,
+       "pts": 2.6,
        "ok": false,
-       "status": "R$ 4.019 (padrão ouro R$ 4.500)",
+       "status": "R$ 3.855 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -226,35 +242,43 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+10% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+     "pts": 5.0,
+     "ok": false,
+     "status": "+3% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 252 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 335 (sem atendimento sem pagamento)."
+     "status": "R$ 233 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 449 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
-    "indicador": "pagantes",
-    "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 33% a mais que a média atual (sem atendimento sem pagamento)."
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia."
    },
-   "posicao": 23
+   "posicao": 27
   },
   {
    "id": "PB002",
    "nome": "Campina Grande",
    "gerencia": "Luiz",
-   "nota": 95.9,
+   "nota": 96.4,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -262,31 +286,31 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "124% do ritmo do objetivo",
+     "status": "122% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 16.3,
+     "pts": 16.4,
      "ok": false,
-     "status": "Abaixo: contratação 54,7% (padrão ouro 65%); ticket 69% do padrão ouro",
+     "status": "Abaixo: contratação 59,3% (padrão ouro 65%); ticket 61% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 8.4,
+       "pts": 9.1,
        "ok": false,
-       "status": "54,7% (padrão ouro 65%)",
+       "status": "59,3% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 4.8,
+       "pts": 4.3,
        "ok": false,
-       "status": "R$ 1.121 (padrão ouro R$ 1.621)",
+       "status": "R$ 989 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -294,7 +318,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 6.412 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.885 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -307,12 +331,20 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+120% de primeiras avaliações sobre o mês anterior",
+     "status": "+104% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -320,7 +352,7 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 303 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
@@ -329,13 +361,13 @@
     "nome": "Performance de avaliação",
     "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
    },
-   "posicao": 7
+   "posicao": 3
   },
   {
    "id": "GO022",
    "nome": "Canaã",
    "gerencia": "Felipe",
-   "nota": 71.8,
+   "nota": 83.3,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -343,7 +375,7 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "102% do ritmo do objetivo",
+     "status": "104% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
@@ -351,7 +383,7 @@
      "max": 20,
      "pts": 18.3,
      "ok": false,
-     "status": "Abaixo: contratação 54,2% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 54,0% (padrão ouro 65%)",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
@@ -359,7 +391,7 @@
        "max": 10,
        "pts": 8.3,
        "ok": false,
-       "status": "54,2% (padrão ouro 65%)",
+       "status": "54,0% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
@@ -367,7 +399,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 1.934 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.866 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -375,7 +407,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 6.495 (padrão ouro R$ 4.500)",
+       "status": "R$ 7.233 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -388,35 +420,43 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 6.3,
+     "pts": 0,
      "ok": false,
-     "status": "+4% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 5 primeira(s) avaliação(ões) a mais que a média do dia."
+     "status": "-5% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 15 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 277 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 288 (sem atendimento sem pagamento)."
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 283 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
-    "indicador": "pagantes",
-    "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 4% a mais que a média atual (sem atendimento sem pagamento)."
+    "indicador": "avaliacao",
+    "nome": "Performance de avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
    },
-   "posicao": 25
+   "posicao": 15
   },
   {
    "id": "GO025",
    "nome": "Castelo Branco",
    "gerencia": "Alef",
-   "nota": 52.7,
+   "nota": 57.5,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -424,23 +464,23 @@
      "max": 30,
      "pts": 0,
      "ok": false,
-     "status": "69% do ritmo do objetivo",
+     "status": "77% do ritmo do objetivo",
      "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 17.4,
+     "pts": 17.5,
      "ok": false,
-     "status": "Abaixo: contratação 48,0% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 48,5% (padrão ouro 65%)",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 7.4,
+       "pts": 7.5,
        "ok": false,
-       "status": "48,0% (padrão ouro 65%)",
+       "status": "48,5% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
@@ -448,7 +488,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 1.855 (padrão ouro R$ 1.621)",
+       "status": "R$ 2.561 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -456,7 +496,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 6.030 (padrão ouro R$ 4.500)",
+       "status": "R$ 6.584 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -469,12 +509,20 @@
      "status": "Faltam 13 avaliação(ões) 5★ para o ritmo",
      "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 13 para o ritmo)."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+37% de primeiras avaliações sobre o mês anterior",
+     "status": "+43% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -482,7 +530,7 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 403 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
@@ -497,7 +545,185 @@
    "id": "GO028",
    "nome": "Catalão",
    "gerencia": "Alex",
-   "nota": 55.6,
+   "nota": 60.0,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "72% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 19.6,
+     "ok": false,
+     "status": "Abaixo: contratação 62,1% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 9.6,
+       "ok": false,
+       "status": "62,1% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 7,
+       "ok": true,
+       "status": "R$ 2.903 (padrão ouro R$ 1.621)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 17.703 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 5.4,
+     "ok": false,
+     "status": "+4% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 2 primeira(s) avaliação(ões) a mais que a média do dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 428 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 2 primeira(s) avaliação(ões) a mais que a média do dia."
+   },
+   "posicao": 35
+  },
+  {
+   "id": "GO024",
+   "nome": "Ceilândia",
+   "gerencia": "Mattheus",
+   "nota": 66.9,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "87% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 16.9,
+     "ok": false,
+     "status": "Abaixo: contratação 57,0% (padrão ouro 65%); ticket 84% do padrão ouro; pedida 75% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 8.8,
+       "ok": false,
+       "status": "57,0% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 5.9,
+       "ok": false,
+       "status": "R$ 1.356 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 2.3,
+       "ok": false,
+       "status": "R$ 3.388 (padrão ouro R$ 4.500)",
+       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+13% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 295 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 30
+  },
+  {
+   "id": "GO010",
+   "nome": "Formosa",
+   "gerencia": "Mattheus",
+   "nota": 25.1,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -505,8 +731,364 @@
      "max": 30,
      "pts": 0,
      "ok": false,
-     "status": "82% do ritmo do objetivo",
+     "status": "92% do ritmo do objetivo",
+     "hoje": "Faturar hoje 2,7 vez(es) a média diária da clínica para voltar ao ritmo."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 15.1,
+     "ok": false,
+     "status": "Abaixo: contratação 49,3% (padrão ouro 65%); ticket 68% do padrão ouro; pedida 93% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 7.6,
+       "ok": false,
+       "status": "49,3% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 4.7,
+       "ok": false,
+       "status": "R$ 1.096 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 2.8,
+       "ok": false,
+       "status": "R$ 4.205 (padrão ouro R$ 4.500)",
+       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 6 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 6 avaliação(ões) 5★ no Google."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "-8% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 14 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 235 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 444 (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Faturar hoje 2,7 vez(es) a média diária da clínica para voltar ao ritmo."
+   },
+   "posicao": 49
+  },
+  {
+   "id": "GO009",
+   "nome": "Garavelo",
+   "gerencia": "Jéssica",
+   "nota": 62.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "129% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 17.4,
+     "ok": false,
+     "status": "Abaixo: contratação 51,8% (padrão ouro 65%); pedida 81% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 8.0,
+       "ok": false,
+       "status": "51,8% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 7,
+       "ok": true,
+       "status": "R$ 1.722 (padrão ouro R$ 1.621)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 2.4,
+       "ok": false,
+       "status": "R$ 3.633 (padrão ouro R$ 4.500)",
+       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 52 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 52 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "5 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+27% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 277 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 290 (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render R$ 290 (sem atendimento sem pagamento)."
+   },
+   "posicao": 34
+  },
+  {
+   "id": "PE002",
+   "nome": "Goiana",
+   "gerencia": "Luiz",
+   "nota": 65.1,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "67% do ritmo do objetivo",
      "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 15.1,
+     "ok": false,
+     "status": "Abaixo: contratação 64,3% (padrão ouro 65%); ticket 46% do padrão ouro; pedida 68% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 9.9,
+       "ok": false,
+       "status": "64,3% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 3.2,
+       "ok": false,
+       "status": "R$ 738 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 2.1,
+       "ok": false,
+       "status": "R$ 3.081 (padrão ouro R$ 4.500)",
+       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+180% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 322 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+   },
+   "posicao": 32
+  },
+  {
+   "id": "GO018",
+   "nome": "Goianira",
+   "gerencia": "Alef",
+   "nota": 54.4,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "117% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 16.4,
+     "ok": false,
+     "status": "Abaixo: contratação 56,0% (padrão ouro 65%); ticket 68% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 8.6,
+       "ok": false,
+       "status": "56,0% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 4.7,
+       "ok": false,
+       "status": "R$ 1.097 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 5.070 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 1 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 1 avaliação(ões) 5★ no Google."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 8,
+     "ok": false,
+     "status": "1 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "-4% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 11 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 215 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 515 (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "google",
+    "nome": "Avaliação do Google",
+    "texto": "Hoje: 1 avaliação(ões) 5★ no Google."
+   },
+   "posicao": 39
+  },
+  {
+   "id": "GO006",
+   "nome": "Goiânia 01",
+   "gerencia": "Murilo",
+   "nota": 78.5,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "112% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
@@ -521,7 +1103,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "68,2% (padrão ouro 65%)",
+       "status": "70,5% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -529,7 +1111,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 3.280 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.807 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -537,7 +1119,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 16.604 (padrão ouro R$ 4.500)",
+       "status": "R$ 6.404 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -547,200 +1129,46 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 20 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 20 para o ritmo)."
+     "status": "Faltam 60 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 60 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+41% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+     "pts": 3.5,
+     "ok": false,
+     "status": "+2% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 395 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
-    "indicador": "faturamento",
-    "nome": "Faturamento",
-    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
    },
-   "posicao": 36
+   "posicao": 21
   },
   {
-   "id": "GO024",
-   "nome": "Ceilândia",
-   "gerencia": "Mattheus",
-   "nota": 46.2,
-   "atencao": true,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 0,
-     "ok": false,
-     "status": "87% do ritmo do objetivo",
-     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 16.6,
-     "ok": false,
-     "status": "Abaixo: contratação 53,2% (padrão ouro 65%); ticket 85% do padrão ouro; pedida 84% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 8.2,
-       "ok": false,
-       "status": "53,2% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 5.9,
-       "ok": false,
-       "status": "R$ 1.372 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 2.5,
-       "ok": false,
-       "status": "R$ 3.771 (padrão ouro R$ 4.500)",
-       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 10,
-     "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+52% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 277 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 280 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "pagantes",
-    "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 1% a mais que a média atual (sem atendimento sem pagamento)."
-   },
-   "posicao": 42
-  },
-  {
-   "id": "GO010",
-   "nome": "Formosa",
-   "gerencia": "Mattheus",
-   "nota": 15.8,
-   "atencao": true,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 0,
-     "ok": false,
-     "status": "84% do ritmo do objetivo",
-     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 14.2,
-     "ok": false,
-     "status": "Abaixo: contratação 50,9% (padrão ouro 65%); ticket 54% do padrão ouro; pedida 85% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 7.8,
-       "ok": false,
-       "status": "50,9% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 3.8,
-       "ok": false,
-       "status": "R$ 879 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 2.5,
-       "ok": false,
-       "status": "R$ 3.803 (padrão ouro R$ 4.500)",
-       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 7 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 7 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "-8% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 12 para +10%)."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 210 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 414 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "faturamento",
-    "nome": "Faturamento",
-    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
-   },
-   "posicao": 51
-  },
-  {
-   "id": "GO009",
-   "nome": "Garavelo",
-   "gerencia": "Jéssica",
-   "nota": 69.0,
+   "id": "GO007",
+   "nome": "Goiânia 02",
+   "gerencia": "Murilo",
+   "nota": 90.0,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -748,120 +1176,128 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "131% do ritmo do objetivo",
+     "status": "121% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 17.1,
-     "ok": false,
-     "status": "Abaixo: contratação 50,7% (padrão ouro 65%); pedida 77% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 7.8,
-       "ok": false,
-       "status": "50,7% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 7,
-       "ok": true,
-       "status": "R$ 1.702 (padrão ouro R$ 1.621)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 2.3,
-       "ok": false,
-       "status": "R$ 3.449 (padrão ouro R$ 4.500)",
-       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 48 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 48 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
+     "pts": 20,
      "ok": true,
-     "status": "+32% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 274 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 288 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "pagantes",
-    "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 5% a mais que a média atual (sem atendimento sem pagamento)."
-   },
-   "posicao": 28
-  },
-  {
-   "id": "PE002",
-   "nome": "Goiana",
-   "gerencia": "Luiz",
-   "nota": 61.8,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 0,
-     "ok": false,
-     "status": "67% do ritmo do objetivo",
-     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 15.6,
-     "ok": false,
-     "status": "Abaixo: ticket 47% do padrão ouro; pedida 79% do padrão ouro",
-     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket.",
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "69,4% (padrão ouro 65%)",
+       "status": "68,1% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 3.3,
-       "ok": false,
-       "status": "R$ 758 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+       "pts": 7,
+       "ok": true,
+       "status": "R$ 2.069 (padrão ouro R$ 1.621)",
+       "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 2.4,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 5.702 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 10 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 10 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+15% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 387 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "google",
+    "nome": "Avaliação do Google",
+    "texto": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 10 para o ritmo)."
+   },
+   "posicao": 5
+  },
+  {
+   "id": "SGG03",
+   "nome": "Goiânia 03",
+   "gerencia": "Paulo",
+   "nota": 44.6,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "97% do ritmo do objetivo",
+     "hoje": "Faturar hoje 1,6 vez(es) a média diária da clínica para voltar ao ritmo."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 17.6,
+     "ok": false,
+     "status": "Abaixo: contratação 51,0% (padrão ouro 65%); pedida 93% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 7.8,
        "ok": false,
-       "status": "R$ 3.560 (padrão ouro R$ 4.500)",
+       "status": "51,0% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 7,
+       "ok": true,
+       "status": "R$ 1.682 (padrão ouro R$ 1.621)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 2.8,
+       "ok": false,
+       "status": "R$ 4.170 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -874,35 +1310,43 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 2,
+     "ok": false,
+     "status": "4 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+246% de primeiras avaliações sobre o mês anterior",
+     "status": "+22% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 269 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 319 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
     "indicador": "faturamento",
     "nome": "Faturamento",
-    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    "texto": "Faturar hoje 1,6 vez(es) a média diária da clínica para voltar ao ritmo."
    },
-   "posicao": 34
+   "posicao": 43
   },
   {
-   "id": "GO018",
-   "nome": "Goianira",
-   "gerencia": "Alef",
-   "nota": 69.2,
+   "id": "GO016",
+   "nome": "Independência",
+   "gerencia": "Paulo",
+   "nota": 66.8,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -910,31 +1354,31 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "124% do ritmo do objetivo",
+     "status": "104% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 17.3,
+     "pts": 15.8,
      "ok": false,
-     "status": "Abaixo: contratação 60,3% (padrão ouro 65%); ticket 72% do padrão ouro",
+     "status": "Abaixo: contratação 57,8% (padrão ouro 65%); ticket 56% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 9.3,
+       "pts": 8.9,
        "ok": false,
-       "status": "60,3% (padrão ouro 65%)",
+       "status": "57,8% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 5.0,
+       "pts": 3.9,
        "ok": false,
-       "status": "R$ 1.167 (padrão ouro R$ 1.621)",
+       "status": "R$ 902 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -942,7 +1386,274 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 4.910 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.303 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 10 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 10 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 6,
+     "ok": false,
+     "status": "2 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+16% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 221 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 491 (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Performance de avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 31
+  },
+  {
+   "id": "SGI01",
+   "nome": "Inhumas",
+   "gerencia": "Alef",
+   "nota": 89.0,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "102% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 19.0,
+     "ok": false,
+     "status": "Abaixo: contratação 58,3% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 9.0,
+       "ok": false,
+       "status": "58,3% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 7,
+       "ok": true,
+       "status": "R$ 2.920 (padrão ouro R$ 1.621)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 6.307 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 49 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 49 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+67% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 339 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Performance de avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 6
+  },
+  {
+   "id": "GO014",
+   "nome": "Itumbiara",
+   "gerencia": "Alex",
+   "nota": 87.7,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "109% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 17.7,
+     "ok": false,
+     "status": "Abaixo: contratação 50,0% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 7.7,
+       "ok": false,
+       "status": "50,0% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 7,
+       "ok": true,
+       "status": "R$ 2.553 (padrão ouro R$ 1.621)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 7.825 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 51 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 51 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+42% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 290 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Performance de avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 9
+  },
+  {
+   "id": "MT002",
+   "nome": "Jaciara",
+   "gerencia": "Felipe",
+   "nota": 37.3,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 0,
+     "ok": false,
+     "status": "74% do ritmo do objetivo",
+     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 12.3,
+     "ok": false,
+     "status": "Abaixo: contratação 35,3% (padrão ouro 65%); ticket 56% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 5.4,
+       "ok": false,
+       "status": "35,3% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 3.9,
+       "ok": false,
+       "status": "R$ 904 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 6.158 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -954,6 +1665,103 @@
      "ok": false,
      "status": "Faltam 1 avaliação(ões) 5★ para o ritmo",
      "hoje": "Hoje: 1 avaliação(ões) 5★ no Google."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "-3% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 5 primeira(s) avaliação(ões) a mais que a média do dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 291 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "google",
+    "nome": "Avaliação do Google",
+    "texto": "Hoje: 1 avaliação(ões) 5★ no Google."
+   },
+   "posicao": 46
+  },
+  {
+   "id": "GO020",
+   "nome": "Jardim Ingá",
+   "gerencia": "Mattheus",
+   "nota": 72.4,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "140% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 17.4,
+     "ok": false,
+     "status": "Abaixo: contratação 60,2% (padrão ouro 65%); ticket 74% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 9.3,
+       "ok": false,
+       "status": "60,2% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 5.2,
+       "ok": false,
+       "status": "R$ 1.201 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 5.010 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 16 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 16 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
@@ -968,427 +1776,22 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 218 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 400 (sem atendimento sem pagamento)."
+     "status": "R$ 246 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 401 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
-    "indicador": "google",
-    "nome": "Avaliação do Google",
-    "texto": "Hoje: 1 avaliação(ões) 5★ no Google."
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render R$ 401 (sem atendimento sem pagamento)."
    },
-   "posicao": 27
+   "posicao": 25
   },
   {
-   "id": "GO006",
-   "nome": "Goiânia 01",
-   "gerencia": "Murilo",
-   "nota": 55.6,
-   "atencao": true,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 0,
-     "ok": false,
-     "status": "98% do ritmo do objetivo",
-     "hoje": "Faturar hoje 1,4 vez(es) a média diária da clínica para voltar ao ritmo."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 20,
-     "ok": true,
-     "status": "No padrão ouro",
-     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 10,
-       "ok": true,
-       "status": "70,1% (padrão ouro 65%)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 7,
-       "ok": true,
-       "status": "R$ 2.041 (padrão ouro R$ 1.621)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 5.404 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 52 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 52 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+16% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
-    }
-   },
-   "missao": {
-    "indicador": "faturamento",
-    "nome": "Faturamento",
-    "texto": "Faturar hoje 1,4 vez(es) a média diária da clínica para voltar ao ritmo."
-   },
-   "posicao": 35
-  },
-  {
-   "id": "GO007",
-   "nome": "Goiânia 02",
-   "gerencia": "Murilo",
-   "nota": 88.9,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "122% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 20,
-     "ok": true,
-     "status": "No padrão ouro",
-     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 10,
-       "ok": true,
-       "status": "67,6% (padrão ouro 65%)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 7,
-       "ok": true,
-       "status": "R$ 1.878 (padrão ouro R$ 1.621)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 6.378 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 8 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 8 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+39% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
-    }
-   },
-   "missao": {
-    "indicador": "google",
-    "nome": "Avaliação do Google",
-    "texto": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 8 para o ritmo)."
-   },
-   "posicao": 9
-  },
-  {
-   "id": "SGG03",
-   "nome": "Goiânia 03",
-   "gerencia": "Paulo",
-   "nota": 97.1,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "105% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 17.4,
-     "ok": false,
-     "status": "Abaixo: contratação 48,1% (padrão ouro 65%)",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 7.4,
-       "ok": false,
-       "status": "48,1% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 7,
-       "ok": true,
-       "status": "R$ 1.745 (padrão ouro R$ 1.621)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 5.096 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 10,
-     "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+32% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
-    }
-   },
-   "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-   },
-   "posicao": 5
-  },
-  {
-   "id": "GO016",
-   "nome": "Independência",
-   "gerencia": "Paulo",
-   "nota": 68.1,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "107% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 16.3,
-     "ok": false,
-     "status": "Abaixo: contratação 61,4% (padrão ouro 65%); ticket 56% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 9.4,
-       "ok": false,
-       "status": "61,4% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 3.9,
-       "ok": false,
-       "status": "R$ 900 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 5.850 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 8 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 8 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+28% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 388 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-   },
-   "posicao": 30
-  },
-  {
-   "id": "SGI01",
-   "nome": "Inhumas",
-   "gerencia": "Alef",
-   "nota": 87.6,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "111% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 18.8,
-     "ok": false,
-     "status": "Abaixo: contratação 56,9% (padrão ouro 65%)",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 8.8,
-       "ok": false,
-       "status": "56,9% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 7,
-       "ok": true,
-       "status": "R$ 3.301 (padrão ouro R$ 1.621)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 6.587 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 36 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 36 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+93% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
-    }
-   },
-   "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-   },
-   "posicao": 10
-  },
-  {
-   "id": "GO014",
-   "nome": "Itumbiara",
+   "id": "GO011",
+   "nome": "Jataí",
    "gerencia": "Alex",
-   "nota": 86.8,
+   "nota": 85.0,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -1402,114 +1805,33 @@
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 18.1,
-     "ok": false,
-     "status": "Abaixo: contratação 63,9% (padrão ouro 65%); ticket 75% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 9.8,
-       "ok": false,
-       "status": "63,9% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 5.3,
-       "ok": false,
-       "status": "R$ 1.219 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
+       "pts": 10,
        "ok": true,
-       "status": "R$ 7.462 (padrão ouro R$ 4.500)",
+       "status": "69,0% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 43 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 43 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+32% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
-    }
-   },
-   "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-   },
-   "posicao": 12
-  },
-  {
-   "id": "MT002",
-   "nome": "Jaciara",
-   "gerencia": "Felipe",
-   "nota": 39.8,
-   "atencao": true,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 0,
-     "ok": false,
-     "status": "72% do ritmo do objetivo",
-     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 10.8,
-     "ok": false,
-     "status": "Abaixo: contratação 31,8% (padrão ouro 65%); ticket 42% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 4.9,
-       "ok": false,
-       "status": "31,8% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 2.9,
-       "ok": false,
-       "status": "R$ 677 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+       "pts": 7,
+       "ok": true,
+       "status": "R$ 1.789 (padrão ouro R$ 1.621)",
+       "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Pedida",
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 5.670 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.478 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1522,12 +1844,20 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+32% de primeiras avaliações sobre o mês anterior",
+     "status": "+23% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -1535,184 +1865,22 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 274 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 294 (sem atendimento sem pagamento)."
+     "status": "R$ 222 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 490 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
     "indicador": "pagantes",
     "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 7% a mais que a média atual (sem atendimento sem pagamento)."
+    "texto": "Hoje: cada atendimento precisa render R$ 490 (sem atendimento sem pagamento)."
    },
-   "posicao": 44
-  },
-  {
-   "id": "GO020",
-   "nome": "Jardim Ingá",
-   "gerencia": "Mattheus",
-   "nota": 68.7,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "129% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 16.8,
-     "ok": false,
-     "status": "Abaixo: contratação 56,7% (padrão ouro 65%); ticket 73% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 8.7,
-       "ok": false,
-       "status": "56,7% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 5.1,
-       "ok": false,
-       "status": "R$ 1.185 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 5.161 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 13 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 13 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+35% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 383 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-   },
-   "posicao": 29
-  },
-  {
-   "id": "GO011",
-   "nome": "Jataí",
-   "gerencia": "Alex",
-   "nota": 82.0,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "110% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 18.8,
-     "ok": false,
-     "status": "Abaixo: ticket 83% do padrão ouro",
-     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 10,
-       "ok": true,
-       "status": "67,8% (padrão ouro 65%)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 5.8,
-       "ok": false,
-       "status": "R$ 1.342 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 4.680 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 10,
-     "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+19% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 385 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
-   },
-   "posicao": 17
+   "posicao": 12
   },
   {
    "id": "PB001",
    "nome": "João Pessoa",
    "gerencia": "Luiz",
-   "nota": 98.0,
+   "nota": 76.9,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -1720,15 +1888,15 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "146% do ritmo do objetivo",
+     "status": "140% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 18.2,
+     "pts": 17.3,
      "ok": false,
-     "status": "Abaixo: ticket 75% do padrão ouro",
+     "status": "Abaixo: ticket 61% do padrão ouro",
      "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket.",
      "partes": [
       {
@@ -1736,15 +1904,15 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "79,5% (padrão ouro 65%)",
+       "status": "79,3% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 5.2,
+       "pts": 4.3,
        "ok": false,
-       "status": "R$ 1.215 (padrão ouro R$ 1.621)",
+       "status": "R$ 992 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -1752,7 +1920,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 6.808 (padrão ouro R$ 4.500)",
+       "status": "R$ 6.643 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1765,93 +1933,20 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+12% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
-    }
-   },
-   "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
-   },
-   "posicao": 4
-  },
-  {
-   "id": "SGL01",
-   "nome": "Luziânia",
-   "gerencia": "Mattheus",
-   "nota": 70.2,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "126% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 17.7,
-     "ok": false,
-     "status": "Abaixo: contratação 62,5% (padrão ouro 65%); ticket 73% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 9.6,
-       "ok": false,
-       "status": "62,5% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 5.1,
-       "ok": false,
-       "status": "R$ 1.177 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 6.713 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
+    "reclamacoes": {
+     "nome": "Reclamações",
      "max": 10,
      "pts": 10,
      "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 5.5,
+     "pts": 9.6,
      "ok": false,
-     "status": "+4% de primeiras avaliações sobre o mês anterior",
+     "status": "+6% de primeiras avaliações sobre o mês anterior",
      "hoje": "Hoje: 4 primeira(s) avaliação(ões) a mais que a média do dia."
     },
     "pagantes": {
@@ -1859,22 +1954,22 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 238 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 357 (sem atendimento sem pagamento)."
+     "status": "R$ 276 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 293 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
-    "indicador": "crescimento",
-    "nome": "Crescimento de avaliação",
-    "texto": "Hoje: 4 primeira(s) avaliação(ões) a mais que a média do dia."
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render R$ 293 (sem atendimento sem pagamento)."
    },
-   "posicao": 26
+   "posicao": 23
   },
   {
-   "id": "GO003",
-   "nome": "Madre Germana",
-   "gerencia": "Jéssica",
-   "nota": 68.1,
+   "id": "SGL01",
+   "nome": "Luziânia",
+   "gerencia": "Mattheus",
+   "nota": 62.4,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -1882,7 +1977,96 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "119% do ritmo do objetivo",
+     "status": "120% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 16.4,
+     "ok": false,
+     "status": "Abaixo: contratação 59,7% (padrão ouro 65%); ticket 60% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 9.2,
+       "ok": false,
+       "status": "59,7% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 4.2,
+       "ok": false,
+       "status": "R$ 974 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 6.347 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 6,
+     "ok": false,
+     "status": "2 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "+0% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 226 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 473 (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
+   },
+   "posicao": 33
+  },
+  {
+   "id": "GO003",
+   "nome": "Madre Germana",
+   "gerencia": "Jéssica",
+   "nota": 58.4,
+   "atencao": true,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "101% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
@@ -1906,7 +2090,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 2.195 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.801 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1914,7 +2098,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 6.830 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.543 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -1924,38 +2108,46 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 4 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: 4 avaliação(ões) 5★ no Google."
+     "status": "Faltam 2 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 2 avaliação(ões) 5★ no Google."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 12.9,
+     "pts": 0,
      "ok": false,
-     "status": "+9% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
+     "status": "-19% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 16 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 255 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 329 (sem atendimento sem pagamento)."
+     "status": "R$ 234 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 447 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
-    "indicador": "crescimento",
-    "nome": "Crescimento de avaliação",
-    "texto": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
+    "indicador": "google",
+    "nome": "Avaliação do Google",
+    "texto": "Hoje: 2 avaliação(ões) 5★ no Google."
    },
-   "posicao": 31
+   "posicao": 37
   },
   {
    "id": "GO015",
    "nome": "Mangalô",
    "gerencia": "Alef",
-   "nota": 85.2,
+   "nota": 85.5,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -1963,23 +2155,23 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "112% do ritmo do objetivo",
+     "status": "114% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 16.7,
+     "pts": 18.4,
      "ok": false,
-     "status": "Abaixo: contratação 43,8% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 54,3% (padrão ouro 65%)",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 6.7,
+       "pts": 8.4,
        "ok": false,
-       "status": "43,8% (padrão ouro 65%)",
+       "status": "54,3% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
@@ -1987,7 +2179,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 2.059 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.983 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -1995,7 +2187,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 5.098 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.263 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2008,21 +2200,118 @@
      "status": "Faltam 22 avaliação(ões) 5★ para o ritmo",
      "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 22 para o ritmo)."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 8,
+     "ok": false,
+     "status": "1 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+30% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+     "pts": 14.1,
+     "ok": false,
+     "status": "+9% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 424 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
+   },
+   "posicao": 10
+  },
+  {
+   "id": "SGM01",
+   "nome": "Maysa",
+   "gerencia": "Paulo",
+   "nota": 83.1,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "111% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 18.1,
+     "ok": false,
+     "status": "Abaixo: contratação 59,8% (padrão ouro 65%); ticket 93% do padrão ouro; pedida 79% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 9.2,
+       "ok": false,
+       "status": "59,8% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 6.5,
+       "ok": false,
+       "status": "R$ 1.512 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 2.4,
+       "ok": false,
+       "status": "R$ 3.562 (padrão ouro R$ 4.500)",
+       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+56% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 224 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 483 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -2030,13 +2319,102 @@
     "nome": "Performance de avaliação",
     "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
    },
-   "posicao": 13
+   "posicao": 17
   },
   {
-   "id": "SGM01",
-   "nome": "Maysa",
-   "gerencia": "Paulo",
-   "nota": 81.0,
+   "id": "GO021",
+   "nome": "Morrinhos",
+   "gerencia": "Alex",
+   "nota": 75.0,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "121% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 10,
+       "ok": true,
+       "status": "68,6% (padrão ouro 65%)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 7,
+       "ok": true,
+       "status": "R$ 2.894 (padrão ouro R$ 1.621)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 6.473 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 19 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 19 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "-14% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 14 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 317 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 14 para +10%)."
+   },
+   "posicao": 24
+  },
+  {
+   "id": "GO012",
+   "nome": "Novo Gama",
+   "gerencia": "Mattheus",
+   "nota": 71.7,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -2050,34 +2428,34 @@
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 17.9,
-     "ok": false,
-     "status": "Abaixo: contratação 55,4% (padrão ouro 65%); pedida 78% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 8.5,
-       "ok": false,
-       "status": "55,4% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+       "pts": 10,
+       "ok": true,
+       "status": "71,1% (padrão ouro 65%)",
+       "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Ticket",
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 1.722 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.642 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 2.3,
-       "ok": false,
-       "status": "R$ 3.519 (padrão ouro R$ 4.500)",
-       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 4.945 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
       }
      ]
     },
@@ -2089,12 +2467,198 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 1.7,
+     "ok": false,
+     "status": "+1% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 8 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 276 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 296 (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render R$ 296 (sem atendimento sem pagamento)."
+   },
+   "posicao": 26
+  },
+  {
+   "id": "DF003",
+   "nome": "Núcleo Band.",
+   "gerencia": "Mattheus",
+   "nota": 84.3,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "187% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 20,
+     "ok": true,
+     "status": "No padrão ouro",
+     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 10,
+       "ok": true,
+       "status": "67,4% (padrão ouro 65%)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 7,
+       "ok": true,
+       "status": "R$ 2.362 (padrão ouro R$ 1.621)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 5.118 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam 6 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 6 avaliação(ões) 5★ no Google."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 9.3,
+     "ok": false,
+     "status": "+6% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 4 primeira(s) avaliação(ões) a mais que a média do dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 441 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 4 primeira(s) avaliação(ões) a mais que a média do dia."
+   },
+   "posicao": 14
+  },
+  {
+   "id": "GO029",
+   "nome": "Paracatu",
+   "gerencia": "Nathan",
+   "nota": 81.8,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "123% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 16.8,
+     "ok": false,
+     "status": "Abaixo: contratação 54,3% (padrão ouro 65%); ticket 78% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 8.4,
+       "ok": false,
+       "status": "54,3% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 5.5,
+       "ok": false,
+       "status": "R$ 1.272 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 5.415 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+67% de primeiras avaliações sobre o mês anterior",
+     "status": "+45% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -2102,21 +2666,21 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 235 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 360 (sem atendimento sem pagamento)."
+     "status": "R$ 261 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 347 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
     "indicador": "pagantes",
     "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 53% a mais que a média atual (sem atendimento sem pagamento)."
+    "texto": "Hoje: cada atendimento precisa render R$ 347 (sem atendimento sem pagamento)."
    },
-   "posicao": 19
+   "posicao": 18
   },
   {
-   "id": "GO021",
-   "nome": "Morrinhos",
-   "gerencia": "Alex",
+   "id": "DF001",
+   "nome": "Paranoá",
+   "gerencia": "Mattheus",
    "nota": 83.1,
    "atencao": false,
    "indicadores": {
@@ -2125,23 +2689,23 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "131% do ritmo do objetivo",
+     "status": "109% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 19.8,
+     "pts": 18.1,
      "ok": false,
-     "status": "Abaixo: contratação 63,4% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 52,5% (padrão ouro 65%)",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 9.8,
+       "pts": 8.1,
        "ok": false,
-       "status": "63,4% (padrão ouro 65%)",
+       "status": "52,5% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
@@ -2149,7 +2713,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 2.904 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.752 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2157,250 +2721,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 7.472 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 19 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 19 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 10.0,
-     "ok": false,
-     "status": "+7% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 2 primeira(s) avaliação(ões) a mais que a média do dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
-    }
-   },
-   "missao": {
-    "indicador": "crescimento",
-    "nome": "Crescimento de avaliação",
-    "texto": "Hoje: 2 primeira(s) avaliação(ões) a mais que a média do dia."
-   },
-   "posicao": 16
-  },
-  {
-   "id": "GO012",
-   "nome": "Novo Gama",
-   "gerencia": "Mattheus",
-   "nota": 80.3,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "118% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 18.0,
-     "ok": false,
-     "status": "Abaixo: ticket 72% do padrão ouro; pedida 98% do padrão ouro",
-     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 10,
-       "ok": true,
-       "status": "69,0% (padrão ouro 65%)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 5.1,
-       "ok": false,
-       "status": "R$ 1.175 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 2.9,
-       "ok": false,
-       "status": "R$ 4.403 (padrão ouro R$ 4.500)",
-       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 10,
-     "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 14.3,
-     "ok": false,
-     "status": "+10% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 263 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 311 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "crescimento",
-    "nome": "Crescimento de avaliação",
-    "texto": "Hoje: 1 primeira(s) avaliação(ões) a mais que a média do dia."
-   },
-   "posicao": 20
-  },
-  {
-   "id": "DF003",
-   "nome": "Núcleo Band.",
-   "gerencia": "Mattheus",
-   "nota": 88.9,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "201% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 20,
-     "ok": true,
-     "status": "No padrão ouro",
-     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 10,
-       "ok": true,
-       "status": "67,2% (padrão ouro 65%)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 7,
-       "ok": true,
-       "status": "R$ 2.448 (padrão ouro R$ 1.621)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 4.936 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 0,
-     "ok": false,
-     "status": "Faltam 12 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 12 para o ritmo)."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+19% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
-    }
-   },
-   "missao": {
-    "indicador": "google",
-    "nome": "Avaliação do Google",
-    "texto": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 12 para o ritmo)."
-   },
-   "posicao": 8
-  },
-  {
-   "id": "GO029",
-   "nome": "Paracatu",
-   "gerencia": "Nathan",
-   "nota": 79.6,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "127% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 16.6,
-     "ok": false,
-     "status": "Abaixo: contratação 54,5% (padrão ouro 65%); ticket 75% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 8.4,
-       "ok": false,
-       "status": "54,5% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 5.3,
-       "ok": false,
-       "status": "R$ 1.216 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 5.608 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.145 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2413,101 +2734,28 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+74% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 263 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 308 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "pagantes",
-    "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 17% a mais que a média atual (sem atendimento sem pagamento)."
-   },
-   "posicao": 22
-  },
-  {
-   "id": "DF001",
-   "nome": "Paranoá",
-   "gerencia": "Mattheus",
-   "nota": 80.0,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "104% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 17.0,
-     "ok": false,
-     "status": "Abaixo: contratação 45,5% (padrão ouro 65%)",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 7.0,
-       "ok": false,
-       "status": "45,5% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 7,
-       "ok": true,
-       "status": "R$ 1.978 (padrão ouro R$ 1.621)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 5.463 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
+    "reclamacoes": {
+     "nome": "Reclamações",
      "max": 10,
      "pts": 10,
      "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "-20% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 29 para +10%)."
+     "status": "-15% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 30 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 366 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
@@ -2516,45 +2764,45 @@
     "nome": "Performance de avaliação",
     "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
    },
-   "posicao": 21
+   "posicao": 16
   },
   {
    "id": "GO023",
    "nome": "Parque Anhanguera",
    "gerencia": "Felipe",
-   "nota": 66.7,
-   "atencao": false,
+   "nota": 35.8,
+   "atencao": true,
    "indicadores": {
     "faturamento": {
      "nome": "Faturamento",
      "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "100% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+     "pts": 0,
+     "ok": false,
+     "status": "98% do ritmo do objetivo",
+     "hoje": "Faturar hoje 1,3 vez(es) a média diária da clínica para voltar ao ritmo."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 20,
-     "ok": true,
-     "status": "No padrão ouro",
-     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
+     "pts": 17.8,
+     "ok": false,
+     "status": "Abaixo: contratação 51,0% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 10,
-       "ok": true,
-       "status": "65,5% (padrão ouro 65%)",
-       "hoje": "Manter o padrão ouro."
+       "pts": 7.8,
+       "ok": false,
+       "status": "51,0% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 2.006 (padrão ouro R$ 1.621)",
+       "status": "R$ 2.089 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2562,7 +2810,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 5.675 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.225 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2575,35 +2823,43 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 8,
+     "ok": false,
+     "status": "1 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "-24% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 17 para +10%)."
+     "status": "-23% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 22 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 260 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 315 (sem atendimento sem pagamento)."
+     "status": "R$ 268 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 322 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
-    "indicador": "pagantes",
-    "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 21% a mais que a média atual (sem atendimento sem pagamento)."
+    "indicador": "faturamento",
+    "nome": "Faturamento",
+    "texto": "Faturar hoje 1,3 vez(es) a média diária da clínica para voltar ao ritmo."
    },
-   "posicao": 32
+   "posicao": 47
   },
   {
    "id": "GO005",
    "nome": "Planaltina",
    "gerencia": "Mattheus",
-   "nota": 32.4,
+   "nota": 38.6,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -2611,15 +2867,15 @@
      "max": 30,
      "pts": 0,
      "ok": false,
-     "status": "82% do ritmo do objetivo",
+     "status": "74% do ritmo do objetivo",
      "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 19.2,
+     "pts": 18.6,
      "ok": false,
-     "status": "Abaixo: contratação 60,0% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 60,0% (padrão ouro 65%); ticket 91% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
@@ -2633,17 +2889,17 @@
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 7,
-       "ok": true,
-       "status": "R$ 2.041 (padrão ouro R$ 1.621)",
-       "hoje": "Manter o padrão ouro."
+       "pts": 6.4,
+       "ok": false,
+       "status": "R$ 1.474 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 6.608 (padrão ouro R$ 4.500)",
+       "status": "R$ 7.892 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2656,21 +2912,29 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "-24% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 12 para +10%)."
+     "status": "-29% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 17 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 241 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 354 (sem atendimento sem pagamento)."
+     "status": "R$ 214 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 518 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
@@ -2678,13 +2942,13 @@
     "nome": "Faturamento",
     "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
    },
-   "posicao": 47
+   "posicao": 44
   },
   {
    "id": "GO026",
    "nome": "Plano Piloto",
    "gerencia": "Mattheus",
-   "nota": 28.2,
+   "nota": 23.0,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -2692,39 +2956,39 @@
      "max": 30,
      "pts": 0,
      "ok": false,
-     "status": "47% do ritmo do objetivo",
+     "status": "46% do ritmo do objetivo",
      "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 10.4,
+     "pts": 13.0,
      "ok": false,
-     "status": "Abaixo: contratação 29,4% (padrão ouro 65%); ticket 56% do padrão ouro; pedida 65% do padrão ouro",
+     "status": "Abaixo: contratação 46,7% (padrão ouro 65%); ticket 61% do padrão ouro; pedida 52% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 4.5,
+       "pts": 7.2,
        "ok": false,
-       "status": "29,4% (padrão ouro 65%)",
+       "status": "46,7% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 4.0,
+       "pts": 4.3,
        "ok": false,
-       "status": "R$ 915 (padrão ouro R$ 1.621)",
+       "status": "R$ 992 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 1.9,
+       "pts": 1.5,
        "ok": false,
-       "status": "R$ 2.920 (padrão ouro R$ 4.500)",
+       "status": "R$ 2.321 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -2734,38 +2998,46 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 41 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 41 para o ritmo)."
+     "status": "Faltam 36 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 36 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+19% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+     "pts": 0,
+     "ok": false,
+     "status": "+0% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 3 primeira(s) avaliação(ões) a mais que a média do dia."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 272 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 293 (sem atendimento sem pagamento)."
+     "status": "R$ 249 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 391 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
-    "indicador": "pagantes",
-    "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 8% a mais que a média atual (sem atendimento sem pagamento)."
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 3 primeira(s) avaliação(ões) a mais que a média do dia."
    },
-   "posicao": 50
+   "posicao": 51
   },
   {
    "id": "RO001",
    "nome": "Porto Velho",
    "gerencia": "Murilo",
-   "nota": 65.4,
+   "nota": 67.2,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -2773,40 +3045,40 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "134% do ritmo do objetivo",
+     "status": "153% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 16.8,
+     "pts": 17.2,
      "ok": false,
-     "status": "Abaixo: ticket 59% do padrão ouro; pedida 87% do padrão ouro",
-     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket.",
+     "status": "Abaixo: contratação 57,8% (padrão ouro 65%); ticket 75% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 10,
-       "ok": true,
-       "status": "65,5% (padrão ouro 65%)",
-       "hoje": "Manter o padrão ouro."
+       "pts": 8.9,
+       "ok": false,
+       "status": "57,8% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 4.2,
+       "pts": 5.3,
        "ok": false,
-       "status": "R$ 964 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.220 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 2.6,
-       "ok": false,
-       "status": "R$ 3.936 (padrão ouro R$ 4.500)",
-       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 4.728 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
       }
      ]
     },
@@ -2818,67 +3090,75 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 2.1,
+     "pts": 0,
      "ok": false,
-     "status": "+1% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
+     "status": "-9% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 18 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 227 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 376 (sem atendimento sem pagamento)."
+     "status": "R$ 262 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 343 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
-    "indicador": "crescimento",
-    "nome": "Crescimento de avaliação",
-    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render R$ 343 (sem atendimento sem pagamento)."
    },
-   "posicao": 33
+   "posicao": 29
   },
   {
    "id": "GO032",
    "nome": "Praça A",
    "gerencia": "Alef",
-   "nota": 50.0,
-   "atencao": true,
+   "nota": 84.8,
+   "atencao": false,
    "indicadores": {
     "faturamento": {
      "nome": "Faturamento",
      "max": 30,
-     "pts": 0,
-     "ok": false,
-     "status": "98% do ritmo do objetivo",
-     "hoje": "Faturar hoje 1,4 vez(es) a média diária da clínica para voltar ao ritmo."
+     "pts": 30,
+     "ok": true,
+     "status": "102% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 20,
-     "ok": true,
-     "status": "No padrão ouro",
-     "hoje": "Manter o padrão: todo paciente avaliado sai com plano completo apresentado.",
+     "pts": 19.8,
+     "ok": false,
+     "status": "Abaixo: contratação 63,9% (padrão ouro 65%)",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 10,
-       "ok": true,
-       "status": "65,3% (padrão ouro 65%)",
-       "hoje": "Manter o padrão ouro."
+       "pts": 9.8,
+       "ok": false,
+       "status": "63,9% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 1.746 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.675 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2886,7 +3166,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 5.662 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.288 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2898,6 +3178,14 @@
      "ok": true,
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
@@ -2905,29 +3193,29 @@
      "pts": 0,
      "ok": false,
      "status": "-13% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 16 para +10%)."
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 20 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 477 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
-    "indicador": "faturamento",
-    "nome": "Faturamento",
-    "texto": "Faturar hoje 1,4 vez(es) a média diária da clínica para voltar ao ritmo."
+    "indicador": "avaliacao",
+    "nome": "Performance de avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
    },
-   "posicao": 39
+   "posicao": 13
   },
   {
    "id": "GO017",
    "nome": "Quirinópolis",
    "gerencia": "Alex",
-   "nota": 99.4,
+   "nota": 99.8,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -2935,23 +3223,23 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "110% do ritmo do objetivo",
+     "status": "106% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 19.5,
+     "pts": 19.8,
      "ok": false,
-     "status": "Abaixo: contratação 61,8% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 63,8% (padrão ouro 65%)",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 9.5,
+       "pts": 9.8,
        "ok": false,
-       "status": "61,8% (padrão ouro 65%)",
+       "status": "63,8% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
@@ -2959,7 +3247,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 1.698 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.678 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -2967,7 +3255,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 7.166 (padrão ouro R$ 4.500)",
+       "status": "R$ 7.669 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -2980,12 +3268,20 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+29% de primeiras avaliações sobre o mês anterior",
+     "status": "+34% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -2993,7 +3289,7 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 338 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
@@ -3008,7 +3304,7 @@
    "id": "SGRV1",
    "nome": "Rio Verde 03",
    "gerencia": "Alex",
-   "nota": 49.9,
+   "nota": 53.9,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -3016,31 +3312,31 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "150% do ritmo do objetivo",
+     "status": "132% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 14.9,
+     "pts": 13.9,
      "ok": false,
-     "status": "Abaixo: contratação 42,9% (padrão ouro 65%); ticket 75% do padrão ouro",
+     "status": "Abaixo: contratação 43,3% (padrão ouro 65%); ticket 61% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 6.6,
+       "pts": 6.7,
        "ok": false,
-       "status": "42,9% (padrão ouro 65%)",
+       "status": "43,3% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 5.3,
+       "pts": 4.3,
        "ok": false,
-       "status": "R$ 1.224 (padrão ouro R$ 1.621)",
+       "status": "R$ 991 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -3048,7 +3344,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 5.766 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.990 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3058,8 +3354,372 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 64 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 64 para o ritmo)."
+     "status": "Faltam 78 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 78 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "-23% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 29 para +10%)."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 199 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 572 (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Performance de avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 40
+  },
+  {
+   "id": "MT001",
+   "nome": "Rondonópolis",
+   "gerencia": "Alef",
+   "nota": 94.7,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "124% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 16.7,
+     "ok": false,
+     "status": "Abaixo: contratação 47,4% (padrão ouro 65%); ticket 92% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 7.3,
+       "ok": false,
+       "status": "47,4% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 6.4,
+       "ok": false,
+       "status": "R$ 1.488 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 6.186 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 8,
+     "ok": false,
+     "status": "1 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+76% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "R$ 294 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Performance de avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 4
+  },
+  {
+   "id": "GO004",
+   "nome": "Santa Rita",
+   "gerencia": "Paulo",
+   "nota": 79.1,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "103% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 18.1,
+     "ok": false,
+     "status": "Abaixo: contratação 62,7% (padrão ouro 65%); ticket 78% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 9.6,
+       "ok": false,
+       "status": "62,7% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 5.4,
+       "ok": false,
+       "status": "R$ 1.259 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 4.695 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 6,
+     "ok": false,
+     "status": "2 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+15% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 221 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 493 (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "avaliacao",
+    "nome": "Performance de avaliação",
+    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+   },
+   "posicao": 20
+  },
+  {
+   "id": "PE004",
+   "nome": "Santo Antão",
+   "gerencia": "Luiz",
+   "nota": 80.8,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "126% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 15.8,
+     "ok": false,
+     "status": "Abaixo: contratação 60,0% (padrão ouro 65%); ticket 64% do padrão ouro; pedida 69% do padrão ouro",
+     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 9.2,
+       "ok": false,
+       "status": "60,0% (padrão ouro 65%)",
+       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 4.5,
+       "ok": false,
+       "status": "R$ 1.040 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 2.1,
+       "ok": false,
+       "status": "R$ 3.119 (padrão ouro R$ 4.500)",
+       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
+    "crescimento": {
+     "nome": "Crescimento de avaliação",
+     "max": 15,
+     "pts": 15,
+     "ok": true,
+     "status": "+54% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+    },
+    "pagantes": {
+     "nome": "Pagamento por atendimento",
+     "max": 15,
+     "pts": 0,
+     "ok": false,
+     "status": "R$ 272 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 310 (sem atendimento sem pagamento)."
+    }
+   },
+   "missao": {
+    "indicador": "pagantes",
+    "nome": "Pagamento por atendimento",
+    "texto": "Hoje: cada atendimento precisa render R$ 310 (sem atendimento sem pagamento)."
+   },
+   "posicao": 19
+  },
+  {
+   "id": "GO001",
+   "nome": "Santo Antônio",
+   "gerencia": "Nathan",
+   "nota": 67.5,
+   "atencao": false,
+   "indicadores": {
+    "faturamento": {
+     "nome": "Faturamento",
+     "max": 30,
+     "pts": 30,
+     "ok": true,
+     "status": "100% do ritmo do objetivo",
+     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
+    },
+    "avaliacao": {
+     "nome": "Performance de avaliação",
+     "max": 20,
+     "pts": 17.5,
+     "ok": false,
+     "status": "Abaixo: ticket 64% do padrão ouro",
+     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket.",
+     "partes": [
+      {
+       "nome": "Contratação",
+       "max": 10,
+       "pts": 10,
+       "ok": true,
+       "status": "69,0% (padrão ouro 65%)",
+       "hoje": "Manter o padrão ouro."
+      },
+      {
+       "nome": "Ticket",
+       "max": 7,
+       "pts": 4.5,
+       "ok": false,
+       "status": "R$ 1.044 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
+      },
+      {
+       "nome": "Pedida",
+       "max": 3,
+       "pts": 3,
+       "ok": true,
+       "status": "R$ 5.230 (padrão ouro R$ 4.500)",
+       "hoje": "Manter o padrão ouro."
+      }
+     ]
+    },
+    "google": {
+     "nome": "Avaliação do Google",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "No ritmo do plano de notas",
+     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
@@ -3074,183 +3734,21 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 207 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 414 (sem atendimento sem pagamento)."
+     "status": "R$ 185 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 621 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
     "indicador": "avaliacao",
     "nome": "Performance de avaliação",
-    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    "texto": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket."
    },
-   "posicao": 40
+   "posicao": 28
   },
   {
-   "id": "MT001",
-   "nome": "Rondonópolis",
-   "gerencia": "Alef",
-   "nota": 96.8,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "124% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 17.1,
-     "ok": false,
-     "status": "Abaixo: contratação 47,9% (padrão ouro 65%); ticket 97% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 7.4,
-       "ok": false,
-       "status": "47,9% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 6.8,
-       "ok": false,
-       "status": "R$ 1.569 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 5.869 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 10,
-     "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+119% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
-     "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
-    }
-   },
-   "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-   },
-   "posicao": 6
-  },
-  {
-   "id": "GO004",
-   "nome": "Santa Rita",
-   "gerencia": "Paulo",
-   "nota": 81.0,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "101% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 17.9,
-     "ok": false,
-     "status": "Abaixo: contratação 60,0% (padrão ouro 65%); ticket 81% do padrão ouro",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 9.2,
-       "ok": false,
-       "status": "60,0% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 5.7,
-       "ok": false,
-       "status": "R$ 1.314 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 4.574 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 10,
-     "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+24% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 216 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 405 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-   },
-   "posicao": 18
-  },
-  {
-   "id": "PE004",
-   "nome": "Santo Antão",
-   "gerencia": "Luiz",
+   "id": "GO031",
+   "nome": "Santo Hilário",
+   "gerencia": "Felipe",
    "nota": 77.9,
    "atencao": false,
    "indicadores": {
@@ -3259,185 +3757,23 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "126% do ritmo do objetivo",
+     "status": "104% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 15.1,
+     "pts": 19.6,
      "ok": false,
-     "status": "Abaixo: contratação 58,3% (padrão ouro 65%); ticket 61% do padrão ouro; pedida 61% do padrão ouro",
+     "status": "Abaixo: contratação 62,7% (padrão ouro 65%)",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 9.0,
+       "pts": 9.6,
        "ok": false,
-       "status": "58,3% (padrão ouro 65%)",
-       "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 4.3,
-       "ok": false,
-       "status": "R$ 996 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 1.8,
-       "ok": false,
-       "status": "R$ 2.727 (padrão ouro R$ 4.500)",
-       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 10,
-     "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+72% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 269 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 298 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "pagantes",
-    "nome": "Pagamento por atendimento",
-    "texto": "Hoje: cada atendimento precisa render 11% a mais que a média atual (sem atendimento sem pagamento)."
-   },
-   "posicao": 24
-  },
-  {
-   "id": "GO001",
-   "nome": "Santo Antônio",
-   "gerencia": "Nathan",
-   "nota": 31.0,
-   "atencao": true,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 0,
-     "ok": false,
-     "status": "95% do ritmo do objetivo",
-     "hoje": "Faturar hoje 1,8 vez(es) a média diária da clínica para voltar ao ritmo."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 17.9,
-     "ok": false,
-     "status": "Abaixo: ticket 69% do padrão ouro",
-     "hoje": "Hoje: apresentar o plano completo (sem cortar tratamento) para subir o ticket.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 10,
-       "ok": true,
-       "status": "70,7% (padrão ouro 65%)",
-       "hoje": "Manter o padrão ouro."
-      },
-      {
-       "nome": "Ticket",
-       "max": 7,
-       "pts": 4.9,
-       "ok": false,
-       "status": "R$ 1.124 (padrão ouro R$ 1.621)",
-       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
-      },
-      {
-       "nome": "Pedida",
-       "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 4.796 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
-      }
-     ]
-    },
-    "google": {
-     "nome": "Avaliação do Google",
-     "max": 10,
-     "pts": 10,
-     "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
-    },
-    "crescimento": {
-     "nome": "Crescimento de avaliação",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "-14% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 14 para +10%)."
-    },
-    "pagantes": {
-     "nome": "Pagamento por atendimento",
-     "max": 15,
-     "pts": 0,
-     "ok": false,
-     "status": "R$ 174 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 477 (sem atendimento sem pagamento)."
-    }
-   },
-   "missao": {
-    "indicador": "faturamento",
-    "nome": "Faturamento",
-    "texto": "Faturar hoje 1,8 vez(es) a média diária da clínica para voltar ao ritmo."
-   },
-   "posicao": 49
-  },
-  {
-   "id": "GO031",
-   "nome": "Santo Hilário",
-   "gerencia": "Felipe",
-   "nota": 98.7,
-   "atencao": false,
-   "indicadores": {
-    "faturamento": {
-     "nome": "Faturamento",
-     "max": 30,
-     "pts": 30,
-     "ok": true,
-     "status": "117% do ritmo do objetivo",
-     "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
-    },
-    "avaliacao": {
-     "nome": "Performance de avaliação",
-     "max": 20,
-     "pts": 18.8,
-     "ok": false,
-     "status": "Abaixo: contratação 57,4% (padrão ouro 65%)",
-     "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
-     "partes": [
-      {
-       "nome": "Contratação",
-       "max": 10,
-       "pts": 8.8,
-       "ok": false,
-       "status": "57,4% (padrão ouro 65%)",
+       "status": "62,7% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
@@ -3445,7 +3781,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 1.872 (padrão ouro R$ 1.621)",
+       "status": "R$ 2.097 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -3453,7 +3789,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 5.498 (padrão ouro R$ 4.500)",
+       "status": "R$ 4.894 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3461,40 +3797,48 @@
     "google": {
      "nome": "Avaliação do Google",
      "max": 10,
-     "pts": 10,
-     "ok": true,
-     "status": "No ritmo do plano de notas",
-     "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
+     "pts": 0,
+     "ok": false,
+     "status": "Faltam -8 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: -8 avaliação(ões) 5★ no Google."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 8,
+     "ok": false,
+     "status": "1 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+15% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+     "pts": 5.3,
+     "ok": false,
+     "status": "+4% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 4 primeira(s) avaliação(ões) a mais que a média do dia."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 454 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
-    "indicador": "avaliacao",
-    "nome": "Performance de avaliação",
-    "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
+    "indicador": "google",
+    "nome": "Avaliação do Google",
+    "texto": "Hoje: -8 avaliação(ões) 5★ no Google."
    },
-   "posicao": 2
+   "posicao": 22
   },
   {
    "id": "GSC01",
    "nome": "Sen. Canedo",
    "gerencia": "Felipe",
-   "nota": 54.6,
+   "nota": 59.2,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -3508,34 +3852,34 @@
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 19.1,
+     "pts": 19.2,
      "ok": false,
-     "status": "Abaixo: contratação 59,4% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 62,0% (padrão ouro 65%); ticket 96% do padrão ouro; pedida 97% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 9.1,
+       "pts": 9.5,
        "ok": false,
-       "status": "59,4% (padrão ouro 65%)",
+       "status": "62,0% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 7,
-       "ok": true,
-       "status": "R$ 1.822 (padrão ouro R$ 1.621)",
-       "hoje": "Manter o padrão ouro."
+       "pts": 6.7,
+       "ok": false,
+       "status": "R$ 1.556 (padrão ouro R$ 1.621)",
+       "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 3,
-       "ok": true,
-       "status": "R$ 5.267 (padrão ouro R$ 4.500)",
-       "hoje": "Manter o padrão ouro."
+       "pts": 2.9,
+       "ok": false,
+       "status": "R$ 4.373 (padrão ouro R$ 4.500)",
+       "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
     },
@@ -3544,38 +3888,46 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 4 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: 4 avaliação(ões) 5★ no Google."
+     "status": "Faltam 2 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 2 avaliação(ões) 5★ no Google."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "-18% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 27 para +10%)."
+     "status": "-17% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 34 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 235 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 362 (sem atendimento sem pagamento)."
+     "status": "R$ 234 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 446 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
     "indicador": "google",
     "nome": "Avaliação do Google",
-    "texto": "Hoje: 4 avaliação(ões) 5★ no Google."
+    "texto": "Hoje: 2 avaliação(ões) 5★ no Google."
    },
-   "posicao": 37
+   "posicao": 36
   },
   {
    "id": "GO013",
    "nome": "Studio OralGold",
    "gerencia": "Jéssica",
-   "nota": 98.4,
+   "nota": 99.4,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -3589,17 +3941,17 @@
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 18.6,
+     "pts": 19.4,
      "ok": false,
-     "status": "Abaixo: contratação 56,0% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 61,1% (padrão ouro 65%)",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 8.6,
+       "pts": 9.4,
        "ok": false,
-       "status": "56,0% (padrão ouro 65%)",
+       "status": "61,1% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
@@ -3607,7 +3959,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 5.633 (padrão ouro R$ 1.621)",
+       "status": "R$ 5.164 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -3615,7 +3967,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 7.254 (padrão ouro R$ 4.500)",
+       "status": "R$ 6.651 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3628,12 +3980,20 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+35% de primeiras avaliações sobre o mês anterior",
+     "status": "+57% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -3641,7 +4001,7 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 762 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
@@ -3650,13 +4010,13 @@
     "nome": "Performance de avaliação",
     "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
    },
-   "posicao": 3
+   "posicao": 2
   },
   {
    "id": "DF002",
    "nome": "Taguatinga",
    "gerencia": "Nathan",
-   "nota": 85.0,
+   "nota": 88.8,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -3670,33 +4030,33 @@
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 16.5,
+     "pts": 18.8,
      "ok": false,
-     "status": "Abaixo: contratação 57,5% (padrão ouro 65%); ticket 79% do padrão ouro; pedida 70% do padrão ouro",
+     "status": "Abaixo: contratação 58,3% (padrão ouro 65%); ticket 100% do padrão ouro; pedida 96% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 8.8,
+       "pts": 9.0,
        "ok": false,
-       "status": "57,5% (padrão ouro 65%)",
+       "status": "58,3% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 5.5,
+       "pts": 7.0,
        "ok": false,
-       "status": "R$ 1.279 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.613 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 2.1,
+       "pts": 2.9,
        "ok": false,
-       "status": "R$ 3.132 (padrão ouro R$ 4.500)",
+       "status": "R$ 4.327 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -3706,15 +4066,23 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 56 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 56 para o ritmo)."
+     "status": "Faltam 65 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 65 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+38% de primeiras avaliações sobre o mês anterior",
+     "status": "+16% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -3722,7 +4090,7 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 395 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
@@ -3731,13 +4099,13 @@
     "nome": "Performance de avaliação",
     "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
    },
-   "posicao": 14
+   "posicao": 7
   },
   {
    "id": "SGT01",
    "nome": "Trindade",
    "gerencia": "Paulo",
-   "nota": 47.1,
+   "nota": 53.1,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -3745,23 +4113,23 @@
      "max": 30,
      "pts": 0,
      "ok": false,
-     "status": "87% do ritmo do objetivo",
-     "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+     "status": "99% do ritmo do objetivo",
+     "hoje": "Faturar hoje 1,3 vez(es) a média diária da clínica para voltar ao ritmo."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 17.4,
+     "pts": 18.1,
      "ok": false,
-     "status": "Abaixo: contratação 48,1% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 52,5% (padrão ouro 65%)",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 7.4,
+       "pts": 8.1,
        "ok": false,
-       "status": "48,1% (padrão ouro 65%)",
+       "status": "52,5% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
@@ -3769,7 +4137,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 2.747 (padrão ouro R$ 1.621)",
+       "status": "R$ 2.197 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -3777,7 +4145,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 5.224 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.175 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3790,12 +4158,20 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+51% de primeiras avaliações sobre o mês anterior",
+     "status": "+57% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -3803,14 +4179,14 @@
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 241 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 356 (sem atendimento sem pagamento)."
+     "status": "R$ 274 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 301 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
     "indicador": "faturamento",
     "nome": "Faturamento",
-    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    "texto": "Faturar hoje 1,3 vez(es) a média diária da clínica para voltar ao ritmo."
    },
    "posicao": 41
   },
@@ -3818,7 +4194,7 @@
    "id": "GO008",
    "nome": "Vila Brasília",
    "gerencia": "Murilo",
-   "nota": 87.3,
+   "nota": 88.6,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -3826,7 +4202,7 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "109% do ritmo do objetivo",
+     "status": "104% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
@@ -3834,7 +4210,7 @@
      "max": 20,
      "pts": 18.6,
      "ok": false,
-     "status": "Abaixo: contratação 56,0% (padrão ouro 65%)",
+     "status": "Abaixo: contratação 56,2% (padrão ouro 65%)",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
@@ -3842,7 +4218,7 @@
        "max": 10,
        "pts": 8.6,
        "ok": false,
-       "status": "56,0% (padrão ouro 65%)",
+       "status": "56,2% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
@@ -3850,7 +4226,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 2.182 (padrão ouro R$ 1.621)",
+       "status": "R$ 2.297 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -3858,7 +4234,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 5.113 (padrão ouro R$ 4.500)",
+       "status": "R$ 4.969 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -3868,15 +4244,23 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 35 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 35 para o ritmo)."
+     "status": "Faltam 27 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 27 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "+62% de primeiras avaliações sobre o mês anterior",
+     "status": "+46% de primeiras avaliações sobre o mês anterior",
      "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
     },
     "pagantes": {
@@ -3884,7 +4268,7 @@
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 292 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
@@ -3893,13 +4277,13 @@
     "nome": "Performance de avaliação",
     "texto": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
    },
-   "posicao": 11
+   "posicao": 8
   },
   {
    "id": "GO019",
    "nome": "Vila Concórdia",
    "gerencia": "Felipe",
-   "nota": 33.8,
+   "nota": 23.4,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -3907,7 +4291,7 @@
      "max": 30,
      "pts": 0,
      "ok": false,
-     "status": "79% do ritmo do objetivo",
+     "status": "71% do ritmo do objetivo",
      "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
     },
     "avaliacao": {
@@ -3915,31 +4299,31 @@
      "max": 20,
      "pts": 15.4,
      "ok": false,
-     "status": "Abaixo: contratação 57,7% (padrão ouro 65%); ticket 67% do padrão ouro; pedida 62% do padrão ouro",
+     "status": "Abaixo: contratação 60,0% (padrão ouro 65%); ticket 61% do padrão ouro; pedida 65% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 8.9,
+       "pts": 9.2,
        "ok": false,
-       "status": "57,7% (padrão ouro 65%)",
+       "status": "60,0% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 4.7,
+       "pts": 4.2,
        "ok": false,
-       "status": "R$ 1.086 (padrão ouro R$ 1.621)",
+       "status": "R$ 983 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
        "nome": "Pedida",
        "max": 3,
-       "pts": 1.9,
+       "pts": 2.0,
        "ok": false,
-       "status": "R$ 2.805 (padrão ouro R$ 4.500)",
+       "status": "R$ 2.926 (padrão ouro R$ 4.500)",
        "hoje": "Hoje: pedir o tratamento ideal em toda avaliação para subir a pedida."
       }
      ]
@@ -3949,38 +4333,46 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 20 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 20 para o ritmo)."
+     "status": "Faltam 22 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: pelo menos 6 avaliações 5★ no Google (faltam 22 para o ritmo)."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 8,
+     "ok": false,
+     "status": "1 reclamação(ões) no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+21% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+     "pts": 0,
+     "ok": false,
+     "status": "+0% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 4 primeira(s) avaliação(ões) a mais que a média do dia."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 232 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 372 (sem atendimento sem pagamento)."
+     "status": "R$ 225 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 478 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
-    "indicador": "faturamento",
-    "nome": "Faturamento",
-    "texto": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 4 primeira(s) avaliação(ões) a mais que a média do dia."
    },
-   "posicao": 46
+   "posicao": 50
   },
   {
    "id": "GO027",
    "nome": "Vila Nova",
    "gerencia": "Murilo",
-   "nota": 83.3,
+   "nota": 85.0,
    "atencao": false,
    "indicadores": {
     "faturamento": {
@@ -3988,7 +4380,7 @@
      "max": 30,
      "pts": 30,
      "ok": true,
-     "status": "126% do ritmo do objetivo",
+     "status": "117% do ritmo do objetivo",
      "hoje": "Manter o ritmo: fechar o dia igual ou acima da média diária."
     },
     "avaliacao": {
@@ -4004,7 +4396,7 @@
        "max": 10,
        "pts": 10,
        "ok": true,
-       "status": "73,7% (padrão ouro 65%)",
+       "status": "77,6% (padrão ouro 65%)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -4012,7 +4404,7 @@
        "max": 7,
        "pts": 7,
        "ok": true,
-       "status": "R$ 2.220 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.996 (padrão ouro R$ 1.621)",
        "hoje": "Manter o padrão ouro."
       },
       {
@@ -4020,7 +4412,7 @@
        "max": 3,
        "pts": 3,
        "ok": true,
-       "status": "R$ 6.503 (padrão ouro R$ 4.500)",
+       "status": "R$ 5.516 (padrão ouro R$ 4.500)",
        "hoje": "Manter o padrão ouro."
       }
      ]
@@ -4033,35 +4425,43 @@
      "status": "No ritmo do plano de notas",
      "hoje": "Pedir avaliação 5★ a todo paciente satisfeito de hoje."
     },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
+    },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "-7% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 8 para +10%)."
+     "status": "-21% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 20 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 15,
      "ok": true,
-     "status": "No objetivo: R$ 280 ou mais por atendimento",
+     "status": "R$ 427 por atendimento no mês (objetivo R$ 280)",
      "hoje": "Manter: todo atendimento com pagamento registrado, pelo menos R$ 280 por atendimento."
     }
    },
    "missao": {
     "indicador": "crescimento",
     "nome": "Crescimento de avaliação",
-    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 8 para +10%)."
+    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 20 para +10%)."
    },
-   "posicao": 15
+   "posicao": 11
   },
   {
    "id": "GO002",
    "nome": "Águas Lindas",
    "gerencia": "Nathan",
-   "nota": 34.8,
+   "nota": 27.5,
    "atencao": true,
    "indicadores": {
     "faturamento": {
@@ -4069,31 +4469,31 @@
      "max": 30,
      "pts": 0,
      "ok": false,
-     "status": "80% do ritmo do objetivo",
+     "status": "73% do ritmo do objetivo",
      "hoje": "Hoje o foco é contratar e receber: cada plano fechado aproxima a clínica do ritmo."
     },
     "avaliacao": {
      "nome": "Performance de avaliação",
      "max": 20,
-     "pts": 16.3,
+     "pts": 15.6,
      "ok": false,
-     "status": "Abaixo: contratação 63,2% (padrão ouro 65%); ticket 60% do padrão ouro; pedida 78% do padrão ouro",
+     "status": "Abaixo: contratação 57,5% (padrão ouro 65%); ticket 62% do padrão ouro; pedida 78% do padrão ouro",
      "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações.",
      "partes": [
       {
        "nome": "Contratação",
        "max": 10,
-       "pts": 9.7,
+       "pts": 8.8,
        "ok": false,
-       "status": "63,2% (padrão ouro 65%)",
+       "status": "57,5% (padrão ouro 65%)",
        "hoje": "Hoje: fechar pelo menos 7 de cada 10 avaliações."
       },
       {
        "nome": "Ticket",
        "max": 7,
-       "pts": 4.2,
+       "pts": 4.4,
        "ok": false,
-       "status": "R$ 980 (padrão ouro R$ 1.621)",
+       "status": "R$ 1.009 (padrão ouro R$ 1.621)",
        "hoje": "Hoje: apresentar o plano completo, sem cortar tratamento, para subir o ticket."
       },
       {
@@ -4111,32 +4511,40 @@
      "max": 10,
      "pts": 0,
      "ok": false,
-     "status": "Faltam 2 avaliação(ões) 5★ para o ritmo",
-     "hoje": "Hoje: 2 avaliação(ões) 5★ no Google."
+     "status": "Faltam 4 avaliação(ões) 5★ para o ritmo",
+     "hoje": "Hoje: 4 avaliação(ões) 5★ no Google."
+    },
+    "reclamacoes": {
+     "nome": "Reclamações",
+     "max": 10,
+     "pts": 10,
+     "ok": true,
+     "status": "Nenhuma reclamação no mês",
+     "hoje": "Hoje: nenhuma reclamação. Resolver na hora qualquer insatisfação antes de o paciente sair."
     },
     "crescimento": {
      "nome": "Crescimento de avaliação",
      "max": 15,
-     "pts": 15,
-     "ok": true,
-     "status": "+19% de primeiras avaliações sobre o mês anterior",
-     "hoje": "Manter: pelo menos a média de primeiras avaliações por dia."
+     "pts": 1.9,
+     "ok": false,
+     "status": "+1% de primeiras avaliações sobre o mês anterior",
+     "hoje": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
     },
     "pagantes": {
      "nome": "Pagamento por atendimento",
      "max": 15,
      "pts": 0,
      "ok": false,
-     "status": "R$ 232 por atendimento no mês (objetivo R$ 280)",
-     "hoje": "Hoje: cada atendimento precisa render R$ 367 (sem atendimento sem pagamento)."
+     "status": "R$ 226 por atendimento no mês (objetivo R$ 280)",
+     "hoje": "Hoje: cada atendimento precisa render R$ 475 (sem atendimento sem pagamento)."
     }
    },
    "missao": {
-    "indicador": "google",
-    "nome": "Avaliação do Google",
-    "texto": "Hoje: 2 avaliação(ões) 5★ no Google."
+    "indicador": "crescimento",
+    "nome": "Crescimento de avaliação",
+    "texto": "Hoje: 6 primeira(s) avaliação(ões) a mais que a média do dia (faltam 7 para +10%)."
    },
-   "posicao": 45
+   "posicao": 48
   }
  ]
 }
