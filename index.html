@@ -13,7 +13,7 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 -apple-system,
 .wrap{max-width:640px;margin:0 auto;padding:14px max(14px,env(safe-area-inset-left)) 40px max(14px,env(safe-area-inset-right))}
 h1{font-size:1.3rem;margin:4px 0 2px}
 .sub{color:var(--mut);font-size:.9rem}
-.tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0}#t4{grid-column:1/-1}
+.tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:14px 0}#t4{grid-column:1/-1}.tabs.com5 #t4{grid-column:span 2}
 .tab{padding:10px 6px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--fg);font:600 .95rem inherit;cursor:pointer}
 .tab[aria-selected=true]{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
 select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)}
@@ -137,6 +137,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <button class="tab" id="t3" role="tab" aria-selected="false">Minha gerência</button>
 <button class="tab" id="t2" role="tab" aria-selected="false">Ranking geral</button>
 <button class="tab" id="t4" role="tab" aria-selected="false">Como é calculada a nota?</button>
+<button class="tab" id="t5" role="tab" aria-selected="false" hidden>Acessos<span id="t5badge"></span></button>
 </div>
 <div id="v1">
 <label for="sel" class="sub">Escolha a clínica</label>
@@ -145,6 +146,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 </div>
 <div id="v3" hidden><div class="card"><div class="sub" id="gsub">Escolha a sua clínica na aba "Minha clínica" para ver a sua gerência.</div><table id="gtab"></table></div></div>
 <div id="v2" hidden><div class="card"><table id="tab"></table></div></div>
+<div id="v7" hidden><div id="acescad"></div></div>
 <div id="v4" hidden>
 <div class="card"><div class="sec" style="margin-top:0">A nota da clínica</div>
 <p>A nota vai de <b>0 a 100</b>. Ela é a soma de 6 indicadores do mês, que juntos valem 100 pontos.</p>
@@ -285,6 +287,7 @@ function mostrarApp(){
   $("sair").onclick=sair;
   const ger=P.papel==="gerente"||P.papel==="admin";
   $("links").hidden=!ger; $("admlink").hidden=$("admsep").hidden=P.papel!=="admin";
+  $("t5").hidden=!ger; document.querySelector(".tabs").classList.toggle("com5",ger);
   if(ger)contarPendentes();
   if(P.clinica&&!ler("clinica")){guardar("clinica",P.clinica);
     const sel=$("sel"); if(D&&sel&&!sel.value&&D.clinicas.some(c=>c.id===P.clinica)){sel.value=P.clinica;clinica(P.clinica);}}
@@ -294,8 +297,16 @@ async function contarPendentes(){try{const r=await api("/rest/v1/perfis?select=u
   if(!r.ok)return; let L=await r.json();
   if(P.papel!=="admin"){const g=await gerenteDoEmail(); for(let i=0;i<50&&!D;i++)await new Promise(r=>setTimeout(r,200));
     const ids=new Set(D.clinicas.filter(c=>c.gerencia===g).map(c=>c.id)); L=L.filter(x=>!x.clinica||ids.has(x.clinica));}
-  const n=L.length; $("gerbadge").innerHTML=n?`<span class="badge" title="Cadastros aguardando aprovação">${n}</span>`:"";}catch(e){}}
+  const n=L.length; $("gerbadge").innerHTML=$("t5badge").innerHTML=n?`<span class="badge" title="Cadastros aguardando aprovação">${n}</span>`:"";}catch(e){}}
 
+async function carregarAcessosAba(){const el=$("acescad");
+  if(!P||!(P.papel==="gerente"||P.papel==="admin")){el.innerHTML="";return;}
+  el.innerHTML='<div class="card sub">Carregando cadastros…</div>';
+  for(let i=0;i<50&&!D;i++)await new Promise(r=>setTimeout(r,200));
+  let g; try{g=await gerenteDoEmail();}catch(e){el.innerHTML='<div class="card erro">Não foi possível carregar agora. Tente de novo em instantes.</div>';return;}
+  if(!g){el.innerHTML='<div class="card erro">Este e-mail não está cadastrado como gerente. Fale com o Willian.</div>';return;}
+  const perm=D.clinicas.filter(c=>g==="*"||c.gerencia===g).sort((a,b)=>a.nome.localeCompare(b.nome));
+  carregarCadastros(el,perm,g==="*"?"todas as clínicas":g);}
 // ---------- Cadastros (gerente e administrador aprovam e escolhem a clínica) ----------
 async function carregarCadastros(el,perm,titulo){
   el.innerHTML='<div class="card sub">Carregando cadastros…</div>';
@@ -496,9 +507,9 @@ function desenharGerencia(meu){
     h+=`<tr class="${x.atencao?"at ":""}${x.id===meu?"eu":""}"><td>${i+1}º</td><td>${x.atencao?"⚠️ ":""}${esc(x.nome)}<div class="ind-s">${x.posicao}º no geral</div></td><td class="n">${fmt(x.nota)}</td></tr>`;});
   document.getElementById("gtab").innerHTML=h;
 }
-const ABAS=[["t1","v1"],["t3","v3"],["t2","v2"],["t4","v4"]];
+const ABAS=[["t1","v1"],["t3","v3"],["t2","v2"],["t4","v4"],["t5","v7"]];
 function aba(id){ABAS.forEach(([t,v])=>{const on=t===id;document.getElementById(t).setAttribute("aria-selected",on);document.getElementById(v).hidden=!on;});}
-ABAS.forEach(([t])=>document.getElementById(t).onclick=()=>aba(t));
+ABAS.forEach(([t])=>document.getElementById(t).onclick=()=>{aba(t); if(t==="t5")carregarAcessosAba();});
 Promise.all([fetch("dados.json?v="+Date.now()).then(r=>r.json()),fetch("acoes.json?v="+Date.now()).then(r=>r.json())]).then(([d,a])=>{
   D=d;A=a; encherClinicas();
   document.getElementById("sub").textContent=`Dados até ${d.data_br} · ${d.dia_trabalhado}º de ${d.dias_mes} dias trabalhados de ${d.mes}`;
