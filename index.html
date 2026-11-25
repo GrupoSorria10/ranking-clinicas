@@ -60,7 +60,14 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 #entrada input{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg);margin-top:8px}
 .btn{width:100%;margin-top:10px;padding:12px;border:0;border-radius:10px;background:var(--acc);color:#fff;font:700 1rem inherit;cursor:pointer}
 .lgpd{color:var(--mut);font-size:.8rem;margin-top:10px}
-#sair{color:var(--acc);text-decoration:underline;cursor:pointer}
+#sair,#admlink{color:var(--acc);text-decoration:underline;cursor:pointer}
+#v5 .card{max-width:980px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+.kpi{background:var(--accbg);border-radius:10px;padding:10px;text-align:center}.kpi b{display:block;font-size:1.4rem}
+.adm td{vertical-align:top}.adm summary{color:var(--fg);font-weight:600}
+.adm .zero td{background:var(--warnbg)}
+.em{font-size:.85rem;color:var(--mut);margin:3px 0}
+.btn2{padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);cursor:pointer;font:600 .9rem inherit}
 </style>
 </head>
 <body>
@@ -106,8 +113,20 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <p>Todo dia de madrugada, com os dados do último dia trabalhado (segunda a sábado). O placar recomeça todo dia 1.</p></div>
 </div>
 </div>
+<div id="v5" hidden>
+<button class="btn2" id="admvoltar">← Voltar ao ranking</button>
+<div class="card" id="admlogin" hidden>
+<div class="sec" style="margin-top:0">Área do administrador</div>
+<p class="sub">Digite o e-mail de administrador. Você vai receber um link de acesso (sem senha).</p>
+<input id="admemail" type="email" inputmode="email" placeholder="seu@email.com" style="width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)">
+<button class="btn" id="admenviar">Enviar link de acesso</button>
+<div class="sub" id="admmsg" style="margin-top:8px"></div>
+</div>
+<div id="admconteudo"></div>
+</div>
 <div class="ft" id="ft"></div>
 <div class="ft" id="quem"></div>
+<div class="ft"><span id="admlink">Área do administrador</span></div>
 </div>
 <script>
 const ORDEM=["faturamento","avaliacao","google","reclamacoes","crescimento","pagantes"];
@@ -136,7 +155,68 @@ function pedirEmail(){
     guardar("email",v); mostrarApp();};
   b.onclick=ir; i.onkeydown=e=>{if(e.key==="Enter")ir();};
 }
-if(ler("email"))mostrarApp(); else pedirEmail();
+
+// ---------- Área do administrador (só o e-mail liberado no Supabase lê os acessos) ----------
+const SBU="https://snhuzcovovpueswmudcq.supabase.co";
+const FERIADOS_ADM=["2026-10-12","2026-11-02","2026-11-15","2026-11-20","2026-12-25","2027-01-01"];
+(function(){ if(location.hash.includes("access_token")){const q=new URLSearchParams(location.hash.slice(1));
+  guardar("adm",JSON.stringify({a:q.get("access_token"),r:q.get("refresh_token"),e:Date.now()+(+q.get("expires_in")||3600)*1000}));
+  guardar("abrirAdm","1"); history.replaceState(null,"",location.pathname+location.search);} })();
+async function tokenAdm(){let t;try{t=JSON.parse(ler("adm"))}catch(e){} if(!t)return null;
+  if(Date.now()>t.e-60000){try{const r=await fetch(SBU+"/auth/v1/token?grant_type=refresh_token",{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({refresh_token:t.r})});
+    if(!r.ok)throw 0; const j=await r.json(); t={a:j.access_token,r:j.refresh_token,e:Date.now()+j.expires_in*1000}; guardar("adm",JSON.stringify(t));}
+    catch(e){try{localStorage.removeItem("adm")}catch(x){} return null;}}
+  return t.a;}
+const diaSP=d=>new Intl.DateTimeFormat("en-CA",{timeZone:"America/Sao_Paulo"}).format(d);
+const horaSP=d=>new Date(d).toLocaleString("pt-BR",{timeZone:"America/Sao_Paulo",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+function diasTrab(ini,fim){let n=0;for(let d=new Date(ini+"T12:00:00");diaSP(d)<=fim;d.setDate(d.getDate()+1)){const k=diaSP(d);if(d.getDay()!==0&&!FERIADOS_ADM.includes(k))n++;}return n;}
+function mostrarAdm(){document.getElementById("admlink").parentElement.hidden=true;document.getElementById("entrada").hidden=true;document.getElementById("app").hidden=true;document.getElementById("v5").hidden=false;carregarAdm();}
+function sairAdm(){document.getElementById("admlink").parentElement.hidden=false;document.getElementById("v5").hidden=true; if(ler("email"))mostrarApp(); else pedirEmail();}
+async function carregarAdm(){
+  const box=document.getElementById("admconteudo"), lg=document.getElementById("admlogin");
+  const tk=await tokenAdm();
+  if(!tk){lg.hidden=false;box.innerHTML="";return;}
+  lg.hidden=true; box.innerHTML='<div class="card sub">Carregando acessos…</div>';
+  for(let i=0;i<50&&!D;i++)await new Promise(r=>setTimeout(r,200));
+  const hoje=diaSP(new Date()), ini=hoje.slice(0,8)+"01";
+  let rows=[],de=0;
+  try{ while(true){const r=await fetch(`${SBU}/rest/v1/acessos?select=email,clinica,criado_em&criado_em=gte.${ini}T03:00:00Z&order=criado_em.desc`,{headers:{apikey:SBK,Authorization:"Bearer "+tk,Range:`${de}-${de+999}`}});
+      if(r.status===401){try{localStorage.removeItem("adm")}catch(x){} return carregarAdm();}
+      if(!r.ok)throw new Error(r.status); const L=await r.json(); rows=rows.concat(L); if(L.length<1000)break; de+=1000;} }
+  catch(e){box.innerHTML='<div class="card erro">Não foi possível carregar os acessos agora. Tente de novo em alguns minutos.</div>';return;}
+  const N=diasTrab(ini,hoje), nomes={}, ger={}; (D?D.clinicas:[]).forEach(c=>{nomes[c.id]=c.nome;ger[c.id]=c.gerencia;});
+  const porC={}; for(const r of rows){const c=r.clinica||"—"; const k=diaSP(new Date(r.criado_em));
+    const x=porC[c]||(porC[c]={n:0,dias:new Set(),em:{}}); x.n++; x.dias.add(k);
+    const e=x.em[r.email]||(x.em[r.email]={n:0,dias:new Set(),ult:r.criado_em}); e.n++; e.dias.add(k); if(r.criado_em>e.ult)e.ult=r.criado_em;}
+  const ids=[...new Set([...Object.keys(nomes),...Object.keys(porC)])];
+  const L=ids.map(id=>({id,nome:nomes[id]||(id==="—"?"Sem clínica escolhida":id),ger:ger[id]||"",x:porC[id]||{n:0,dias:new Set(),em:{}}}))
+    .sort((a,b)=>a.x.dias.size-b.x.dias.size||a.nome.localeCompare(b.nome));
+  const emails=new Set(rows.map(r=>r.email)), hojeC=L.filter(c=>nomes[c.id]&&c.x.dias.has(hoje)).length, gers=[...new Set(L.map(c=>c.ger).filter(Boolean))].sort();
+  const mes=new Date(ini+"T12:00:00").toLocaleString("pt-BR",{month:"long"});
+  let h=`<div class="card"><div class="sec" style="margin-top:0">Acessos ao site · ${mes} (01 a ${hoje.slice(8)}/${hoje.slice(5,7)})</div>
+  <div class="sub">Dias trabalhados no mês até hoje: ${N}. Cada abertura do site com a clínica escolhida conta 1 acesso; vários acessos no mesmo dia contam 1 dia.</div>
+  <div class="kpis"><div class="kpi"><b>${rows.length}</b>acessos</div><div class="kpi"><b>${emails.size}</b>e-mails</div><div class="kpi"><b>${hojeC} de ${Object.keys(nomes).length}</b>clínicas acessaram hoje</div></div>
+  <div style="margin-top:12px"><select id="admger"><option value="">Todas as gerências</option>${gers.map(g=>`<option>${esc(g)}</option>`).join("")}</select></div></div>
+  <div class="card"><table class="adm" id="admtab"><tr><td><b>Clínica</b></td><td class="n"><b>Dias com acesso</b></td><td class="n"><b>Acessos</b></td></tr>`;
+  for(const c of L){const em=Object.entries(c.x.em).sort((a,b)=>b[1].dias.size-a[1].dias.size);
+    h+=`<tr class="${c.x.n?"":"zero"}" data-g="${esc(c.ger)}"><td><details><summary>${esc(c.nome)}</summary>${em.length?em.map(([e,v])=>`<div class="em">${esc(e)} · ${v.dias.size} de ${N} dias · ${v.n} acesso${v.n>1?"s":""} · último ${horaSP(v.ult)}</div>`).join(""):'<div class="em">Nenhum acesso no mês.</div>'}</details><div class="em">${esc(c.ger)}</div></td>
+    <td class="n">${c.x.dias.size} de ${N}</td><td class="n">${c.x.n}</td></tr>`;}
+  h+=`</table><div class="ft">Toque no nome da clínica para ver os e-mails. <span id="admsair" style="color:var(--acc);text-decoration:underline;cursor:pointer">Sair da área do administrador</span></div></div>`;
+  box.innerHTML=h;
+  document.getElementById("admger").onchange=e=>{const g=e.target.value;document.querySelectorAll("#admtab tr[data-g]").forEach(tr=>tr.hidden=!!g&&tr.dataset.g!==g);};
+  document.getElementById("admsair").onclick=()=>{try{localStorage.removeItem("adm")}catch(x){} carregarAdm();};
+}
+document.getElementById("admlink").onclick=mostrarAdm;
+document.getElementById("admvoltar").onclick=sairAdm;
+document.getElementById("admenviar").onclick=async()=>{const e=document.getElementById("admemail").value.trim().toLowerCase(), m=document.getElementById("admmsg");
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)){m.textContent="Digite um e-mail válido.";return;}
+  m.textContent="Enviando…";
+  try{const r=await fetch(`${SBU}/auth/v1/otp?redirect_to=${encodeURIComponent(location.origin+location.pathname)}`,{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({email:e,create_user:true})});
+    m.textContent=r.ok?"Pronto! Abra o link que chegou no seu e-mail (neste mesmo aparelho).":"Não foi possível enviar agora. Espere 1 minuto e tente de novo.";}
+  catch(x){m.textContent="Não foi possível enviar agora. Tente de novo.";}};
+
+if(ler("abrirAdm")){try{localStorage.removeItem("abrirAdm")}catch(x){} mostrarAdm();}
+else if(ler("email"))mostrarApp(); else pedirEmail();
 function guardar(k,v){try{localStorage.setItem(k,v)}catch(e){}}
 function ler(k){try{return localStorage.getItem(k)}catch(e){return null}}
 function clinica(id){
