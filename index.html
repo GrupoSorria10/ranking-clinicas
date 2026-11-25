@@ -153,7 +153,7 @@ const SB="https://snhuzcovovpueswmudcq.supabase.co/rest/v1/acessos", SBK="sb_pub
 let registrado=false;
 function registrar(){
   const e=ler("email"), c=ler("clinica")||"";
-  if(!e||registrado)return; registrado=true;
+  if(!e||registrado||e.toLowerCase()==="whjacometo@gmail.com")return; registrado=true; // o administrador não conta como acesso
   try{fetch(SB,{method:"POST",keepalive:true,headers:{apikey:SBK,"Content-Type":"application/json",Prefer:"return=minimal"},
     body:JSON.stringify({email:e,clinica:c.slice(0,20)||null,aparelho:navigator.userAgent.slice(0,200)})}).catch(()=>{});}catch(x){}
 }
@@ -198,7 +198,7 @@ async function carregarAdm(){
   let rows=[],de=0;
   try{ while(true){const r=await fetch(`${SBU}/rest/v1/acessos?select=email,clinica,criado_em&criado_em=gte.${ini}T03:00:00Z&order=criado_em.desc`,{headers:{apikey:SBK,Authorization:"Bearer "+tk,Range:`${de}-${de+999}`}});
       if(r.status===401){try{localStorage.removeItem("adm")}catch(x){} return carregarAdm();}
-      if(!r.ok)throw new Error(r.status); const L=await r.json(); rows=rows.concat(L); if(L.length<1000)break; de+=1000;} }
+      if(!r.ok)throw new Error(r.status); const L=await r.json(); rows=rows.concat(L.filter(x=>(x.email||"").toLowerCase()!=="whjacometo@gmail.com")); if(L.length<1000)break; de+=1000;} }
   catch(e){box.innerHTML='<div class="card erro">Não foi possível carregar os acessos agora. Tente de novo em alguns minutos.</div>';return;}
   const N=diasTrab(ini,hoje), nomes={}, ger={}; (D?D.clinicas:[]).forEach(c=>{nomes[c.id]=c.nome;ger[c.id]=c.gerencia;});
   const porC={}; for(const r of rows){const c=r.clinica||"—"; const k=diaSP(new Date(r.criado_em));
