@@ -40,6 +40,9 @@ select{width:100%;padding:12px;font-size:1rem;border-radius:10px;border:1px soli
 .m-meta{margin-top:6px;font-size:1rem;font-weight:700;background:rgba(255,255,255,.18);border-radius:10px;padding:8px 10px}
 .gcards{display:grid;grid-template-columns:1fr;gap:12px}@media (min-width:900px){.gcards{grid-template-columns:1fr 1fr}}
 .gcards .missao{margin-top:0}.gcards .m-topo .lab{text-transform:none;letter-spacing:0;font-size:1.1rem;opacity:1}.gcards .gnota{font-size:.9rem;font-weight:600;opacity:.9}.gnota{font-size:.95rem;font-weight:700;margin-top:4px;opacity:.95}
+.gwrap{display:flex;flex-direction:column}.gacoes{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.cap .capft{display:none}.capturando .capft{display:block;padding:8px 14px 12px;font-size:.8rem;color:var(--mut)}
+.capturando details,.capturando .btn2{display:none!important}
 .prio{display:inline-block;font-weight:800;font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:#fff;background:var(--acc);padding:3px 8px;border-radius:6px;margin-bottom:6px}
 .chip{display:inline-block;font-weight:800;font-size:.8rem;padding:2px 8px;border-radius:999px;background:var(--card);color:var(--no);margin-left:4px}
 .m-ok{margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--okbg);font-size:.95rem}
@@ -261,14 +264,36 @@ async function carregarGer(){
   const at=L.filter(c=>c.atencao).length;
   let h=`<div class="card"><div class="sec" style="margin-top:0">Área do gerente${minhas.length>1?"":` · ${esc(gerEscolhida)}`}</div>
    ${minhas.length>1?`<select id="gersel" style="margin-top:8px">${minhas.map(x=>`<option${x===gerEscolhida?" selected":""}>${esc(x)}</option>`).join("")}</select>`:""}
-   <div class="sub" style="margin-top:8px">${L.length} clínicas · ${at} na zona de atenção · da que mais precisa para a que menos precisa. Dados até ${D.data_br}.</div></div>
+   <div class="sub" style="margin-top:8px">${L.length} clínicas · ${at} na zona de atenção · da que mais precisa para a que menos precisa. Dados até ${D.data_br}.</div><button class="btn" id="baixartodos">📥 Baixar todos os cards (PNG, um por clínica)</button><div class="sub" id="baixarmsg" style="margin-top:6px"></div></div>
    <div class="gcards" style="margin-top:12px">`;
-  for(const c of L)h+=missaoHTML(c,{abrir:false,titulo:`${esc(c.nome)} · ${c.posicao}º lugar<div class="gnota">Nota ${fmt(c.nota)}${c.atencao?" · ⚠️ zona de atenção":""}</div>`});
+  for(const c of L)h+=`<div class="gwrap"><div class="cap" data-id="${c.id}">`+missaoHTML(c,{abrir:false,titulo:`${esc(c.nome)} · ${c.posicao}º lugar<div class="gnota">Nota ${fmt(c.nota)}${c.atencao?" · ⚠️ zona de atenção":""}</div>`}).replace(/<\/div>$/,`<div class="capft">Ranking das clínicas · Grupo Sorria · dados até ${D.data_br}</div></div>`)+`</div>
+    <div class="gacoes"><button class="btn2 png1" data-id="${c.id}">📥 Baixar PNG</button>${podeCompartilhar()?`<button class="btn2 share1" data-id="${c.id}">📤 Enviar</button>`:""}</div></div>`;
   h+=`</div><div class="ft">Entrou como ${esc(meu)} · <span class="sairger" style="color:var(--acc);text-decoration:underline;cursor:pointer">sair</span></div>`;
   box.innerHTML=h;
   const sel=document.getElementById("gersel"); if(sel)sel.onchange=()=>{gerEscolhida=sel.value;carregarGer();};
+  document.querySelectorAll(".png1").forEach(b=>b.onclick=async()=>{b.disabled=true;try{const f=await pngDoCard(b.dataset.id);baixar(f);}catch(e){alertaPng();}b.disabled=false;});
+  document.querySelectorAll(".share1").forEach(b=>b.onclick=async()=>{b.disabled=true;try{const f=await pngDoCard(b.dataset.id);await navigator.share({files:[f],title:f.name});}catch(e){if(e&&e.name!=="AbortError")alertaPng();}b.disabled=false;});
+  document.getElementById("baixartodos").onclick=async()=>{const m=document.getElementById("baixarmsg"),bt=document.getElementById("baixartodos");bt.disabled=true;
+    try{await carregarScript("lib/jszip.min.js"); const z=new JSZip();
+      for(let i=0;i<L.length;i++){m.textContent=`Gerando ${i+1} de ${L.length}…`; const f=await pngDoCard(L[i].id); z.file(f.name,f);}
+      const blob=await z.generateAsync({type:"blob"}); baixar(new File([blob],`missao-do-dia-${slug(gerEscolhida)}-${D.data.replace(/-/g,"")}.zip`,{type:"application/zip"}));
+      m.textContent=`Pronto: ${L.length} imagens em um arquivo .zip (uma por clínica).`;}
+    catch(e){m.textContent="Não foi possível gerar as imagens agora. Tente de novo.";}
+    bt.disabled=false;};
   document.querySelectorAll(".sairger").forEach(e=>e.onclick=()=>{try{localStorage.removeItem("geremail")}catch(x){} carregarGer();});
 }
+const slug=t=>String(t).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+function carregarScript(src){return new Promise((ok,erro)=>{if(document.querySelector(`script[src="${src}"]`)){ok();return;}const e=document.createElement("script");e.src=src;e.onload=ok;e.onerror=erro;document.head.appendChild(e);});}
+function podeCompartilhar(){try{return !!(navigator.canShare&&navigator.canShare({files:[new File(["x"],"x.png",{type:"image/png"})]}));}catch(e){return false;}}
+function baixar(f){const u=URL.createObjectURL(f),a=document.createElement("a");a.href=u;a.download=f.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);}
+function alertaPng(){const m=document.getElementById("baixarmsg");if(m)m.textContent="Não foi possível gerar a imagem agora. Tente de novo.";}
+async function pngDoCard(id){await carregarScript("lib/html-to-image.js");
+  const el=document.querySelector(`.cap[data-id="${id}"]`), c=D.clinicas.find(x=>x.id===id);
+  el.classList.add("capturando");
+  try{const fundo=getComputedStyle(document.body).backgroundColor;
+    const blob=await htmlToImage.toBlob(el,{pixelRatio:2,backgroundColor:fundo,cacheBust:true});
+    return new File([blob],`missao-${slug(c.nome)}-${D.data.replace(/-/g,"")}.png`,{type:"image/png"});}
+  finally{el.classList.remove("capturando");}}
 function mostrarGer(){document.getElementById("links").hidden=true;document.getElementById("entrada").hidden=true;document.getElementById("app").hidden=true;document.getElementById("v5").hidden=true;document.getElementById("v6").hidden=false;carregarGer();}
 function sairGer(){document.getElementById("links").hidden=false;document.getElementById("v6").hidden=true; if(ler("email"))mostrarApp(); else pedirEmail();}
 document.getElementById("gerlink").onclick=mostrarGer;
