@@ -316,7 +316,7 @@ async function carregarAcessosAba(){const el=$("acescad");
   if(!g){el.innerHTML='<div class="card erro">Este e-mail não está cadastrado como gerente. Fale com o Willian.</div>';return;}
   const perm=D.clinicas.filter(c=>g==="*"||c.gerencia===g).sort((a,b)=>a.nome.localeCompare(b.nome));
   carregarCadastros(el,perm,g==="*"?"todas as clínicas":g);}
-// ---------- Report do parceiro (Willian, 26/11/2026) ----------
+// ---------- Acompanhamento do parceiro (Willian, 26/11/2026) ----------
 // Manhã: até 13:00, cobra 5/11 do número do dia (clínica aberta das 8h às 19h). Tarde: até 19:00, cobra o dia todo (manhã + tarde).
 const FRAC_MANHA=5/11, PRAZO={manha:13*60,tarde:19*60}, NOME_P={manha:"Manhã",tarde:"Tarde"};
 let MEUGER=null;
@@ -338,7 +338,7 @@ function alvoDe(k,i){
   if(k==="google"||k==="crescimento"){const m=h.match(/Hoje: (?:pelo menos )?(\d+)/);return {n:m?+m[1]:1};}
   if(k==="pagantes"){const m=h.match(/R\$ ([\d.]+)/);return {rs_at:m?+m[1].replace(/\./g,""):280};}
   return {};}
-// Itens do report da clínica = todos os indicadores fora do padrão (pedido do Willian), com o número do dia guardado junto.
+// Itens do acompanhamento da clínica = todos os indicadores fora do padrão (pedido do Willian), com o número do dia guardado junto.
 function itensReport(c){const L=[];
   for(const k of ORDEM){const i=c.indicadores[k]; if(!i||i.ok)continue;
     if(k==="avaliacao"){const partes=(i.partes||[]).filter(p=>!p.ok).map(p=>p.nome); if(!partes.length)continue;
@@ -367,7 +367,7 @@ function avaliar(k,alvo,v,frac,partes){const g=x=>+(v[x]||0);
         if(p==="Pedida")R.push(f?[g("valor_pedido")/f>=4500,`pedida ${rs0(g("valor_pedido")/f)} (padrão R$ 4.500)`]:[null,"pedida: sem avaliações"]);}
       const oks=R.map(x=>x[0]).filter(x=>x!==null);return {ok:oks.length?oks.every(Boolean):null,txt:R.map(x=>x[1]).join(" · ")};}}
   return {ok:null,txt:""};}
-// Resultado de um período: manhã compara o report da manhã com 5/11; tarde soma manhã + tarde e compara com o dia todo.
+// Resultado de um período: manhã compara o acompanhamento da manhã com 5/11; tarde soma manhã + tarde e compara com o dia todo.
 function resultado(per,rows,itensAtuais){
   const r=rows[per]; if(!r)return null;
   const base=r.itens||{}, out=[];
@@ -385,15 +385,15 @@ async function renderReport(c){
   if(P&&P.papel==="gerente"&&MEUGER===null){try{MEUGER=await gerenteDoEmail()||"";}catch(e){MEUGER="";}}
   if(!podeReportar(c)){el.innerHTML="";return;}
   const itens=itensReport(c), ag=agoraSP();
-  if(!itens.length){el.innerHTML=`<div class="card rep"><div class="sec" style="margin-top:0">📝 Report do dia</div><div class="sub">Todos os indicadores no padrão: hoje não precisa de report.</div></div>`;return;}
-  el.innerHTML='<div class="card rep sub">Carregando o report…</div>';
-  let L; try{L=await lerReportes(`clinica=eq.${c.id}&data=eq.${ag.data}`);}catch(e){el.innerHTML='<div class="card rep erro">Não foi possível carregar o report agora. Tente de novo em instantes.</div>';return;}
+  if(!itens.length){el.innerHTML=`<div class="card rep"><div class="sec" style="margin-top:0">📝 Acompanhamento do dia</div><div class="sub">Todos os indicadores no padrão: hoje não precisa de acompanhamento.</div></div>`;return;}
+  el.innerHTML='<div class="card rep sub">Carregando o acompanhamento…</div>';
+  let L; try{L=await lerReportes(`clinica=eq.${c.id}&data=eq.${ag.data}`);}catch(e){el.innerHTML='<div class="card rep erro">Não foi possível carregar o acompanhamento agora. Tente de novo em instantes.</div>';return;}
   const rows={}; L.forEach(r=>rows[r.periodo]=r);
   const per=repPer||(ag.min<PRAZO.manha?"manha":"tarde"), frac=per==="manha"?FRAC_MANHA:1, r=rows[per];
   const chip=pp=>{const x=rows[pp];
     if(x)return atrasado(x,pp)?`⚠️ enviado com atraso`:`✅ enviado ${agoraSP(new Date(x.criado_em)).hora}`;
     return ag.min>PRAZO[pp]?"⏰ não enviado":`até ${pp==="manha"?"13:00":"19:00"}`;};
-  let h=`<div class="card rep"><div class="sec" style="margin-top:0">📝 Report do dia · ${ag.data.slice(8)}/${ag.data.slice(5,7)}</div>
+  let h=`<div class="card rep"><div class="sec" style="margin-top:0">📝 Acompanhamento do dia · ${ag.data.slice(8)}/${ag.data.slice(5,7)}</div>
    <div class="sub">Preencha o que a clínica produziu em cada período. Manhã até 13:00, tarde até 19:00.</div>
    <div class="reptabs">${["manha","tarde"].map(pp=>`<button class="btn2 repper${pp===per?" on":""}" data-p="${pp}">${NOME_P[pp]}<small>${chip(pp)}</small></button>`).join("")}</div>`;
   const ant=per==="tarde"&&rows.manha?rows.manha.itens||{}:{};
@@ -402,7 +402,7 @@ async function renderReport(c){
       <div class="ind-s">Objetivo ${per==="manha"?"até 13:00":"do dia"}: ${esc(objetivoTxt(it.k,it.alvo,frac))}${per==="tarde"&&ant[it.k]?` · manhã: ${esc(avaliar(it.k,it.alvo,ant[it.k],1,it.partes).txt)}`:""}</div>
       ${SUBT[it.k]?`<div class="ind-s" style="margin-top:4px">${SUBT[it.k]}</div>`:""}
       <div class="repcampos">${it.campos.map(([f,l,t])=>`<label>${esc(l)}<input inputmode="${t==="rs"?"decimal":"numeric"}" data-f="${f}" value="${v[f]!==undefined?String(v[f]).replace(".",","):""}" placeholder="0"></label>`).join("")}</div></div>`;}
-  h+=`<button class="btn" id="repenviar">${r?"Atualizar":"Enviar"} report da ${per==="manha"?"manhã":"tarde"}</button><div class="erro" id="repmsg"></div>`;
+  h+=`<button class="btn" id="repenviar">${r?"Atualizar":"Enviar"} acompanhamento da ${per==="manha"?"manhã":"tarde"}</button><div class="erro" id="repmsg"></div>`;
   const res=resultado(per,rows);
   if(res){h+=`<div class="sec">Resultado ${per==="manha"?"da manhã (até 13:00)":"do dia (manhã + tarde)"}</div>`+res.map(x=>`<div class="m-sub"><span class="dot ${x.ok===false?"no":x.ok?"ok":""}" ${x.ok===null?'style="background:#9aa3b2"':""}></span><b>${esc(x.nome)}</b>: ${esc(x.txt)}</div>`).join("");
     if(r)h+=`<div class="em">Enviado por ${esc(r.autor_email||"")} · ${horaSP(r.atualizado_em)}</div>`;}
