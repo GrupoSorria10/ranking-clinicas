@@ -144,7 +144,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <button class="tab" id="t2" role="tab" aria-selected="false">Ranking geral</button>
 <button class="tab" id="t4" role="tab" aria-selected="false">Como é calculada a nota?</button>
 <button class="tab" id="t5" role="tab" aria-selected="false" hidden>Acessos<span id="t5badge"></span></button>
-<button class="tab" id="t6" role="tab" aria-selected="false" hidden>Reportes</button>
+<button class="tab" id="t6" role="tab" aria-selected="false" hidden>Acompanhamento</button>
 </div>
 <div id="v1">
 <label for="sel" class="sub">Escolha a clínica</label>
@@ -418,11 +418,11 @@ async function renderReport(c){
       repPer=per; renderReport(c);}
     catch(e){m.textContent="Sem conexão agora. Tente de novo.";b.disabled=false;}};
 }
-// ---------- Aba Reportes (gerente e administrador) ----------
+// ---------- Aba Acompanhamento (gerente e administrador) ----------
 let repData=null, repGer="";
 async function carregarReportes(){
   const el=$("repaba"); if(!P||!(P.papel==="gerente"||P.papel==="admin")){el.innerHTML="";return;}
-  el.innerHTML='<div class="card sub">Carregando reportes…</div>';
+  el.innerHTML='<div class="card sub">Carregando acompanhamento…</div>';
   for(let i=0;i<50&&!D;i++)await new Promise(r=>setTimeout(r,200));
   let g; try{g=await gerenteDoEmail();}catch(e){el.innerHTML='<div class="card erro">Não foi possível carregar agora. Tente de novo em instantes.</div>';return;}
   if(!g){el.innerHTML='<div class="card erro">Este e-mail não está cadastrado como gerente.</div>';return;}
@@ -430,7 +430,7 @@ async function carregarReportes(){
   const gers=g==="*"?[...new Set(D.clinicas.map(c=>c.gerencia))].sort():[g];
   if(g!=="*")repGer=g;
   const CL=D.clinicas.filter(c=>!repGer||c.gerencia===repGer);
-  let L; try{L=await lerReportes(`data=eq.${dia}`);}catch(e){el.innerHTML='<div class="card erro">Não foi possível carregar os reportes agora.</div>';return;}
+  let L; try{L=await lerReportes(`data=eq.${dia}`);}catch(e){el.innerHTML='<div class="card erro">Não foi possível carregar o acompanhamento agora.</div>';return;}
   const por={}; L.forEach(r=>(por[r.clinica]=por[r.clinica]||{})[r.periodo]=r);
   const venceu=pp=>!hoje||ag.min>PRAZO[pp];
   const linhas=CL.map(c=>{const rows=por[c.id]||{}, itens=itensReport(c), st={};
@@ -444,7 +444,7 @@ async function carregarReportes(){
   const peso={nao:0,fora:1,esp:2,ok:3}, perAtual=hoje&&ag.min<=PRAZO.manha?"manha":"tarde";
   linhas.sort((a,b)=>peso[a.st[perAtual].tipo]-peso[b.st[perAtual].tipo]||a.c.nome.localeCompare(b.c.nome));
   const cnt=t=>linhas.filter(x=>x.st[perAtual].tipo===t).length;
-  let h=`<div class="card"><div class="sec" style="margin-top:0">📝 Reportes das clínicas</div>
+  let h=`<div class="card"><div class="sec" style="margin-top:0">📝 Acompanhamento das clínicas</div>
    <div class="sub">Manhã até 13:00 (objetivo proporcional: 5 de 11 horas do dia) · Tarde até 19:00 (objetivo do dia todo, somando manhã e tarde). Toque na clínica para ver os números.</div>
    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"><input type="date" id="repdia" value="${dia}" style="padding:10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--fg)">
    ${gers.length>1?`<select id="repger" style="max-width:260px"><option value="">Todas as gerências</option>${gers.map(x=>`<option${x===repGer?" selected":""}>${esc(x)}</option>`).join("")}</select>`:""}</div>
