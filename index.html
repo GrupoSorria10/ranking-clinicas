@@ -299,7 +299,7 @@ function mostrarApp(){
   if(ger)contarPendentes();
   if(P.clinica&&!ler("clinica")){guardar("clinica",P.clinica);
     const sel=$("sel"); if(D&&sel&&!sel.value&&D.clinicas.some(c=>c.id===P.clinica)){sel.value=P.clinica;clinica(P.clinica);}}
-  if(ler("clinica"))registrar();
+  if(ler("clinica")||ger)registrar();
   if(D&&$("sel").value){const c=D.clinicas.find(x=>x.id===$("sel").value); if(c)renderReport(c);}
 }
 async function contarPendentes(){try{const r=await api("/rest/v1/perfis?select=user_id,clinica&status=eq.pendente&papel=eq.parceiro");
@@ -465,7 +465,7 @@ async function carregarReportes(){
 // ---------- Cadastros (gerente e administrador aprovam e escolhem a clínica) ----------
 async function carregarCadastros(el,perm,titulo){
   el.innerHTML='<div class="card sub">Carregando cadastros…</div>';
-  let L; try{const r=await api("/rest/v1/perfis?select=*&papel=eq.parceiro&order=criado_em.desc"); if(!r.ok)throw 0; L=await r.json();}
+  let L,GS=[]; try{const r=await api("/rest/v1/perfis?select=*&order=criado_em.desc"); if(!r.ok)throw 0; L=await r.json(); GS=L.filter(x=>x.papel!=="parceiro"); L=L.filter(x=>x.papel==="parceiro");}
   catch(e){el.innerHTML='<div class="card erro">Não foi possível carregar os cadastros agora. Tente de novo em instantes.</div>';return;}
   const nomeC=id=>(D.clinicas.find(c=>c.id===id)||{}).nome||id||"—", pid=new Set(perm.map(c=>c.id));
   const opts=v=>`<option value="">Escolha a clínica…</option>`+perm.map(c=>`<option value="${c.id}"${c.id===v?" selected":""}>${esc(c.nome)}</option>`).join("");
@@ -480,7 +480,8 @@ async function carregarCadastros(el,perm,titulo){
    <div class="erro cadmsg"></div>
    <div class="sec">Aguardando aprovação (${pend.length})</div>${pend.length?pend.map(linha).join(""):'<div class="em">Ninguém aguardando agora.</div>'}
    <details style="margin-top:10px"><summary>Com acesso (${apr.length})</summary>${apr.map(linha).join("")||'<div class="em">Nenhum ainda.</div>'}</details>
-   ${rec.length?`<details style="margin-top:6px"><summary>Recusados (${rec.length})</summary>${rec.map(linha).join("")}</details>`:""}</div>`;
+   ${rec.length?`<details style="margin-top:6px"><summary>Recusados (${rec.length})</summary>${rec.map(linha).join("")}</details>`:""}
+   ${P&&P.papel==="admin"&&GS.length?`<details style="margin-top:6px"><summary>👔 Gerentes e administrador com acesso (${GS.length})</summary>${GS.map(x=>`<div class="cad"><div><b>${esc(x.nome||x.email.split("@")[0])}</b> · ${esc(x.email)}<div class="em">${x.papel==="admin"?"Administrador":"Gerente"} · criou o acesso em ${x.criado_em?horaSP(x.criado_em):"—"}</div></div></div>`).join("")}</details>`:""}</div>`;
   const m=el.querySelector(".cadmsg");
   el.querySelectorAll(".cad").forEach(d=>{const u=d.dataset.u, s=d.querySelector(".cadsel");
     const dec=async(st,b)=>{
@@ -520,7 +521,7 @@ async function carregarAdm(){
     const x=porC[c]||(porC[c]={n:0,dias:new Set(),em:{}}); x.n++; x.dias.add(k);
     const e=x.em[r.email]||(x.em[r.email]={n:0,dias:new Set(),ult:r.criado_em}); e.n++; e.dias.add(k); if(r.criado_em>e.ult)e.ult=r.criado_em;}
   const ids=[...new Set([...Object.keys(nomes),...Object.keys(porC)])];
-  const L=ids.map(id=>({id,nome:nomes[id]||(id==="—"?"Sem clínica escolhida":id),ger:ger[id]||"",x:porC[id]||{n:0,dias:new Set(),em:{}}}))
+  const L=ids.map(id=>({id,nome:nomes[id]||(id==="—"?"Sem clínica (gerentes e administrador)":id),ger:ger[id]||"",x:porC[id]||{n:0,dias:new Set(),em:{}}}))
     .sort((a,b)=>a.x.dias.size-b.x.dias.size||a.nome.localeCompare(b.nome));
   const emails=new Set(rows.map(r=>r.email)), hojeC=L.filter(c=>nomes[c.id]&&c.x.dias.has(hoje)).length, gers=[...new Set(L.map(c=>c.ger).filter(Boolean))].sort();
   const mes=new Date(ini+"T12:00:00").toLocaleString("pt-BR",{month:"long"});
