@@ -110,7 +110,7 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 <div class="sec" style="margin-top:0">Criar acesso</div>
 <p class="sub">Preencha os dados abaixo. O seu gerente vai aprovar o acesso e ligar você à sua clínica.</p>
 <input id="cNome" type="text" autocomplete="name" placeholder="Seu nome completo">
-<select id="cClin" aria-label="Sua clínica" style="margin-top:8px"><option value="">Escolha a sua clínica…</option></select>
+<select id="cClin" aria-label="Sua clínica" style="margin-top:8px"><option value="">Escolha a sua clínica…</option><option value="__gerente">👔 Sou gerente</option></select>
 <input id="cEmail" type="email" inputmode="email" autocomplete="email" placeholder="seu@email.com">
 <input id="cSenha" type="password" autocomplete="new-password" placeholder="Crie uma senha (mínimo 6 caracteres)">
 <input id="cSenha2" type="password" autocomplete="new-password" placeholder="Repita a senha">
@@ -247,7 +247,7 @@ async function iniciar(){
   if(modoNova){telaEntrada("fNova","");return;}
   try{P=await meuPerfil();}catch(e){aviso('<p class="erro">Não foi possível conferir o seu acesso agora. Tente de novo em instantes.</p>');return;}
   if(!P){telaEntrada("fEntrar","Sua sessão terminou. Entre de novo.");return;}
-  if(P.status==="pendente"){aviso(`<div class="sec" style="margin-top:0">Cadastro recebido ✅</div><p>Olá${P.nome?", "+esc(P.nome.split(" ")[0]):""}! O seu acesso (${esc(P.email)}) ${P.clinica&&D&&D.clinicas.find(c=>c.id===P.clinica)?`para a clínica <b>${esc(D.clinicas.find(c=>c.id===P.clinica).nome)}</b> `:""}está <b>aguardando a aprovação do seu gerente</b>. Assim que ele aprovar, é só abrir esta página de novo.</p><button class="btn" id="bDeNovo">Já foi aprovado? Conferir de novo</button>`);$("bDeNovo").onclick=iniciar;return;}
+  if(P.status==="pendente"){aviso(`<div class="sec" style="margin-top:0">Cadastro recebido ✅</div><p>Olá${P.nome?", "+esc(P.nome.split(" ")[0]):""}! O seu acesso (${esc(P.email)}) ${P.clinica&&D&&D.clinicas.find(c=>c.id===P.clinica)?`para a clínica <b>${esc(D.clinicas.find(c=>c.id===P.clinica).nome)}</b> `:""}está <b>aguardando a aprovação ${P.clinica?"do seu gerente":"do administrador"}</b>. Assim que for aprovado, é só abrir esta página de novo.</p>${P.clinica?"":`<p class="sub">Se você é gerente, confira se criou o acesso com o seu e-mail da empresa (o mesmo cadastrado pelo Willian): com ele, a entrada de gerente é liberada na hora.</p>`}<button class="btn" id="bDeNovo">Já foi aprovado? Conferir de novo</button>`);$("bDeNovo").onclick=iniciar;return;}
   if(P.status==="recusado"){aviso(`<div class="sec" style="margin-top:0">Acesso não liberado</div><p>O cadastro de ${esc(P.email)} não foi aprovado. Se for um engano, fale com o seu gerente.</p>`);return;}
   mostrarApp();
 }
@@ -261,10 +261,10 @@ $("bEntrar").onclick=async()=>{const e=$("lEmail").value.trim().toLowerCase(), s
 $("lSenha").onkeydown=e=>{if(e.key==="Enter")$("bEntrar").click();};
 $("bCriar").onclick=async()=>{const n=$("cNome").value.trim(), e=$("cEmail").value.trim().toLowerCase(), s=$("cSenha").value, s2=$("cSenha2").value;
   const cl=$("cClin").value;
-  if(n.length<3)return msgE("Digite o seu nome completo."); if(!cl)return msgE("Escolha a sua clínica."); if(!okEmail(e))return msgE("Digite um e-mail válido.");
+  if(n.length<3)return msgE("Digite o seu nome completo."); if(!cl)return msgE("Escolha a sua clínica (ou “Sou gerente”)."); if(!okEmail(e))return msgE("Digite um e-mail válido.");
   if(s.length<6)return msgE("A senha precisa ter pelo menos 6 caracteres."); if(s!==s2)return msgE("As duas senhas não são iguais.");
   msgE("Criando…",1); $("bCriar").disabled=true;
-  try{const r=await fetch(`${SBU}/auth/v1/signup?redirect_to=${encodeURIComponent(voltarPara())}`,{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({email:e,password:s,data:{nome:n.slice(0,80),clinica:cl}})});
+  try{const r=await fetch(`${SBU}/auth/v1/signup?redirect_to=${encodeURIComponent(voltarPara())}`,{method:"POST",headers:{apikey:SBK,"Content-Type":"application/json"},body:JSON.stringify({email:e,password:s,data:cl==="__gerente"?{nome:n.slice(0,80),gerente:true}:{nome:n.slice(0,80),clinica:cl}})});
     if(!r.ok){msgE(await erroAuth(r));}
     else{const j=await r.json();
       if(j.access_token){salvarSessao(j); await iniciar();}
@@ -284,7 +284,7 @@ $("bNova").onclick=async()=>{const s=$("nSenha").value, s2=$("nSenha2").value;
     if(!r.ok){msgE(await erroAuth(r));}else{modoNova=false; $("nSenha").value=$("nSenha2").value=""; await iniciar();}}
   catch(x){msgE("Sem conexão agora. Tente de novo.");}
   $("bNova").disabled=false;};
-function encherClinicas(){const cs=$("cClin"); if(D&&cs.options.length<2)cs.innerHTML='<option value="">Escolha a sua clínica…</option>'+D.clinicas.slice().sort((a,b)=>a.nome.localeCompare(b.nome)).map(c=>`<option value="${c.id}">${esc(c.nome)}</option>`).join("");}
+function encherClinicas(){const cs=$("cClin"); if(D&&cs.options.length<2)cs.innerHTML='<option value="">Escolha a sua clínica…</option><option value="__gerente">👔 Sou gerente</option>'+D.clinicas.slice().sort((a,b)=>a.nome.localeCompare(b.nome)).map(c=>`<option value="${c.id}">${esc(c.nome)}</option>`).join("");}
 $("irCriar").onclick=()=>{encherClinicas();$("cEmail").value=$("cEmail").value||$("lEmail").value;telaEntrada("fCriar");};
 $("irEsqueci").onclick=()=>{$("rEmail").value=$("rEmail").value||$("lEmail").value;telaEntrada("fEsqueci");};
 document.querySelectorAll(".irEntrar").forEach(x=>x.onclick=()=>telaEntrada("fEntrar"));
