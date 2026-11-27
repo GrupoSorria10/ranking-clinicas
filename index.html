@@ -68,6 +68,13 @@ tr.at td{color:var(--warn)}tr.eu td{background:var(--accbg)}
 .linha60 td{border-top:2px dashed var(--warn);padding:0}
 .ft{color:var(--mut);font-size:.8rem;margin-top:18px}
 .erro{color:var(--warn)}
+.indgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin-top:10px}
+.indt{border:1px solid var(--line);border-radius:12px;padding:12px;border-top:4px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.indt.ok{border-top-color:#22a447}.indt.no{border-top-color:#d93025}
+.indt-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:2px}
+.indt .pill{font-size:.85rem;padding:4px 8px}
+.indt-p{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:5px 0;border-top:1px dashed var(--line);font-size:.9rem}
+.indt-p .pill{font-size:.78rem;padding:3px 7px}
 .duas .lado{position:static!important}.lado>.card{margin-top:12px}
 .rep{border:2px solid var(--acc)}.reptabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
 .repper{display:flex;flex-direction:column;align-items:center;gap:2px}.repper small{font-weight:500;color:var(--mut);font-size:.78rem}.repper.on{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
@@ -635,13 +642,16 @@ function clinica(id){
   <div class="pos">Posição<br><b>${c.posicao}º</b> de ${D.total_clinicas}</div></div>
   <div class="faixa ${c.atencao?"at":"ok"}">${c.atencao?"⚠️ Zona de atenção: abaixo de 60 pontos":"✅ Fora da zona de atenção"}</div></div>`;
   h+=`<div class="duas">`+missaoHTML(c);
-  h+=`<div class="lado"><div id="rep"></div><div class="card"><div class="sec" style="margin-top:0">Indicadores</div>`;
+  h+=`<div class="lado"><div id="rep"></div></div></div>`;
+  // Indicadores na horizontal (pedido do Willian, 27/11/2026): um bloco por indicador, lado a lado
+  h+=`<div class="card"><div class="sec" style="margin-top:0">Indicadores</div><div class="indgrid">`;
   for(const k of ORDEM){const i=c.indicadores[k]; if(!i)continue;
-    h+=`<div class="ind-row"><div><div class="ind-n">${i.ok?"🟢":"🔴"} ${esc(i.nome)}</div>${i.partes?"":`<div class="ind-s">${esc(i.status)}</div><div class="ind-h">${esc(i.hoje)}</div>`}</div>
-    <div class="pill ${i.ok?"ok":"no"}">${fmt(i.pts)} / ${i.max}</div></div>`;
-    if(i.partes)for(const p of i.partes)h+=`<div class="parte"><div><div class="ind-n"><span class="dot ${p.ok?"ok":"no"}"></span>${esc(p.nome)}</div><div class="ind-s">${esc(p.status)}</div></div><div class="pill ${p.ok?"ok":"no"}">${fmt(p.pts)} / ${p.max}</div></div>`;}
-  if(!D.reclamacoes_disponivel)h+=`<div class="ind-row"><div class="ind-s">Reclamações: em breve.</div></div>`;
-  h+=`</div></div></div>`;
+    h+=`<div class="indt ${i.ok?"ok":"no"}"><div class="indt-top"><div class="ind-n">${i.ok?"🟢":"🔴"} ${esc(i.nome)}</div><div class="pill ${i.ok?"ok":"no"}">${fmt(i.pts)} / ${i.max}</div></div>`;
+    if(i.partes)h+=i.partes.map(p=>`<div class="indt-p"><div><span class="dot ${p.ok?"ok":"no"}"></span><b>${esc(p.nome)}</b><div class="ind-s">${esc(p.status)}</div></div><div class="pill ${p.ok?"ok":"no"}">${fmt(p.pts)} / ${p.max}</div></div>`).join("");
+    else h+=`<div class="ind-s">${esc(i.status)}</div><div class="ind-h">${esc(i.hoje)}</div>`;
+    h+=`</div>`;}
+  if(!D.reclamacoes_disponivel)h+=`<div class="indt"><div class="ind-s">Reclamações: em breve.</div></div>`;
+  h+=`</div></div>`;
   document.getElementById("conteudo").innerHTML=h; desenharRanking(id); desenharGerencia(id);
   if(P)renderReport(c);
 }
